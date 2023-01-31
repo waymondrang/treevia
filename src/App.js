@@ -1,8 +1,4 @@
-import './App.css';
-import React from 'react';
-import Trivia from './Trivia.js';
-
-
+import "./App.css";
 
 function App() {
   let state = {
@@ -18,25 +14,15 @@ function App() {
 
   
   return (
-    
-    <Trivia questionData={state.question}/>
-    // <div className="App">
-    //   <header className="App-header">
-        
-        /*{ <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> }*/
-    //   </header>
-    // </div>
+    <div className="App">
+      <header>
+        <h1>Template Text</h1>
+      </header>
+      <body>
+        <p>Template Text</p>
+        <button>button</button>
+      </body>
+    </div>
   );
 }
 
