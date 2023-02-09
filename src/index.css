@@ -1,13 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Object Sans";
+  font-weight: normal;
+  src: url(../public/assets/fonts/PPObjectSans-Regular.woff) format("woff"),
+    url(../public/assets/fonts/PPObjectSans-Regular.woff2) format("woff2");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Object Sans";
+  font-weight: bold;
+  src: url(../public/assets/fonts/PPObjectSans-Heavy.woff) format("woff"),
+    url(../public/assets/fonts/PPObjectSans-Heavy.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Mondwest";
+  font-weight: normal;
+  src: url(../public/assets/fonts/PPMondwest-Regular.woff) format("woff"),
+    url(../public/assets/fonts/PPMondwest-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Neue Bit";
+  font-weight: normal;
+  src: url(../public/assets/fonts/PPNeueBit-Regular.woff) format("woff"),
+    url(../public/assets/fonts/PPNeueBit-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Neue Bit";
+  font-weight: bold;
+  src: url(../public/assets/fonts/PPNeueBit-Bold.woff) format("woff"),
+    url(../public/assets/fonts/PPNeueBit-Bold.woff2) format("woff2");
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
