@@ -1,0 +1,35 @@
+.game {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid black;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+  
+}
+
+.game button {
+    display: block;
+    cursor: pointer;
+    padding: 10px 120px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.game button:hover,
+.game button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+
+#question {
+    text-align: center;
+    margin-top: 10%;
+}
