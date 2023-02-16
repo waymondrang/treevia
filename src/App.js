@@ -1,7 +1,12 @@
 import "./App.css";
+import React from 'react';
+import MainPage from './MainPage.js';
 
 function App() {
+  
   return (
+    <MainPage/>
+    /*
     <div className="App">
       <header>
         <h1>Template Text</h1>
@@ -11,6 +16,7 @@ function App() {
         <button>button</button>
       </body>
     </div>
+    */
   );
 }
 

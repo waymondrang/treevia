@@ -1,0 +1,29 @@
+.Stats{
+    position: absolute;
+    border-style: double;
+    margin-right: 10px;
+    background-color: #b3efae;
+    border: 3px solid #0c0c0c;
+    border-radius: 5px;
+    right:2%;
+}
+.Stats h1{
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #b3efae;
+    border-style: double;
+    border: 2px dotted #0c0c0c;
+    border-radius: 0px;
+}
+.Stat-vals{
+    margin: 0;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    padding-right: 55%;
+    text-align: right;
+    text-transform: unset;
+}
