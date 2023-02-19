@@ -1,6 +1,7 @@
 import "./MainPage.css";
 import React from 'react';
 import Stats from './Stats.jsx';
+import Farm from './Farm.jsx';
 
 function MainPage() {
   return (
@@ -9,6 +10,7 @@ function MainPage() {
         <h1>Main Page</h1>
       </header>
       <body>
+      <Farm/>
       <Stats/>
         <div className="buttons-list">
           <h2>Select Question Type</h2>
@@ -21,6 +23,7 @@ function MainPage() {
             <button className="button" disabled>Strategy Question</button>
             <br/>
         </div>
+        
       </body>
     </div>
   );

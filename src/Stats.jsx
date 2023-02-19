@@ -12,7 +12,7 @@ class Stats extends Component{
       Average: 0,
     };
   }
-  
+  setState
     render(){
         return (
             <div className="Stats">
@@ -20,15 +20,21 @@ class Stats extends Component{
                 <h1>Stats</h1>
               </header>
               <body>
-                <div className="Stat-vals">
-                  <p>Productivity:{this.state.Productivity}</p>
-                  <p>Resilience:{this.state.Resilience}</p>
-                  <p>Eco-friendliness:{this.state.Ecofriendliness}</p>
-                  <p>Average:{this.state.Average}</p>
+              <div className="Stat-vals">
+                  <p>{this.state.Productivity}</p>
+                  <p>{this.state.Resilience}</p>
+                  <p>{this.state.Ecofriendliness}</p>
+                  <p>{this.state.Average}</p>
                 </div>
+                <div className="Stat-names">
+                  <p>Productivity:</p>
+                  <p>Resilience:</p>
+                  <p>Eco-friendliness:</p>
+                  <p>Average:</p>
+                </div>
+                
               </body>
-            </div>
-           
+            </div> 
         );
     }
 }

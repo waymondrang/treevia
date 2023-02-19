@@ -20,10 +20,13 @@
     border-radius: 0px;
 }
 .Stat-vals{
+    position: absolute;
+    padding-left: 55%;
+}
+.Stat-names{
     margin: 0;
-    padding-bottom: 30px;
     padding-left: 0px;
-    padding-right: 55%;
+    padding-right: 50%;
+    padding-top: 0.009%;
     text-align: right;
-    text-transform: unset;
 }
