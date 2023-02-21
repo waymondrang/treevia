@@ -1,7 +1,8 @@
 .game {
     position: absolute;
-    width: 350px;
-    height: 350px;
+    /* width 350px height 350px */
+    width: 40%; 
+    height: auto;
     border: 1px solid black;
     top: 50%;
     left: 50%;
@@ -10,10 +11,18 @@
   
 }
 
-.game button {
+.game h3 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.game button.q {
     display: block;
     cursor: pointer;
-    padding: 10px 120px;
+    width: 80%;
+    /* padding: 10px 120px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
     margin-top: 16px;
     margin-bottom: 16px;
     margin-left: auto;
@@ -22,12 +31,53 @@
     transition-duration: 0.4s;
 }
 
-.game button:hover,
-.game button:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
+.game button.next {
+    cursor: pointer;
+    width: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
+/* .game button:hover {
+    background-color: aqua;
+} */
+
+.game button.q:hover,
+.game button.q:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+}
+
+p.explanation {
+    /* padding-left: 30px;
+    padding-right: 30px; */
+    margin-left: 35px;
+    margin-right: 30px;
+}
+
+.alignRight {
+    margin-right: 35px;
+    margin-bottom: 25px;
+    text-align: right;
+    border: 0;
+}
+
+
+.image[wobble='1']{
+    background-color: green;
+}
+
+.image[wobble='2'] {
+    background-color: red;
+}
+
+.correct {
+    color: green
+}
+  
+.error {
+    color: red
+}    
 
 #question {
     text-align: center;
