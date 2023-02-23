@@ -4,10 +4,13 @@ import './Trivia.css';
 
 function Trivia({questionData}) {
     const [wobble, setWobble] = React.useState(0)
+    
     const [showResults, setShowResults] = React.useState(false)
     const [showCorrect, setShowCorrect] = React.useState(false)
     const [showNotCorrect, setShowNotCorrect] = React.useState(false)
     const [shuffleResults, setShuffleResults] = React.useState(true)
+
+    const [textColor, setTextColor] = React.useState('black');
 
     const canShuffle = () => setShuffleResults(true)
 
@@ -44,18 +47,13 @@ function Trivia({questionData}) {
     <div className="game">
         <h3 id="question">{questionData.question}</h3>
 
-        <button type="button" className='q' onClick={evaluateAnswer} value={ans[0]}>{arr[0]}</button>
-        <button type="button" className='q' onClick={evaluateAnswer} value={ans[1]}>{arr[1]}</button>
-        <button type="button" className='q' onClick={evaluateAnswer} value={ans[3]}>{arr[3]}</button>
-        <button type="button" className='q' onClick={evaluateAnswer} value={ans[2]}> {arr[2]}</button>
+        <button type="button" className='q' onClick={evaluateAnswer} style={{color:textColor}} disabled={showResults} value={ans[0]}>{arr[0]}</button>
+        <button type="button" className='q' onClick={evaluateAnswer} disabled={showResults} value={ans[1]}>{arr[1]}</button>
+        <button type="button" className='q' onClick={evaluateAnswer} disabled={showResults} value={ans[3]}>{arr[3]}</button>
+        <button type="button" className='q' onClick={evaluateAnswer} disabled={showResults} value={ans[2]}> {arr[2]}</button>
         {showCorrect ? <IsCorrect /> : null}
         {showNotCorrect ? <NotCorrect /> : null}
         {showResults ? <Results info={questionData} /> : null}
-
-        {/* <div class="alignRight">
-            <button type="button" className='next' onClick={canShuffle}>Next</button>
-        </div> */}
-
     </div>
     );
 }
@@ -64,6 +62,9 @@ const Results = ({info}) => (
     <div>
     <p className='explanation'>The answer is {info.answer}.</p>
     <p className='explanation'>{info.explanation}</p>  
+    <div className='alignRight'>
+        <button type="button" className='next'>Next</button>
+    </div>
     </div>
   )
 
@@ -78,6 +79,22 @@ const NotCorrect = () => (
 // Shuffle contents of the answers array 
 function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
+}
+
+const changeB1Color = () => {
+
+}
+
+const changeB2Color = () => {
+    
+}
+
+const changeB3Color = () => {
+    
+}
+
+const changeB4Color = () => {
+    
 }
 
 export default Trivia;
