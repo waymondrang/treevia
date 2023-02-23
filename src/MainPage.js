@@ -4,6 +4,21 @@ import Stats from './Stats.jsx';
 import Farm from './Farm.jsx';
 
 function MainPage() {
+  this.state = {
+    images:
+        [{
+            field: "/images/Tilled Dirt.png", //correlates with soil
+            irrigation: "",                   //correlates with water
+            SustainableProp: "",              
+            NatDistaster: "",         
+            CarbonEmissions: "",
+            misc: "",
+            crop0: "",
+            crop1: "",
+            crop2: "",
+            crop3: "",
+        }]
+  };
   return (
     <div className="MainPage">
       <header>
@@ -14,13 +29,17 @@ function MainPage() {
       <Stats/>
         <div className="buttons-list">
           <h2>Select Question Type</h2>
-            <button className="button">Productivity </button>
+            <button className="button">Sustainability </button>
             <br/>
-            <button className="button">Resilience</button>
+            <button className="button">Soil</button>
             <br/>
-            <button className="button">Eco-friendliness</button>
+            <button className="button">Carbon Emissions</button>
             <br/>
-            <button className="button" disabled>Strategy Question</button>
+            <button className="button">Natural Distasters</button>
+            <br/>
+            <button className="button">Water</button>
+            <br/>
+            <button className="button">Misc</button>
             <br/>
         </div>
         

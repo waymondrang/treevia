@@ -11,8 +11,17 @@ class Stats extends Component{
       Ecofriendliness: 0,
       Average: 0,
     };
+
   }
-  setState
+  incState({stats}){
+    this.setState({
+      Productivity: this.state.Productivity + stats.Productivity,
+      Resilience: this.state.Resilience + stats.Resilience,
+      Ecofriendliness: this.state.Ecofriendliness + stats.Ecofriendliness,
+      Average: this.state.Average + stats.Average,
+    })
+
+  }
     render(){
         return (
             <div className="Stats">
@@ -32,10 +41,14 @@ class Stats extends Component{
                   <p>Eco-friendliness:</p>
                   <p>Average:</p>
                 </div>
-                
               </body>
             </div> 
         );
+    }
+    setImgs(){
+      images = {
+        
+      }
     }
 }
 
