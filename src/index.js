@@ -1,13 +1,39 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import ErrorPage from "./routes/ErrorPage";
+import JoinPage from "./routes/JoinPage";
+import HostPage from "./routes/HostPage";
+import LocalPage from "./routes/LocalPage";
+import TriviaTestPage from "./routes/TriviaTestPage";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider
+      router={createBrowserRouter([
+        { path: "/", element: <App />, errorElement: <ErrorPage /> },
+        {
+          path: "/join",
+          element: <JoinPage />,
+        },
+        {
+          path: "/host",
+          element: <HostPage />,
+        },
+        {
+          path: "/local",
+          element: <LocalPage />,
+        },
+        {
+          path: "/triviatest",
+          element: <TriviaTestPage />,
+        },
+      ])}
+    />
   </React.StrictMode>
 );
 

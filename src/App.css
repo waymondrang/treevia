@@ -1,39 +1,126 @@
-.App {
-  text-align: center;
+#main-menu {
+  height: 100vh;
+  background: #76b852;
+  background: -webkit-linear-gradient(to right, #8DC26F, #76b852);
+  background: linear-gradient(to right, #8DC26F, #76b852);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.expand-container {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8rem;
+  background-color: #ffffff25;
+  border-radius: 0.5rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+.expand-container .expand-icon {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.centered {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
 }
 
-.App-link {
-  color: #61dafb;
+.main-page-section h1 {
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-collection {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: -0.25rem;
 }
 
+.button-link {
+  margin: 0.25rem;
+}
+
+button {
+  font-family: "Object Sans";
+  height: 3rem;
+  width: 12rem;
+  border: none;
+  border-radius: 0.25em;
+  transition: all 0.25s cubic-bezier(0, 0, .01, 1);
+  color: #000;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+button:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+#main-menu button {
+  background: #558b2f;
+  color: #fff;
+}
+
+#main-menu button:not(:disabled):hover {
+  box-shadow: inset 13.5rem 0 0 0 #2F4D1A;
+  color: #fff;
+  background-color: #2F4D1A;
+}
+
+#about-section {
+  background: #76b852;
+  background: -webkit-linear-gradient(to right, #8DC26F, #76b852);
+  background: linear-gradient(to right, #8DC26F, #76b852);
+  padding: 2rem 0;
+}
+
+#about-section-contents {
+  background-color: #2F4D1A;
+  padding: 1rem 4rem;
+  border-radius: 1rem;
+  width: 93.3333333%;
+  max-width: 800px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#error-section {
+  background: #0F2027;
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  height: 100vh;
+}
+
+#error-section h1 {
+  margin: 0;
+}
+
+#error-content {
+  padding: 1rem 4rem;
+  border-radius: 1rem;
+  max-width: 800px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#error-section button {
+  background-color: #2C5F73;
+  color: #fff;
+}
+
+
+
+#error-section button:not(:disabled):hover {
+  box-shadow: inset 13.5rem 0 0 0 #132A33;
+  color: #fff;
+  background-color: #132A33;
+}
