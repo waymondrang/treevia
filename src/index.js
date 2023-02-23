@@ -4,7 +4,11 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import ErrorPage from "./ErrorPage";
+import ErrorPage from "./routes/ErrorPage";
+import JoinPage from "./routes/JoinPage";
+import HostPage from "./routes/HostPage";
+import LocalPage from "./routes/LocalPage";
+import TriviaTestPage from "./routes/TriviaTestPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,15 +18,19 @@ root.render(
         { path: "/", element: <App />, errorElement: <ErrorPage /> },
         {
           path: "/join",
-          element: <div>this is the join page</div>,
+          element: <JoinPage />,
         },
         {
           path: "/host",
-          element: <div>this is the host page</div>,
+          element: <HostPage />,
         },
         {
           path: "/local",
-          element: <div>this is the local page</div>,
+          element: <LocalPage />,
+        },
+        {
+          path: "/triviatest",
+          element: <TriviaTestPage />,
         },
       ])}
     />
