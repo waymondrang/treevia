@@ -10,6 +10,8 @@ const server = http.createServer(app);
 
 const io = new socketio.Server(server);
 
+var games = {};
+
 app.use(express.static("build"));
 
 io.on("connection", function (socket) {
