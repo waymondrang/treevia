@@ -38,3 +38,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+html {
+  font-family: "Object Sans";
+  color: #ffffff;
+  background: #76b852;
+}
