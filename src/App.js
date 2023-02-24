@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./App.css";
 
 function App() {
@@ -6,26 +6,7 @@ function App() {
     <div className="App">
       <body>
         <div className="centered" id="main-menu">
-          <div className="centered">
-            <h1>UntitledTrivia</h1>
-            <div className="button-collection">
-              <Link to={`/join`} className="button-link">
-                <button>
-                  <span>Join</span>
-                </button>
-              </Link>
-              <Link to={`/host`} className="button-link">
-                <button>
-                  <span>Host</span>
-                </button>
-              </Link>
-              <Link to={`/local`} className="button-link">
-                <button>
-                  <span>Local</span>
-                </button>
-              </Link>
-            </div>
-          </div>
+          <Outlet />
           <div className="expand-container">
             <span class="material-symbols-rounded expand-icon">
               expand_more

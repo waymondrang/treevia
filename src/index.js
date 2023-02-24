@@ -5,28 +5,41 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./routes/ErrorPage";
-import JoinPage from "./routes/JoinPage";
-import HostPage from "./routes/HostPage";
-import LocalPage from "./routes/LocalPage";
 import TriviaTestPage from "./routes/TriviaTestPage";
+import Main from "./routes/Main";
+import Join from "./routes/Join";
+import Host from "./routes/Host";
+import Local from "./routes/Local";
+import Demo from "./routes/Demo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <RouterProvider
       router={createBrowserRouter([
-        { path: "/", element: <App />, errorElement: <ErrorPage /> },
         {
-          path: "/join",
-          element: <JoinPage />,
-        },
-        {
-          path: "/host",
-          element: <HostPage />,
-        },
-        {
-          path: "/local",
-          element: <LocalPage />,
+          path: "/",
+          element: <App />,
+          errorElement: <ErrorPage />,
+          children: [
+            { path: "/", element: <Main /> },
+            {
+              path: "/join",
+              element: <Join />,
+            },
+            {
+              path: "/host",
+              element: <Host />,
+            },
+            {
+              path: "/local",
+              element: <Local />,
+            },
+            {
+              path: "/demo",
+              element: <Demo />,
+            },
+          ],
         },
         {
           path: "/triviatest",
