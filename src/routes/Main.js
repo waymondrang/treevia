@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Main() {
   return (
-    <div className="centered">
+    <div className="centered" id="main-menu">
       <h1>UntitledTrivia</h1>
       <div className="button-collection">
         <Link to={`/join`} className="button-link">

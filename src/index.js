@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./routes/ErrorPage";
-import TriviaTestPage from "./routes/TriviaTestPage";
 import Main from "./routes/Main";
 import Join from "./routes/Join";
 import Host from "./routes/Host";
@@ -40,10 +39,6 @@ root.render(
               element: <Demo />,
             },
           ],
-        },
-        {
-          path: "/triviatest",
-          element: <TriviaTestPage />,
         },
       ])}
     />

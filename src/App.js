@@ -1,12 +1,11 @@
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import "./App.css";
 
 function App() {
-  
   return (
     <div className="App">
       <body>
-        <div className="centered" id="main-menu">
+        <div className="centered" id="top-section">
           <Outlet />
           <div className="expand-container">
             <span class="material-symbols-rounded expand-icon">
