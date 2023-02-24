@@ -14,8 +14,16 @@ function Trivia({questionData}) {
 
     // const canShuffle = () => setShuffleResults(true)
 
-    let arr = [questionData.wrongAnswer1, questionData.wrongAnswer2, questionData.wrongAnswer3, questionData.answer]
-    shuffle(arr);
+    let tmp_arr = [questionData.wrongAnswer1, questionData.wrongAnswer2, questionData.wrongAnswer3, questionData.answer]
+    // shuffle(arr);
+
+    console.log(tmp_arr)
+
+    const arr = React.useMemo(() => {
+        return shuffle(tmp_arr);
+    }, [])
+
+    console.log(arr)
     
     let ans = [false, false, false, false]
 
@@ -79,6 +87,8 @@ const NotCorrect = () => (
 // Shuffle contents of the answers array 
 function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
+
+    return array
 }
 
 const changeB1Color = () => {
