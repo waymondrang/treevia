@@ -1,7 +1,7 @@
 #trivia {
     box-sizing: border-box;
     width: 93.333333%;
-    max-width: 800px;
+    max-width: 700px;
     background-color: #2F4D1A28;
     border-radius: 1rem;
     padding: 2.5rem 4rem;
@@ -13,43 +13,21 @@
     margin: -0.5rem;
 }
 
+#trivia hr {
+    margin: 1.5rem 0;
+    border: 0;
+    border-top: 1px solid #558b2f;
+}
+
 #question {
-    text-align: center;
-    font-size: 1.5rem;
+    text-align: left;
+    font-size: 1.25rem;
     margin: 0;
     margin-bottom: 1.5rem;
 }
 
 #trivia .button-collection button {
     margin: 0.5rem;
-}
-
-#trivia button.q {
-    display: block;
-    cursor: pointer;
-    width: 100%;
-    padding: 1rem;
-    background: #558b2f;
-    color: #fff;
-    -webkit-transition-duration: transform 0.4s cubic-bezier(0, 0, .01, 1);
-    transition: transform 0.4s cubic-bezier(0, 0, .01, 1);
-}
-
-#trivia button.next {
-    cursor: pointer;
-    width: 20%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-/* .game button:hover {
-    background-color: aqua;
-} */
-
-#trivia button.q:hover,
-#trivia button.q:focus {
-    transform: translateY(-0.125rem);
-    background-color: #2F4D1A;
 }
 
 p.explanation {

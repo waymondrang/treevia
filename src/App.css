@@ -115,6 +115,7 @@ button:not(:disabled) {
 #error-section button {
   background-color: #2C5F73;
   color: #fff;
+  padding: 0.8rem;
 }
 
 

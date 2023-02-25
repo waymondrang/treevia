@@ -1,0 +1,24 @@
+[
+    {
+        "question": "?",
+        "answers": [
+            {
+                "answer": "A",
+                "correct": true
+            },
+            {
+                "answer": "B",
+                "correct": false
+            },
+            {
+                "answer": "C",
+                "correct": false
+            },
+            {
+                "answer": "D",
+                "correct": false
+            }
+        ],
+        "explaination": "..."
+    }
+]
