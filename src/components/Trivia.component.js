@@ -8,7 +8,7 @@ function shuffle(array) {
   return array;
 }
 
-function Trivia({ questionData }) {
+function Trivia({ questionData, nextQuestion }) {
   const [showResults, setShowResults] = useState(false);
   const [showCorrect, setShowCorrect] = useState(false);
   const [showNotCorrect, setShowNotCorrect] = useState(false);
@@ -21,6 +21,14 @@ function Trivia({ questionData }) {
   function evaluateAnswer(correct) {
     correct ? setShowCorrect(true) : setShowNotCorrect(true);
     setShowResults(true);
+  }
+
+  function triviaNextQuestion(...args) {
+    // Reset state
+    setShowCorrect(false);
+    setShowNotCorrect(false);
+    setShowResults(false);
+    nextQuestion(...args);
   }
 
   return (
@@ -38,17 +46,19 @@ function Trivia({ questionData }) {
       </div>
       {showCorrect ? <IsCorrect /> : null}
       {showNotCorrect ? <NotCorrect /> : null}
-      {showResults ? <Results info={questionData} /> : null}
+      {showResults ? (
+        <Results info={questionData} triviaNextQuestion={triviaNextQuestion} />
+      ) : null}
     </div>
   );
 }
 
-const Results = ({ info }) => (
+const Results = ({ info, triviaNextQuestion }) => (
   <div>
     {/* <p className="explanation">The answer is {info.answer}.</p> */}
     <p className="explanation">{info.explanation}</p>
     <div className="alignRight">
-      <button type="button" className="next">
+      <button onClick={triviaNextQuestion} type="button" className="next">
         Next
       </button>
     </div>
