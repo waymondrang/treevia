@@ -5,9 +5,9 @@ export default function Main() {
     <div className="centered" id="main-menu">
       <h1>UntitledTrivia</h1>
       <div className="button-collection">
-        <Link to={`/join`} className="button-link">
+        <Link to={`/play`} className="button-link">
           <button>
-            <span>Join</span>
+            <span>Play</span>
           </button>
         </Link>
         <Link to={`/host`} className="button-link">

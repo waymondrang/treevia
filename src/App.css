@@ -118,8 +118,6 @@ button:not(:disabled) {
   padding: 0.8rem;
 }
 
-
-
 #error-section button:not(:disabled):hover {
   box-shadow: inset 13.5rem 0 0 0 #132A33;
   color: #fff;

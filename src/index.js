@@ -6,10 +6,10 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./routes/ErrorPage";
 import Main from "./routes/Main";
-import Join from "./routes/Join";
 import Host from "./routes/Host";
 import Local from "./routes/Local";
 import Demo from "./routes/Demo";
+import Play from "./routes/Play";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,8 +23,8 @@ root.render(
           children: [
             { path: "/", element: <Main /> },
             {
-              path: "/join",
-              element: <Join />,
+              path: "/play",
+              element: <Play />,
             },
             {
               path: "/host",
