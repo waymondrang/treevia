@@ -10,6 +10,9 @@ import Host from "./routes/Host";
 import Local from "./routes/Local";
 import Demo from "./routes/Demo";
 import Play from "./routes/Play";
+import io from "socket.io-client";
+
+const _io = io("http://localhost:3001");
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -24,11 +27,11 @@ root.render(
             { path: "/", element: <Main /> },
             {
               path: "/play",
-              element: <Play />,
+              element: <Play _io={_io} />,
             },
             {
               path: "/host",
-              element: <Host />,
+              element: <Host _io={_io} />,
             },
             {
               path: "/local",
