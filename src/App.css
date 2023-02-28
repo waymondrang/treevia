@@ -26,10 +26,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-  font-size: calc(20px + 2vmin);
-  color: rgb(42, 236, 13);
-=======
   flex-direction: column;
 }
 
@@ -63,7 +59,6 @@ button {
 button:disabled {
   opacity: 0.25;
   cursor: not-allowed;
->>>>>>> origin/main
 }
 
 button:not(:disabled) {

@@ -2,12 +2,7 @@
   
   width: 100%;
   height: 100%;
-  background: #76b852;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #8DC26F, #76b852);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #8DC26F, #76b852);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
   .MainPage h1{
     text-align: center;
@@ -25,21 +20,20 @@
   }
 .buttons-list{
   width: 100%;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
-
   text-align: center;
 }
 .button{
   text-align: center;
-  height: 3rem;
+  height: fit-content;
   border: none;
   border-radius: 0.25em;
   background-color: #c5e1a5;
   margin: 0.25rem;
   box-shadow: inset 0 0 0 0 #558b2f;
   transition: all 0.25s cubic-bezier(0, 0, .01, 1);
-  color: #000;
+  color: #2a3422;
   font-weight: bold;
   font-size: 1.4rem;
 }

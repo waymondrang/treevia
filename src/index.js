@@ -9,28 +9,36 @@ import JoinPage from "./routes/JoinPage";
 import HostPage from "./routes/HostPage";
 import LocalPage from "./routes/LocalPage";
 import TriviaTestPage from "./routes/TriviaTestPage";
+import MainPage from "./routes/MainPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <RouterProvider
       router={createBrowserRouter([
-        { path: "/", element: <App />, errorElement: <ErrorPage /> },
         {
-          path: "/join",
-          element: <JoinPage />,
-        },
-        {
-          path: "/host",
-          element: <HostPage />,
-        },
-        {
-          path: "/local",
-          element: <LocalPage />,
-        },
-        {
-          path: "/triviatest",
-          element: <TriviaTestPage />,
+          path: "/",
+          element: <App />,
+          errorElement: <ErrorPage />,
+          children: [
+            { path: "/", element: <MainPage /> },
+            {
+              path: "/join",
+              element: <JoinPage />,
+            },
+            {
+              path: "/host",
+              element: <HostPage />,
+            },
+            {
+              path: "/local",
+              element: <LocalPage />,
+            },
+            {
+              path: "/test",
+              element: <TriviaTestPage />,
+            },
+          ],
         },
       ])}
     />

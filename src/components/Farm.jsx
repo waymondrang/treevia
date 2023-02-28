@@ -1,4 +1,4 @@
-import "./Farm.css";
+import "../Farm.css";
 import React, { Component } from 'react';
 
 class Farm extends Component{
@@ -20,7 +20,20 @@ class Farm extends Component{
             }]
     };
   }
-  
+  imgState({imgs}){
+    this.setState({
+        field: imgs.field, //correlates with soil
+        irrigation: imgs.irrigation,                   //correlates with water
+        SustainableProp: imgs.SustainableProp,              
+        NatDistaster: imgs.NatDistaster,         
+        CarbonEmissions: imgs.CarbonEmissions,
+        misc: imgs.misc,
+        crop0: imgs.crop0,
+        crop1: imgs.crop1,
+        crop2: imgs.crop2,
+        crop3: imgs.crop3,
+    })
+  }
     render(){            
         return (
             <div className="farm">

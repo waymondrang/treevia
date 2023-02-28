@@ -10,14 +10,10 @@
     "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-<<<<<<< HEAD
-    "react-scripts": "^5.0.1",
-=======
-    "react-router-dom": "^6.8.1",
+    "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
     "socket.io": "^4.6.1",
     "socket.io-client": "^4.6.1",
->>>>>>> origin/main
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,7 +30,7 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      "0.2%",
       "not dead",
       "not op_mini all"
     ],

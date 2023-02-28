@@ -1,4 +1,5 @@
-import "./Stats.css";
+import "../Stats.css";
+import "../Farm.css";
 import React, { Component } from 'react';
 
 class Stats extends Component{
@@ -45,12 +46,6 @@ class Stats extends Component{
             </div> 
         );
     }
-    setImgs(){
-      images = {
-        
-      }
-    }
 }
-
 
 export default Stats;
