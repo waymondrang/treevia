@@ -24,6 +24,7 @@ export default function Play() {
 
   return (
     <div id="play">
+      <span id="debug">{socketStatus}</span>
       {gameState === 0 && (
         <div id="join">
           <h1>Join Game</h1>
@@ -36,7 +37,6 @@ export default function Play() {
           <button onClick={joinGame} type="button">
             Join
           </button>
-          <span>{socketStatus}</span>
         </div>
       )}
       {gameState === 1 && (
