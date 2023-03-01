@@ -14,8 +14,13 @@ const io = new socketio.Server(server, {
   },
 });
 
+type Player = {
+  id: string;
+  name: string;
+};
+
 type Game = {
-  players: string[];
+  players: Player[];
   host: string;
   gameState: number;
   hostState: number;
@@ -39,43 +44,82 @@ app.use(express.static("build"));
 
 io.on("connection", function (socket) {
   console.log("Socket Connection Established");
-  socket.on("joinRoom", function (roomCode) {
-    console.log("[" + socket.id + "] Joining Room: " + roomCode);
-    if (games[roomCode] === undefined) {
+  var roomCode: string;
+
+  socket.on("joinRoom", function (rc) {
+    console.log("[" + socket.id + "] Joining Room: " + rc);
+    if (games[rc] === undefined) {
       socket.emit("gameError", "Room does not exist.");
       return;
     }
-    socket.join(roomCode);
-    games[roomCode].players.push(socket.id);
-    console.log(games[roomCode].players);
-    io.to(roomCode).emit("gameState", games[roomCode].gameState);
+    socket.join(rc);
+    games[rc].players.push({ id: socket.id, name: "" });
+    console.log(games[rc].players);
+    io.to(rc).emit("gameState", games[rc].gameState);
+    // send player list to host
+    io.to(games[rc].host).emit("completeGameState", games[rc]);
+
+    roomCode = rc;
   });
 
-  socket.on("createRoom", function (roomCode) {
-    console.log("[" + socket.id + "] Creating Room: " + roomCode);
-    socket.join(roomCode);
-    games[roomCode] = {
+  socket.on("createRoom", function (rc) {
+    console.log("[" + socket.id + "] Creating Room: " + rc);
+    socket.join(rc);
+    games[rc] = {
       players: [],
       gameState: 1,
       hostState: 1,
       host: socket.id,
     };
+    io.to(rc).emit("gameState", games[rc].gameState);
+    io.to(rc).emit("hostState", games[rc].hostState);
+
+    roomCode = rc;
+  });
+
+  socket.on("startGame", function () {
+    if (games[roomCode].host !== socket.id) {
+      socket.emit("gameError", "You are not the host.");
+      return;
+    }
+
+    if (!roomCode) {
+      socket.emit("gameError", "You are not in a room.");
+      return;
+    }
+
+    console.log("[" + socket.id + "] Starting Game: " + roomCode);
+    games[roomCode].gameState = 2;
+    games[roomCode].hostState = 2;
     io.to(roomCode).emit("gameState", games[roomCode].gameState);
     io.to(roomCode).emit("hostState", games[roomCode].hostState);
   });
 
-  // TODO: do not delete room if last player is still in game and host is still alive
   socket.on("disconnect", function () {
     console.log("Socket Disconnected");
     // remove player from game
-    for (var roomCode in games) {
-      var index = games[roomCode].players.indexOf(socket.id);
-      if (index > -1) {
-        games[roomCode].players.splice(index, 1);
-        if (games[roomCode].players.length === 0) {
-          delete games[roomCode];
-        }
-        return;
+    if (roomCode && games[roomCode]) {
+      games[roomCode].players = games[roomCode].players.filter(
+        (p) => p.id !== socket.id
+      );
+      // send player list to host
+      io.to(games[roomCode].host).emit("completeGameState", games[roomCode]);
+
+      // if host disconnects, delete game
+      if (games[roomCode].host === socket.id) {
+        console.log("[" + socket.id + "] Deleting Game: " + roomCode);
+        io.to(roomCode).emit("gameError", "Host has disconnected.");
+        io.to(roomCode).emit("gameState", 0);
+        // remove room
+        io.of("/")
+          .in(roomCode)
+          .fetchSockets()
+          .then((sockets) => {
+            sockets.forEach((socket) => {
+              socket.leave(roomCode);
+            });
+          });
+        delete games[roomCode];
       }
     }
   });
