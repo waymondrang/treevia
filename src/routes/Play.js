@@ -9,12 +9,15 @@ export default function Play({ _io }) {
   var [gameError, setGameError] = useState("");
 
   useEffect(() => {
+    _io.connect();
+
     _io.on("connect", () => {
       console.log("Connected to Server");
       setSocketStatus(_io.connected);
     });
 
     _io.on("gameState", (state) => {
+      if (state !== 0) setGameError("");
       setGameState(state);
     });
 
@@ -28,6 +31,9 @@ export default function Play({ _io }) {
     });
 
     return () => {
+      // disconnect from server
+      _io.disconnect();
+      // remove event listeners
       _io.off("connect");
       _io.off("gameState");
       _io.off("gameError");
@@ -35,8 +41,12 @@ export default function Play({ _io }) {
   }, []);
 
   function joinRoom() {
+    if (!_io.connected) {
+      console.log("No Connection to Server");
+      setGameError("No Connection to Server.");
+      return;
+    }
     console.log("Joining Room...");
-    setGameError("");
     // join room
     _io.emit("joinRoom", roomCode);
   }
@@ -63,6 +73,12 @@ export default function Play({ _io }) {
           <h1>Waiting for Game to Start</h1>
         </div>
       )}
+      {gameState === 2 && (
+        <div id="game">
+          <h1>Get Ready!</h1>
+        </div>
+      )}
+
       {gameError && (
         <div id="error">
           <span>Oops! {gameError}</span>

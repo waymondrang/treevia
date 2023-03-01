@@ -13,6 +13,7 @@ import Play from "./routes/Play";
 import io from "socket.io-client";
 
 const _io = io("http://localhost:3001");
+_io.disconnect();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
