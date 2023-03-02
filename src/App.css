@@ -1,4 +1,16 @@
-#main-menu {
+@-webkit-keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+#top-section {
   height: 100vh;
   background: #76b852;
   background: -webkit-linear-gradient(to right, #8DC26F, #76b852);
@@ -46,7 +58,6 @@
 
 button {
   font-family: "Object Sans";
-  height: 3rem;
   width: 12rem;
   border: none;
   border-radius: 0.25em;
@@ -68,6 +79,7 @@ button:not(:disabled) {
 #main-menu button {
   background: #558b2f;
   color: #fff;
+  padding: 0.8rem;
 }
 
 #main-menu button:not(:disabled):hover {
@@ -115,6 +127,7 @@ button:not(:disabled) {
 #error-section button {
   background-color: #2C5F73;
   color: #fff;
+  padding: 0.8rem;
 }
 
 #error-section button:not(:disabled):hover {

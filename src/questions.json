@@ -1,0 +1,1513 @@
+[
+    {
+        "question": "Which of the following is not a technique used in hydroponics?",
+        "answers": [
+            {
+                "answer": "Soil immersion technique",
+                "correct": true
+            },
+            {
+                "answer": "Deep flow technique",
+                "correct": false
+            },
+            {
+                "answer": "Floating technique",
+                "correct": false
+            },
+            {
+                "answer": "Capillary action technique",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": " Hydroponics is a soil-less method where the roots of the plant are immersed in a nutrient solution (Sardare)."
+    },
+
+    {
+        "question": "Aeroponics is the method of growing plants using fine drops (aerosols). This method is best for which type of vegetable?",
+        "answers": [
+            {
+                "answer": "Spinach",
+                "correct": true
+            },
+            {
+                "answer": "Carrot",
+                "correct": false
+            },
+            {
+                "answer": "Potato",
+                "correct": false
+            },
+            {
+                "answer": "Zucchini",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Aeroponics is the best for leafy vegetables like cabbage, spinach, kale, etc (Sardare)."
+    },
+
+    {
+        "question": "Which of the following is not a benefit of growing methods like hydroponics/ aeroponics/ aquaponics?",
+        "answers": [
+            {
+                "answer": "Seasonal growing times",
+                "correct": true
+            },
+            {
+                "answer": "Higher yield rate",
+                "correct": false
+            },
+            {
+                "answer": "Less water usage",
+                "correct": false
+            },
+            {
+                "answer": "Fewer pest problems",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "These growing methods allow for year-round growing which is one of the most valuable features it has. Using grow lights, plants are able to sustain life in any location throughout the year (Sardare)."
+    },
+
+    {
+        "question": "When is the best time to water your plants?",
+        "answers": [
+            {
+                "answer": "6-8 am",
+                "correct": true
+            },
+            {
+                "answer": "2-4 pm",
+                "correct": false
+            },
+            {
+                "answer": "5-7 pm",
+                "correct": false
+            },
+            {
+                "answer": "9-11 am",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "The best time to water plants is in the morning or evening when the sun is not as prominent. Watering during the day will increase the chances that the water will evaporate instead of absorbing into the soil and into the roots of plants (Sardare)."
+    },
+
+    {
+        "question": "Aquaponics is a growing method that combines aquaculture and hydroponics. This creates a _____ relationship between plants and aquatic animals.",
+        "answers": [
+            {
+                "answer": "Symbiotic",
+                "correct": true
+            },
+            {
+                "answer": "Parasitic",
+                "correct": false
+            },
+            {
+                "answer": "Commensalism",
+                "correct": false
+            },
+            {
+                "answer": "Neutralism",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Both plants and aquatic animals benefit from being in an aquaponic environment. Generally, fish are utilized and they produce ammonia. Plant bacteria transform this into nutrients that can be uptaken and act as a natural filter to detoxify the water for recirculation."
+    },
+
+    {
+        "question": "Drip irrigation is an efficient water method that delivers water directly to the plant's roots. By how much percent does drip irrigation reduce water usage compared to surface irrigation?",
+        "answers": [
+            {
+                "answer": "30-50%",
+                "correct": true
+            },
+            {
+                "answer": "10-30%",
+                "correct": false
+            },
+            {
+                "answer": "50-70%",
+                "correct": false
+            },
+            {
+                "answer": "70-90%",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "\"Drip irrigation uses 30-50% less water than surface irrigation, reduces salinization and waterlogging, and achieves up to 95% irrigation efficiency” (World Bank, 2006: 163)."
+    },
+
+    {
+        "question": "Which of the following is an example of a synthetic fertilizer?",
+        "answers": [
+            {
+                "answer": "Ammonium phosphate",
+                "correct": true
+            },
+            {
+                "answer": "Kelp meal",
+                "correct": false
+            },
+            {
+                "answer": "Manure",
+                "correct": false
+            },
+            {
+                "answer": "Compost",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Natural fertilizers are organic substances that contain vital nutrients for plant growth whereas synthetic fertilizers are made of synthesized chemicals like nitrogen, potassium, and phosphorus (Hazra)."
+    },
+
+    {
+        "question": "Which of the following is not one of the 3 primary macronutrients that plants need to receive additionally through fertilizers for growth?",
+        "answers": [
+            {
+                "answer": "Sodium",
+                "correct": true
+            },
+            {
+                "answer": "Nitrogen",
+                "correct": false
+            },
+            {
+                "answer": "Phosphorus",
+                "correct": false
+            },
+            {
+                "answer": "Potassium",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Sodium is not an essential nutrient for plants but can be used in micro amounts to aid in water retention and metabolism. Nitrogen, potassium, and phosphorus are three nutrients used in large amounts by plants so it is important for these elements to be restored in order to maintain productivity (Hazra)."
+    },
+
+    {
+        "question": "Which of the following is not a benefit of drip irrigation?",
+        "answers": [
+            {
+                "answer": "High salinity",
+                "correct": true
+            },
+            {
+                "answer": "Water and nutrient doses are tailored to the plant",
+                "correct": false
+            },
+            {
+                "answer": "Good soil aeration",
+                "correct": false
+            },
+            {
+                "answer": "High availability of water and nutrients",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Drip irrigation is when water and nutrients are delivered in small periodic amounts to a plant. This reduces the need for excessive fertilizer application which results in a lower salinity of the soil."
+    },
+
+    {
+        "question": "Permaculture is the design and maintenance of agriculturally productive ecosystems that have productivity and stability as a holistic ecosystem. Which is a core component of permaculture practice?",
+        "answers": [
+            {
+                "answer": "Perennial crops",
+                "correct": true
+            },
+            {
+                "answer": "Open loop systems",
+                "correct": false
+            },
+            {
+                "answer": "Surface irrigation",
+                "correct": false
+            },
+            {
+                "answer": "Dependency on the grower for maintenance",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Perennials are plants that come back every year. Perennials only require being planted once which is more soil sustainable compared to annual crops that require constant tillage. The main concepts of permaculture are based on closed-loop systems, multiple functionalities, water conservation, and letting nature do the work for you (Ferguson)."
+    },
+
+    {
+        "question": "What are some farming practices that stem from the idea of permaculture?",
+        "answers": [
+            {
+                "answer": "All the choices are correct",
+                "correct": true
+            },
+            {
+                "answer": "Produce no waste",
+                "correct": false
+            },
+            {
+                "answer": "Terraces on steep land",
+                "correct": false
+            },
+            {
+                "answer": "Design components to serve multiple purposes",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Permaculture is creating an efficient and self-sustainable environment. These examples given are all based on the core principles of permaculture (Ferguson)."
+    },
+
+    {
+        "question": "Which of the following decreases soil productivity?",
+        "answers": [
+            {
+                "answer": "Increased soil sealing",
+                "correct": true
+            },
+            {
+                "answer": "Increased soil organic matter",
+                "correct": false
+            },
+            {
+                "answer": "Managing soil erosion through soil conservation",
+                "correct": false
+            },
+            {
+                "answer": "Enhancing soil biodiversity",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Soil sealing is the destruction or covering of the ground by an impermeable material and is one of the main causes of soil degradation. Therefore, decreasing the amount of soil sealing helps increase soil productivity (Rojas)."
+    },
+
+    {
+        "question": "Which of the following is not a type of soil microbe?",
+        "answers": [
+            {
+                "answer": "Earthworms",
+                "correct": true
+            },
+            {
+                "answer": "Bacteria",
+                "correct": false
+            },
+            {
+                "answer": "Archaea",
+                "correct": false
+            },
+            {
+                "answer": "Protozoa",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Most soil microbes can be classified into one of the five different microbes: actinomycetes, bacteria, fungi, nematodes, and protozoa (Rojas)."
+    },
+
+    {
+        "question": "One gram of fertile soil can contain up to ___ bacteria.",
+        "answers": [
+            {
+                "answer": "One billion",
+                "correct": true
+            },
+            {
+                "answer": "One trillion",
+                "correct": false
+            },
+            {
+                "answer": "One hundred",
+                "correct": false
+            },
+            {
+                "answer": "One million",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "One gram of soil can have up to 1 billion bacteria. Although they are small, they make up the majority of the soil's biomass (Raynaud)."
+
+    },
+
+    {
+        "question": "What is a healthy range of soil pH?",
+        "answers": [
+            {
+                "answer": "5.5 to 7.5",
+                "correct": true
+            },
+            {
+                "answer": "7.0 to 9.0",
+                "correct": false
+            },
+            {
+                "answer": "3.5 to 5.5",
+                "correct": false
+            },
+            {
+                "answer": "1.0 to 3.0",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Soil pH should be close to neutral so a range of a slightly acidic pH of 5.5 to a slightly alkaline pH of 7.5 is considered good for plant growth (Neina)."
+        
+    },
+
+    {
+        "question": "What is soil pH a measure of?",
+        "answers": [
+            {
+                "answer": "Acidity or alkalinity of the soil",
+                "correct": true
+            },
+            {
+                "answer": "Number of microorganisms present",
+                "correct": false
+            },
+            {
+                "answer": "Water saturation",
+                "correct": false
+            },
+            {
+                "answer": "Root density in one cubic meter of soil",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "A pH value is the measure of hydrogen concentration so soil pH is the measure of the acidity or alkalinity of the soil. Lower pH corresponds to more acidic soil whereas higher pH is alkaline (Neina)."
+        
+    },
+
+    {
+        "question": "Plants are only able to absorb nitrogen in two forms: nitrate and ammonium. This means that they need to convert nitrogen gas from the atmosphere into a usable form that they can uptake. What is this process called?",
+        "answers": [
+            {
+                "answer": "Nitrogen fixation",
+                "correct": true
+            },
+            {
+                "answer": "Nitrogen transformation",
+                "correct": false
+            },
+            {
+                "answer": "Nitrification",
+                "correct": false
+            },
+            {
+                "answer": "Nitric acid synthesis",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Through a process called nitrogen fixation, microorganisms capture atmospheric nitrogen and convert it to ammonia. This new form of nitrogen can now be absorbed and utilized by plants to make organic molecules (Qu)."
+        
+    },
+
+    {
+        "question": "Which of the following do not affect soil pH?",
+        "answers": [
+            {
+                "answer": "Sunlight",
+                "correct": true
+            },
+            {
+                "answer": "Climate",
+                "correct": false
+            },
+            {
+                "answer": "Minerals",
+                "correct": false
+            },
+            {
+                "answer": "Soil texture",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Soil pH is affected by factors like climate, minerals present in the soil, and soil texture (Qu)."
+        
+    },
+
+    {
+        "question": "Which is not a result of utilizing chemical fertilizers?",
+        "answers": [
+            {
+                "answer": "None of the choices are correct.",
+                "correct": true
+            },
+            {
+                "answer": "Soil degradation",
+                "correct": false
+            },
+            {
+                "answer": "Nitrogen leaching",
+                "correct": false
+            },
+            {
+                "answer": "Soil compaction",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "All of the choices are a potential result. Chemical fertilizers are often used to enhance crop yield and decrease pest problems, but a long time use of them can damage the soil’s microbiome (Lin)."
+        
+    },
+
+    {
+        "question": "The impacts of soil erosion include?",
+        "answers": [
+            {
+                "answer": "All the choices are correct.",
+                "correct": true
+            },
+            {
+                "answer": "Reduced soil's ability to store water and nutrients",
+                "correct": false
+            },
+            {
+                "answer": "Exposure of subsoil",
+                "correct": false
+            },
+            {
+                "answer": "Higher runoff rates",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Soil erosion removes valuable topsoil which is the most productive part of the soil for agricultural purposes and results in lower crop yield (Nearing)."
+        
+    },
+
+    {
+        "question": "How much soil is lost due to erosion in the Midwestern US each year?",
+        "answers": [
+            {
+                "answer": "2mm",
+                "correct": true
+            },
+            {
+                "answer": "5mm",
+                "correct": false
+            },
+            {
+                "answer": "1cm",
+                "correct": false
+            },
+            {
+                "answer": "2cm",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "According to a study done by the University of Massachusetts Amherst, midwestern US farmland loses on average 2mm of soil per year. This is double the erosion rate that the USDA deems to be sustainable (Nearing)."
+        
+    },
+
+    {
+        "question": "The most common effects of natural disasters on agriculture are?",
+        "answers": [
+            {
+                "answer": "All the choices are correct",
+                "correct": true
+            },
+            {
+                "answer": "Water contamination",
+                "correct": false
+            },
+            {
+                "answer": "Increased disease susceptibility",
+                "correct": false
+            },
+            {
+                "answer": "Irrigation system damage",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Agriculture depends on the climate and accessibility of water so natural disasters affect the growth and output of crops significantly."
+        
+    },
+
+    {
+        "question": "Which natural disaster impacts agriculture the greatest?",
+        "answers": [
+            {
+                "answer": "Drought",
+                "correct": true
+            },
+            {
+                "answer": "Hurricane",
+                "correct": false
+            },
+            {
+                "answer": "Floods",
+                "correct": false
+            },
+            {
+                "answer": "Tornado",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Drought causes 44% of crop and livestock production loss compared to floods that result in a 39% production loss (Sivakumar)."
+        
+    },
+
+    {
+        "question": "Which natural disaster causes destabilization of soil, damage to a plant’s root system, and destruction of natural underground watersheds?",
+        "answers": [
+            {
+                "answer": "Earthquakes",
+                "correct": true
+            },
+            {
+                "answer": "Tsunamis",
+                "correct": false
+            },
+            {
+                "answer": "Cyclones",
+                "correct": false
+            },
+            {
+                "answer": "Wildfires",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Earthquakes cause the soil underneath crops to become loose which results in damaged root systems (Sivakumar)."
+        
+    },
+
+    {
+        "question": "Which natural disaster causes destabilization of soil, damage to a plant’s root system, and destruction of natural underground watersheds?",
+        "answers": [
+            {
+                "answer": "$12 billion",
+                "correct": true
+            },
+            {
+                "answer": "$20 billion",
+                "correct": false
+            },
+            {
+                "answer": "$700 million",
+                "correct": false
+            },
+            {
+                "answer": "$5 billion",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Natural disasters resulted in a domestic food production loss of over $12.5 billion in 2021. Drought and wildfires contributed to over $3.3 billion alone (Sivakumar)."
+        
+    },
+
+    {
+        "question": "Agriculture absorbs ___% of the total economic impact caused by natural hazards",
+        "answers": [
+            {
+                "answer": "22",
+                "correct": true
+            },
+            {
+                "answer": "36",
+                "correct": false
+            },
+            {
+                "answer": "64",
+                "correct": false
+            },
+            {
+                "answer": "13",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "In the past decade, the US lost a total of $140 billion in damages across all sectors due to disasters. The agriculture sector occupies 14% of damages and 29% of loss across all sectors for a combined percentage of 22% in damage and loss in agriculture (Cutter)."
+        
+    },
+
+    {
+        "question": "Which natural disaster negatively affects the forestry subsector the most?",
+        "answers": [
+            {
+                "answer": "Storms",
+                "correct": true
+            },
+            {
+                "answer": "Floods",
+                "correct": false
+            },
+            {
+                "answer": "Tsunamis",
+                "correct": false
+            },
+            {
+                "answer": "Earthquakes",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Storms which include hurricanes and typhoons have the greatest impact on the forestry subsector (Banholzer)."
+        
+    },
+
+    {
+        "question": "How can climate change affect natural disasters?",
+        "answers": [
+            {
+                "answer": "All the choices are correct",
+                "correct": true
+            },
+            {
+                "answer": "Evaporating water vapor promotes powerful storms",
+                "correct": false
+            },
+            {
+                "answer": "Warmer sea temperatures increase tropical storm wind speeds",
+                "correct": false
+            },
+            {
+                "answer": "Increased intensity of storms",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Raising temperatures due to climate change increases the chances and frequencies of storms."
+        
+    },
+
+    {
+        "question": "The number of climate-related disasters has ____ in the past 30 years.",
+        "answers": [
+            {
+                "answer": "Tripled",
+                "correct": true
+            },
+            {
+                "answer": "Doubled",
+                "correct": false
+            },
+            {
+                "answer": "Halved",
+                "correct": false
+            },
+            {
+                "answer": "Quadrupled",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "As global warming continues to progress, the number of climate-related disasters has tripled in the past 30 years (Banholzer)."
+        
+    },
+
+    {
+        "question": "In the last 20 years, how many inches has the sea level risen?",
+        "answers": [
+            {
+                "answer": "3 in",
+                "correct": true
+            },
+            {
+                "answer": "5 in",
+                "correct": false
+            },
+            {
+                "answer": "0.5 in",
+                "correct": false
+            },
+            {
+                "answer": "1 in",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Sea levels have risen 3 inches in the past 20 years. Since 1950, sea levels have increased by nearly 6.5 inches (Banholzer)."
+        
+    },
+
+    {
+        "question": "True or false: there are protection plans for farmers to assist with damages caused by natural disasters.",
+        "answers": [
+            {
+                "answer": "True, there are government-funded programs to financially aid",
+                "correct": true
+            },
+            {
+                "answer": "True, there are one-time programs that only last for 1 year",
+                "correct": false
+            },
+            {
+                "answer": "False, farmers just have to take the financial loss themselves",
+                "correct": false
+            },
+            {
+                "answer": "None of the choices are correct",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "The US government provides a variety of disaster relief programs like the Noninsured Disaster Assistance Program (NAP), Family Farm Disaster Fund, etc to help farmers out after they are affected by a natural disaster (Cutter)."
+        
+    },
+
+    {
+        "question": "What are the three major gasses emitted by agriculture that contribute to global warming?",
+        "answers": [
+            {
+                "answer": "carbon dioxide, methane, and nitrous oxide",
+                "correct": true
+            },
+            {
+                "answer": "ozone, nitrogen, and argon",
+                "correct": false
+            },
+            {
+                "answer": "oxygen, carbon dioxide, and methane",
+                "correct": false
+            },
+            {
+                "answer": "argon, helium, and carbon dioxide",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Carbon Dioxide, Methane, and Nitrous Oxide are the three most infamous contributors to global warming, particularly in agriculture (Pant, K. P.)."
+        
+    },
+
+    {
+        "question": "As a farmer, you intend to implement more practices to decrease the emission of greenhouse gasses. Which of the following will not allow you to do so?",
+        "answers": [
+            {
+                "answer": "Cutting down trees to build a greenhouse",
+                "correct": true
+            },
+            {
+                "answer": "Eating plant-based",
+                "correct": false
+            },
+            {
+                "answer": "Using solar-powered machinery",
+                "correct": false
+            },
+            {
+                "answer": "Stabilizing carbon in crops",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Deforestation takes away a natural carbon sink — which is a system that absorbs carbon. Without it, more carbon is staying in the atmosphere (Pant, K. P.)."
+        
+    },
+
+    {
+        "question": "Carbon sinks are systems that absorb more carbon dioxide than they release. Why are forests considered natural carbon sinks?",
+        "answers": [
+            {
+                "answer": "Plants convert carbon dioxide into oxygen, thereby reducing carbon in the environment",
+                "correct": true
+            },
+            {
+                "answer": "Many animals live in forests and contribute to the natural carbon cycle.",
+                "correct": false
+            },
+            {
+                "answer": "Lots of decomposition occurs on the forest ground.",
+                "correct": false
+            },
+            {
+                "answer": "Humans tend not to live in forests, so less man-made destruction occurs there.",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "All plants perform photosynthesis where they convert CO2 to O2 (Pant, K. P.)."
+        
+    },
+
+    {
+        "question": "Which of the following is not a major source of carbon found on most farms?",
+        "answers": [
+            {
+                "answer": "Produce",
+                "correct": true
+            },
+            {
+                "answer": "Machinery",
+                "correct": false
+            },
+            {
+                "answer": "Livestock",
+                "correct": false
+            },
+            {
+                "answer": "Transportation",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Machinery, livestock, and transportation all contribute to carbon emissions (Pant, K. P.)."
+        
+    },
+
+    {
+        "question": "Why is buying locally sourced produce beneficial for climate change?",
+        "answers": [
+            {
+                "answer": "The produce has to travel less distance to get to the customer.",
+                "correct": true
+            },
+            {
+                "answer": "Local produce is organic which is better for the climate.",
+                "correct": false
+            },
+            {
+                "answer": "Local businesses use less machinery which is more environmentally friendly.",
+                "correct": false
+            },
+            {
+                "answer": "It is better to buy native species of crops since biodiversity is suffering.",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Buying things locally means there is less travel time for the customer, so less fuel is burned (Pant, K. P.)."
+        
+    },
+
+    {
+        "question": "Does carbon sequestration increase or decrease atmospheric carbon levels?",
+        "answers": [
+            {
+                "answer": "Decrease; by storing atmospheric carbon, it is getting removed from the environment.",
+                "correct": true
+            },
+            {
+                "answer": "Increase; the plants less efficiently transform carbon, so there are higher levels of it.",
+                "correct": false
+            },
+            {
+                "answer": "Decrease; carbon binds to other elements to become a less harmful compound",
+                "correct": false
+            },
+            {
+                "answer": "Increase; the carbon is more likely to bind to oxygen in its atmospheric form.",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Carbon Sequestration is the stabilization and trapping of carbon, usually in its solid compound form (West, T.O., Marland, G.)."
+        
+    },
+
+    {
+        "question": "Which of the following is true regarding the relationship between crop yields and carbon sequestration?",
+        "answers": [
+            {
+                "answer": "The benefits of carbon sequestration can be outweighed if the crop yields decrease as a result.",
+                "correct": true
+            },
+            {
+                "answer": "Carbon sequestration always results in higher crop yields.",
+                "correct": false
+            },
+            {
+                "answer": "The benefits of carbon sequestration can be outweighed if the crop yields increase as a result.",
+                "correct": false
+            },
+            {
+                "answer": "Carbon sequestration always results in lower crop yields.",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "If crop yields decrease because you use a field with vegetation that stores carbon, another field will have to be used to compensate for the loss. This may set back CO2 mitigation (West, T.O., Marland, G.)."
+        
+    },
+
+    {
+        "question": "Why is large-scale CO2 mitigation so difficult to incorporate into farming practices?",
+        "answers": [
+            {
+                "answer": "All the choices are correct.",
+                "correct": true
+            },
+            {
+                "answer": "Many fertilizers contribute to the carbon cycle.",
+                "correct": false
+            },
+            {
+                "answer": "It can be expensive to opt for low-carbon options.",
+                "correct": false
+            },
+            {
+                "answer": "Emissions can actually increase if green materials need to be transported.",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "All options are true (West, T.O., Marland, G.)."
+        
+    },
+
+    {
+        "question": "Which of the following is not a method to decrease or offset CO2 emissions?",
+        "answers": [
+            {
+                "answer": "Importing crops",
+                "correct": true
+            },
+            {
+                "answer": "Decreased tillage",
+                "correct": false
+            },
+            {
+                "answer": "Efficient fertilization",
+                "correct": false
+            },
+            {
+                "answer": "Irrigation",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Importing materials requires transportation which often burns fossil fuels (West, T.O., Marland, G.)."
+        
+    },
+
+    {
+        "question": "True or False: As a farmer, you are trying to decide how to use your land in the most productive but green way possible. An effective way to do this is to focus on increasing crop yield per field.",
+        "answers": [
+            {
+                "answer": "True, increasing yield per field means that you can use fewer fields to meet the demand.",
+                "correct": true
+            },
+            {
+                "answer": "True, increasing crop yield will increase crop demand.",
+                "correct": false
+            },
+            {
+                "answer": "False, increasing crop yield will increase carbon emissions since more fertilizer will be used.",
+                "correct": false
+            },
+            {
+                "answer": "False, increasing crop yield will decrease crop demand.",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "This is true; making more efficient use of a field will cause a decrease in both emissions and carbon accumulation (West, T.O., Marland, G.)."
+        
+    },
+
+    {
+        "question": "Irrigation is generally considered to be an eco-friendly method of watering crops. What percentage of water in a typical irrigation system is actually applied to the crops?",
+        "answers": [
+            {
+                "answer": "55%",
+                "correct": true
+            },
+            {
+                "answer": "35%",
+                "correct": false
+            },
+            {
+                "answer": "75%",
+                "correct": false
+            },
+            {
+                "answer": "95%",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Irrigation is considered inefficient because only about half of the water used goes to the plant. The outlying percentages of water go to other areas of the farm or are lost (Chartzoulakis K., and Maria B.)."
+        
+    },
+
+    {
+        "question": "What is the relationship between crop yield and water availability?",
+        "answers": [
+            {
+                "answer": "It is a positive relationship that plateaus when the crop reaches the saturation point.",
+                "correct": true
+            },
+            {
+                "answer": "It is a negative relationship because overwatering decreases crop yield.",
+                "correct": false
+            },
+            {
+                "answer": "It is a positive relationship because more water causes more crops to grow.",
+                "correct": false
+            },
+            {
+                "answer": "The two are not related.",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "As water availability increases, crop yield will increase, but only till the saturation point of the crop.  (Chartzoulakis K., and Maria B.)."
+        
+    },
+
+    {
+        "question": "Which of the following is not a consequence of overirrigation?",
+        "answers": [
+            {
+                "answer": "Increased productivity",
+                "correct": true
+            },
+            {
+                "answer": "Increased disease development",
+                "correct": false
+            },
+            {
+                "answer": "Decreased nutrients",
+                "correct": false
+            },
+            {
+                "answer": "Increased water-logging conditions",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Crop yield typically decreases with overirrigation meaning that the productivity of the farm also goes down. (Chartzoulakis K., and Maria B.)."
+        
+    },
+
+    {
+        "question": "Which of the following irrigation techniques is the most efficient?",
+        "answers": [
+            {
+                "answer": "Drip irrigation",
+                "correct": true
+            },
+            {
+                "answer": "Micro-sprinkler",
+                "correct": false
+            },
+            {
+                "answer": "Overhead sprinkler",
+                "correct": false
+            },
+            {
+                "answer": "Sub-irrigation",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Drip irrigation (a type of localized irrigation) reduces water use by 30% and increases crop yields by 20%. (Chartzoulakis K., and Maria B.)."
+        
+    },
+
+    {
+        "question": "Though localized irrigation (watering each plant directly) has proven to be one of the most efficient methods, it accounts for less than 6% of the world's irrigated areas. Why is this technique difficult to implement?",
+        "answers": [
+            {
+                "answer": "There is a higher sensitivity to clogging.",
+                "correct": true
+            },
+            {
+                "answer": "The materials are too cheap.",
+                "correct": false
+            },
+            {
+                "answer": "Farmers do not know about this type of watering",
+                "correct": false
+            },
+            {
+                "answer": "It doesn't work for most types of plants.",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Localized irrigation is expensive and watering each plant individually leads to more water clogging (Chartzoulakis K., and Maria B.)."
+        
+    },
+
+    {
+        "question": "When using irrigation, farmers must establish an irrigation schedule. What are some metrics they can use to determine the best one?",
+        "answers": [
+            {
+                "answer": "All of the choices are correct.",
+                "correct": true
+            },
+            {
+                "answer": "Crop stress",
+                "correct": false
+            },
+            {
+                "answer": "Soil-water balance",
+                "correct": false
+            },
+            {
+                "answer": "Crop evapotranspiration",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "All of those metrics provide insight to what a plant requires and what its limits are. Factors to consider are the climate and soil potential  (Chartzoulakis K., and Maria B.)."
+        
+    },
+
+    {
+        "question": "What is a way to prevent water loss in irrigation?",
+        "answers": [
+            {
+                "answer": "Detect the water loss when it happens",
+                "correct": true
+            },
+            {
+                "answer": "Plant more crops to use more of the water.",
+                "correct": false
+            },
+            {
+                "answer": "Use saltwater instead of freshwater.",
+                "correct": false
+            },
+            {
+                "answer": "Plant fewer crops to require less water.",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Technologies such as remote sensing can detect the loss as soon as it happens so the farmer can take care of it  (Chartzoulakis K., and Maria B.)."
+        
+    },
+
+    {
+        "question": "What percentage of water withdrawal (the process of using and removing freshwater) does agriculture account for?",
+        "answers": [
+            {
+                "answer": "70%",
+                "correct": true
+            },
+            {
+                "answer": "10%",
+                "correct": false
+            },
+            {
+                "answer": "20%",
+                "correct": false
+            },
+            {
+                "answer": "50%",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "An overwhelming majority of water usage is from agriculture. Other sectors include residential, industrial, etc (Chartzoulakis K., and Maria B.)."
+        
+    },
+
+    {
+        "question": "Fill in the blank: ____ of the world's food comes from irrigated lands.",
+        "answers": [
+            {
+                "answer": "40%",
+                "correct": true
+            },
+            {
+                "answer": "10%",
+                "correct": false
+            },
+            {
+                "answer": "20%",
+                "correct": false
+            },
+            {
+                "answer": "60%",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "A sizable portion of the world's food comes from irrigated lands, especially considering that only 18% of the croplands are irrigated. (Chartzoulakis K., and Maria B.)."
+        
+    },
+
+    {
+        "question": "Why is water reliability in agriculture becoming more of an issue as the world has changed?",
+        "answers": [
+            {
+                "answer": "The population of the world is increasing, so the demand for crops (and thus water) has increased.",
+                "correct": true
+            },
+            {
+                "answer": "Global warming has caused water to evaporate more rapidly, so water availability has decreased.",
+                "correct": false
+            },
+            {
+                "answer": "The prevalence of GMOs has greatly increased, and they require more water to produce.",
+                "correct": false
+            },
+            {
+                "answer": "Saltwater is slowly taking over freshwater reservoirs which are necessary for agriculture.",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Crop demand is only increasing, so water reliability is much more critical. Water wastage is not tolerable because that deficit will be felt by other users. (Chartzoulakis K., and Maria B.)."
+        
+    },
+
+    {
+        "question": "What is one of the reasons more scientists are looking to implement more indigenous agricultural practices on the basis of sustainability?",
+        "answers": [
+            {
+                "answer": "They tend to use natural indicators (ie plants and animals) of the weather and climate to adjust their techniques.",
+                "correct": true
+            },
+            {
+                "answer": "They use fewer machines and technology which are inherently bad for the environment.",
+                "correct": false
+            },
+            {
+                "answer": "Their traditional techniques are much more efficient than modern ones.",
+                "correct": false
+            },
+            {
+                "answer": "All of the choices are correct.",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Indigenous practices often form a harmonious system with the earth which can make their crops more resilient (Nkomwa, Emmanuel Charles, et al.)."
+        
+    },
+
+    {
+        "question": "What is a natural indicator of climate change?",
+        "answers": [
+            {
+                "answer": "All of the choices are correct.",
+                "correct": true
+            },
+            {
+                "answer": "Animal population",
+                "correct": false
+            },
+            {
+                "answer": "Rainfall",
+                "correct": false
+            },
+            {
+                "answer": "Biodiversity",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "These are natural indicators that are especially utilized by indigenous practices. They are more small-scale, so they have the ability to be more attentive to all of these factors.  (Nkomwa, Emmanuel Charles, et al.)."
+        
+    },
+
+    {
+        "question": "What percentage of the economic activity in developing countries does agriculture account for?",
+        "answers": [
+            {
+                "answer": "25%",
+                "correct": true
+            },
+            {
+                "answer": "15%",
+                "correct": false
+            },
+            {
+                "answer": "10%",
+                "correct": false
+            },
+            {
+                "answer": "5%",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "25% of the economy in developing countries is due to agriculture; however, their productivity is generally low (Gollin, Douglas)."
+        
+    },
+
+    {
+        "question": "Globally, what percentage of workers make their living directly from agriculture?",
+        "answers": [
+            {
+                "answer": "40%",
+                "correct": true
+            },
+            {
+                "answer": "50%",
+                "correct": false
+            },
+            {
+                "answer": "10%",
+                "correct": false
+            },
+            {
+                "answer": "70%",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "On average, 40% of workers earn money from agriculture; that number is much higher in developing countries — around 60-75%. (Gollin, Douglas)."
+        
+    },
+
+    {
+        "question": "Which of the following regions has the highest fraction of agriculture-related jobs?",
+        "answers": [
+            {
+                "answer": "Eastern Africa",
+                "correct": true
+            },
+            {
+                "answer": "Central America",
+                "correct": false
+            },
+            {
+                "answer": "Southeastern Asia",
+                "correct": false
+            },
+            {
+                "answer": "Europe",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "73.2% of Eastern Africans work in agriculture and contribute to the economy (Gollin, Douglas)."
+        
+    },
+
+    {
+        "question": "Which of the following is not a possible reason that crop productivity differs so vastly across regions?",
+        "answers": [
+            {
+                "answer": "The land of developing countries is naturally more adverse to growth.",
+                "correct": true
+            },
+            {
+                "answer": "Poor data reporting might lead to skewed numbers.",
+                "correct": false
+            },
+            {
+                "answer": "Labor is comparatively lower-skilled.",
+                "correct": false
+            },
+            {
+                "answer": "The technology required to scale up production is limited.",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Though the infrastructure may eventually lead to adverse growing conditions, the environment is not an inherent reason why their crop productivity is lower (Gollin, Douglas)."
+        
+    },
+
+    {
+        "question": "Why is agriculture more significant culturally and economically in developing countries compared to developed countries?",
+        "answers": [
+            {
+                "answer": "Developing countries tend to import less, so they are more reliant on domestic agriculture.",
+                "correct": true
+            },
+            {
+                "answer": "Developed countries have fewer cultural ties to food.",
+                "correct": false
+            },
+            {
+                "answer": "Developing countries have stronger patriotism which leads them to consume more domestic products.",
+                "correct": false
+            },
+            {
+                "answer": "None of the choices are correct.",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Developed countries import a large percentage of their food, so less of their economy and culture is dedicated to the growing of food (Gollin, Douglas)."
+        
+    },
+
+    {
+        "question": "Which of the following is a reason that residents of developing countries experience high relative food prices?",
+        "answers": [
+            {
+                "answer": "All of the choices are correct",
+                "correct": true
+            },
+            {
+                "answer": "Low agricultural productivity",
+                "correct": false
+            },
+            {
+                "answer": "Few imports",
+                "correct": false
+            },
+            {
+                "answer": "Low-income",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Workers have less income to buy food, so their food prices are relatively higher. In addition, the supply of food is reduced which also raises the prices  (Gollin, Douglas)."
+        
+    },
+
+    {
+        "question": "On average, how much of household income in a third-world country is spent on food?",
+        "answers": [
+            {
+                "answer": ">50%",
+                "correct": true
+            },
+            {
+                "answer": "<50%",
+                "correct": false
+            },
+            {
+                "answer": "~ 50%",
+                "correct": false
+            },
+            {
+                "answer": "None, they grow their own food.",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Over half of a household income was often spent on food; in some cases, up to 80% was spent  (Gollin, Douglas)."
+        
+    },
+
+    {
+        "question": "Which of the following is not an effect of increased agricultural productivity?",
+        "answers": [
+            {
+                "answer": "All choices are an effect",
+                "correct": true
+            },
+            {
+                "answer": "Declining food prices",
+                "correct": false
+            },
+            {
+                "answer": "Expansion of industrial sector",
+                "correct": false
+            },
+            {
+                "answer": "Increasing competitiveness of agricultural exports",
+                "correct": false
+            }
+        ],
+        "category": "...",
+        "explanation": "Increased agricultural productivity has the potential to affect every other part of the economy which is why it is one of the key distinguishers between developing and developed countries  (Gollin, Douglas)."
+        
+    }
+]

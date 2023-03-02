@@ -1,36 +1,52 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useRouteError,
+} from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./routes/ErrorPage";
-import JoinPage from "./routes/JoinPage";
-import HostPage from "./routes/HostPage";
-import LocalPage from "./routes/LocalPage";
-import TriviaTestPage from "./routes/TriviaTestPage";
+import Main from "./routes/Main";
+import Host from "./routes/Host";
+import Local from "./routes/Local";
+import Demo from "./routes/Demo";
+import Play from "./routes/Play";
+import io from "socket.io-client";
+
+const _io = io();
+_io.disconnect();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <RouterProvider
       router={createBrowserRouter([
-        { path: "/", element: <App />, errorElement: <ErrorPage /> },
         {
-          path: "/join",
-          element: <JoinPage />,
-        },
-        {
-          path: "/host",
-          element: <HostPage />,
-        },
-        {
-          path: "/local",
-          element: <LocalPage />,
-        },
-        {
-          path: "/triviatest",
-          element: <TriviaTestPage />,
+          path: "/",
+          element: <App />,
+          errorElement: <ErrorPage />,
+          children: [
+            { path: "/", element: <Main /> },
+            {
+              path: "/play",
+              element: <Play _io={_io} />,
+            },
+            {
+              path: "/host",
+              element: <Host _io={_io} />,
+            },
+            {
+              path: "/local",
+              element: <Local />,
+            },
+            {
+              path: "/demo",
+              element: <Demo />,
+            },
+          ],
         },
       ])}
     />
