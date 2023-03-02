@@ -5,25 +5,31 @@ import React, { Component } from 'react';
 class Stats extends Component{
   constructor(props) {
     super(props);
-    console.log(this.props);
     this.state = {
       Productivity: 0,
       Resilience: 0,
       Ecofriendliness: 0,
       Average: 0,
     };
-
+    console.log("constructor ran");
   }
-  incState({stats}){
-    this.setState({
-      Productivity: this.state.Productivity + stats.Productivity,
-      Resilience: this.state.Resilience + stats.Resilience,
-      Ecofriendliness: this.state.Ecofriendliness + stats.Ecofriendliness,
-      Average: this.state.Average + stats.Average,
-    })
 
+  
+  componentDidMount(){
+    if(this.props.data !== null){
+      this.setState(
+              { Productivity: this.state.Productivity + this.props.data.Productivity,
+                Resilience: this.state.Resilience + this.props.data.Resilience,
+                Ecofriendliness:this.state.Ecofriendliness + this.props.data.Ecofriendliness,
+                Average:(((this.state.Productivity + this.props.data.Productivity)+(this.state.Resilience + this.props.data.Resilience)+(this.state.Ecofriendliness + this.props.data.Ecofriendliness))/3).toFixed(2) 
+              });
+              console.log("Did mount and state is now"+ this.state.Productivity +", "+ this.state.Ecofriendliness+", "+this.state.Resilience);
+    }
   }
+  
+
     render(){
+      console.log("Render running and state is Productivity:"+ this.state.Productivity +", Ecofriendliness:"+ this.state.Ecofriendliness+", Resilience:"+this.state.Resilience);
         return (
             <div className="Stats">
               <header>
