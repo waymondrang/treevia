@@ -1,15 +1,24 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useRouteError,
+} from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./routes/ErrorPage";
-import JoinPage from "./routes/JoinPage";
-import HostPage from "./routes/HostPage";
-import LocalPage from "./routes/LocalPage";
-import TriviaTestPage from "./routes/TriviaTestPage";
-import MainPage from "./routes/MainPage";
+import Main from "./routes/Main";
+import Host from "./routes/Host";
+import Local from "./routes/MainPage";
+import Demo from "./routes/Demo";
+import Play from "./routes/Play";
+import Trivia from "./routes/TriviaTestPage";
+import io from "socket.io-client";
+
+const _io = io();
+_io.disconnect();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -21,22 +30,26 @@ root.render(
           element: <App />,
           errorElement: <ErrorPage />,
           children: [
-            { path: "/", element: <MainPage /> },
+            { path: "/", element: <Main /> },
             {
-              path: "/join",
-              element: <JoinPage />,
+              path: "/play",
+              element: <Play _io={_io} />,
             },
             {
               path: "/host",
-              element: <HostPage />,
+              element: <Host _io={_io} />,
             },
             {
               path: "/local",
-              element: <LocalPage />,
+              element: <Local />,
             },
             {
-              path: "/test",
-              element: <TriviaTestPage />,
+              path: "/demo",
+              element: <Demo />,
+            },
+            {
+              path: "/trivia",
+              element: <Trivia/>,
             },
           ],
         },

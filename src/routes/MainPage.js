@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 import Stats from '../components/Stats.jsx';
 import Farm from '../components/Farm.jsx';
+import questions from "../Resources/questions.json"
 
 function MainPage() {
-  var jsonObj = require("../Resources/questions.json");
+  
   const data1 = {
     message: "Sustainability"
   }
@@ -39,27 +40,27 @@ function MainPage() {
       <Stats  data = {stats}/>
         <div className="buttons-list">
           <h2>Select Question Type</h2>
-          <Link to='/test' state= {data1}>
+          <Link to='/trivia' state= {data1}>
             <button className="button">Sustainability </button>
           </Link>
             <br/>
-          <Link to='/test' state= {data2}>
+          <Link to='/trivia' state= {data2}>
             <button className="button">Soil</button>
           </Link>
             <br/>
-          <Link to='/test' state= {data3}>
+          <Link to='/trivia' state= {data3}>
             <button className="button">Carbon Emissions</button>
           </Link>
             <br/>
-          <Link to='/test' state= {data4}>
+          <Link to='/trivia' state= {data4}>
             <button className="button">Natural Distasters</button>
           </Link>
             <br/>
-          <Link to='/test' state= {data5}>
+          <Link to='/trivia' state= {data5}>
             <button className="button">Water</button>
           </Link>
             <br/>
-          <Link to='/test' state= {data6}>
+          <Link to='/trivia' state= {data6}>
             <button className="button">Misc</button>
           </Link>
             <br/>
@@ -69,5 +70,9 @@ function MainPage() {
   );
 }
 
+function makeList(){
+  questions = questions.filter();
+  return null;
+}
 
 export default MainPage;
