@@ -11,6 +11,7 @@ export default function Host({ _io }) {
   var [completeGameState, setCompleteGameState] = useState({});
   var [playerList, setPlayerList] = useState([]);
   const [gameCycle, setGameCycle] = useState(0);
+  const [gameError, setGameError] = useState("");
   var [currentQuestion, setCurrentQuestion] = useState({});
 
   var questions = questionsRaw;
@@ -120,9 +121,16 @@ export default function Host({ _io }) {
   function createRoom(e) {
     e.preventDefault();
 
+    if (!_io.connected) {
+      console.log("No connection to server");
+      setGameError("No connection to server.");
+      return;
+    }
+
     console.log("Creating Room...");
     // join room
     _io.emit("createRoom", roomCode);
+
     // set local host state
     setLocalHostState(1);
   }
@@ -139,18 +147,25 @@ export default function Host({ _io }) {
     <div id="play">
       <span id="debug">{socketStatus ? "Connected" : "Disconnected"}</span>
       {localHostState === 0 && (
-        <form id="host">
-          <h1>Host Game</h1>
-          <input
-            onChange={(e) => setRoomCode(e.target.value)}
-            value={roomCode}
-            type="text"
-            placeholder="Room Code"
-          />
-          <button onClick={createRoom} type="submit">
-            Create
-          </button>
-        </form>
+        <div>
+          <form id="host">
+            <h1>Host Game</h1>
+            <input
+              onChange={(e) => setRoomCode(e.target.value)}
+              value={roomCode}
+              type="text"
+              placeholder="Room Code"
+            />
+            <button onClick={createRoom} type="submit">
+              Create
+            </button>
+          </form>
+          {gameError && (
+            <div id="error">
+              <span>Oops! {gameError}</span>
+            </div>
+          )}
+        </div>
       )}
       {localHostState === 1 && (
         <div id="lobby">
