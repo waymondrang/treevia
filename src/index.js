@@ -1,7 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useRouteError,
+} from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./routes/ErrorPage";
@@ -12,7 +16,7 @@ import Demo from "./routes/Demo";
 import Play from "./routes/Play";
 import io from "socket.io-client";
 
-const _io = io("http://localhost:3001");
+const _io = io();
 _io.disconnect();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

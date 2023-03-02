@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   return (
-    <body className="App">
+    <div className="App">
       <div className="centered" id="top-section">
         <Outlet />
         <div className="expand-container">
@@ -26,7 +26,7 @@ function App() {
           </p>
         </div>
       </div>
-    </body>
+    </div>
   );
 }
 

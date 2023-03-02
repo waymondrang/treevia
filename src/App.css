@@ -1,3 +1,15 @@
+@-webkit-keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
 #top-section {
   height: 100vh;
   background: #76b852;
