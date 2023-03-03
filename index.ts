@@ -2,7 +2,7 @@ import socketio from "socket.io";
 import express from "express";
 import http from "http";
 
-const PORT = 3000;
+const PORT = 3001;
 
 const app = express();
 
@@ -89,7 +89,13 @@ io.on("connection", function (socket) {
   });
 
   socket.on("createRoom", function (rc) {
+    // check if room already exists
+    if (games[rc] !== undefined) {
+      socket.emit("gameError", "Room already exists.");
+      return;
+    }
     console.log("[" + socket.id + "] Creating Room: " + rc);
+
     socket.join(rc);
     games[rc] = {
       players: [],
@@ -104,13 +110,18 @@ io.on("connection", function (socket) {
   });
 
   socket.on("startGame", function () {
-    if (games[roomCode].host !== socket.id) {
-      socket.emit("gameError", "You are not the host.");
+    if (!roomCode) {
+      socket.emit("gameError", "You are not in a room.");
       return;
     }
 
-    if (!roomCode) {
-      socket.emit("gameError", "You are not in a room.");
+    if (games[roomCode] === undefined) {
+      socket.emit("gameError", "Room does not exist.");
+      return;
+    }
+
+    if (games[roomCode].host !== socket.id) {
+      socket.emit("gameError", "You are not the host.");
       return;
     }
 
@@ -171,7 +182,7 @@ io.on("connection", function (socket) {
 
         // send results to individual player
         io.to(p.id).emit("questionResults", {
-          answers: games[roomCode].currentQuestion!.answers,
+          question: games[roomCode].currentQuestion!,
           correct: correctAnswer,
         });
       }

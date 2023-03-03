@@ -130,9 +130,7 @@ export default function Host({ _io }) {
     console.log("Creating Room...");
     // join room
     _io.emit("createRoom", roomCode);
-
-    // set local host state
-    setLocalHostState(1);
+    // do not set local host state, wait for server
   }
 
   function startGame() {

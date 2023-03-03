@@ -126,7 +126,7 @@ export default function Play({ _io }) {
           <h1>Results</h1>
           <div id="answers">
             You answered {questionResults.correct ? "correctly" : "incorrectly"}
-            .
+            . {questionResults.question.explanation}
           </div>
         </div>
       )}
