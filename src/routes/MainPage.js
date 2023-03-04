@@ -7,29 +7,10 @@ import Farm from '../components/Farm.jsx';
 import questions from "../Resources/questions.json"
 
 function MainPage() {
-  
-  const data1 = {
-    message: "Sustainability"
-  }
-  const data2 = {
-    message: "Soil"
-  }
-  const data3 = {
-    message: "Carbon Emissions"
-  }
-  const data4 = {
-    message: "Natural Distasters"
-  }
-  const data5 = {
-    message: "Water"
-  }
-  const data6 = {
-    message: "Misc"
-  }
-  
   const location = useLocation();
   const stats = location.state;
   console.log("Main page ran");
+
   return (
     <div className="MainPage">
       <header>
@@ -40,27 +21,27 @@ function MainPage() {
       <Stats  data = {stats}/>
         <div className="buttons-list">
           <h2>Select Question Type</h2>
-          <Link to='/trivia' state= {data1}>
+          <Link to='/demo' state= {{jason: JSON.stringify(makeList("..."))}}>
             <button className="button">Sustainability </button>
           </Link>
             <br/>
-          <Link to='/trivia' state= {data2}>
+          <Link to='/demo' state= {{jason: JSON.stringify(makeList("..."))}}>
             <button className="button">Soil</button>
           </Link>
             <br/>
-          <Link to='/trivia' state= {data3}>
+          <Link to='/demo' state= {{jason: JSON.stringify(makeList("..."))}}>
             <button className="button">Carbon Emissions</button>
           </Link>
             <br/>
-          <Link to='/trivia' state= {data4}>
+          <Link to='/demo' state= {{jason: JSON.stringify(makeList("..."))}}>
             <button className="button">Natural Distasters</button>
           </Link>
             <br/>
-          <Link to='/trivia' state= {data5}>
+          <Link to='/demo' state= {{jason: JSON.stringify(makeList("..."))}}>
             <button className="button">Water</button>
           </Link>
             <br/>
-          <Link to='/trivia' state= {data6}>
+          <Link to='/demo' state= {{jason: JSON.stringify(makeList("..."))}}>
             <button className="button">Misc</button>
           </Link>
             <br/>
@@ -70,9 +51,15 @@ function MainPage() {
   );
 }
 
-function makeList(){
-  questions = questions.filter();
-  return null;
+function makeList(label){
+  var questArr = questions.filter(element => element.category === label);
+  var final = [];
+  for(var i = 0; i < 3; i++){
+    var int = Math.trunc((Math.random()*questArr.length));
+    var question = questArr[int];
+    final[i] = question;
+  }
+  return final;
 }
 
 export default MainPage;

@@ -1,14 +1,20 @@
 import React, { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Trivia.css";
 import TriviaButton from "./TriviaButton.component";
+import Stats from "./Stats";
 
 // Shuffle contents of the answers array
 function shuffle(array) {
+  if(array == undefined){
+    return;
+  }
   array.sort(() => Math.random() - 0.5);
   return array;
 }
 
 function Trivia({ questionData, nextQuestion }) {
+
   const [showResults, setShowResults] = useState(false);
   const [showCorrect, setShowCorrect] = useState(false);
   const [showNotCorrect, setShowNotCorrect] = useState(false);

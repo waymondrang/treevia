@@ -1,53 +1,31 @@
 import "../Farm.css";
 import React, { Component } from 'react';
+import field1 from '../img/field_1.png';
+import field2 from '../img/field_2.png';
+import field3 from '../img/field_3.png';
+import field4 from '../img/field_4.png';
+import field5 from '../img/field_5.png';
+import field6 from '../img/field_6.png';
+import field7 from '../img/field_7.png';
+
 
 class Farm extends Component{
   constructor(props) {
     super(props);
     this.state = {
-        images:
-            [{
-                field: "/images/Tilled Dirt.png", //correlates with soil
-                irrigation: "",                   //correlates with water
-                SustainableProp: "",              
-                NatDistaster: "",         
-                CarbonEmissions: "",
-                misc: "",
-                crop0: "",
-                crop1: "",
-                crop2: "",
-                crop3: "",
-            }]
+            field: field1, 
     };
   }
-  imgState({imgs}){
+  imgState(){
     this.setState({
-        field: imgs.field, //correlates with soil
-        irrigation: imgs.irrigation,                   //correlates with water
-        SustainableProp: imgs.SustainableProp,              
-        NatDistaster: imgs.NatDistaster,         
-        CarbonEmissions: imgs.CarbonEmissions,
-        misc: imgs.misc,
-        crop0: imgs.crop0,
-        crop1: imgs.crop1,
-        crop2: imgs.crop2,
-        crop3: imgs.crop3,
+        field: field2, //correlates with soil
     })
   }
-    render(){            
+    render(){           
         return (
             <div className="farm">
                 <body>
-                    <img class="feild" src={this.state.field}></img>
-                    <img class="crop0" src={this.state.crop0}></img>
-                    <img class="crop1" src={this.state.crop1}></img>
-                    <img class="crop2" src={this.state.crop2}></img>   
-                    <img class="crop3" src={this.state.crop3}></img>
-                    <img class="irrigation" src={this.state.irrigation}></img>
-                    <img class="NatDistaster" src={this.state.NatDistaster}></img>
-                    <img class="CarbonEmissions" src={this.state.CarbonEmissions}></img>
-                    <img class="SustainableProp" src={this.state.SustainableProp}></img>
-                    <img class="misc" src={this.state.misc}></img>
+                    <img class="field" src= {this.state.field}  alt="field" ></img>
                 </body>
             </div>
         );

@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { useLocation } from 'react-router-dom';
 import Trivia from "../components/Trivia.component";
-
+/*
 const questions = [
   {
     question:
@@ -40,8 +41,12 @@ const questions = [
     ],
   },
 ];
-
+*/
 export default function Demo() {
+  const location = useLocation();
+  const questions = JSON.parse(location.state.jason);
+  console.log("Demo ran");
+  
   const [questionIndex, setQuestionIndex] = useState(0);
 
   function nextQuestion() {
@@ -54,4 +59,5 @@ export default function Demo() {
       nextQuestion={nextQuestion}
     />
   );
+  
 }
