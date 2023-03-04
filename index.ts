@@ -1,6 +1,9 @@
 import socketio from "socket.io";
 import express from "express";
 import http from "http";
+import ClientStates from "./src/util/ClientStates";
+
+// Add comments!!!!@!!!!!!!! -adhi no -ray
 
 const PORT = 3001;
 
@@ -42,7 +45,7 @@ type BroadcastedQuestion = {
 type Game = {
   players: Player[];
   host: string;
-  gameState: number;
+  gameState: typeof ClientStates[keyof typeof ClientStates];
   hostState: number;
   currentQuestion?: Question;
 };
@@ -99,7 +102,7 @@ io.on("connection", function (socket) {
     socket.join(rc);
     games[rc] = {
       players: [],
-      gameState: 1,
+      gameState: "postJoinWaitingGameState",
       hostState: 1,
       host: socket.id,
     };
@@ -126,7 +129,7 @@ io.on("connection", function (socket) {
     }
 
     console.log("[" + socket.id + "] Starting Game: " + roomCode);
-    games[roomCode].gameState = 2;
+    games[roomCode].gameState = "readyGameState";
     games[roomCode].hostState = 2;
     io.to(roomCode).emit("gameState", games[roomCode].gameState);
     io.to(roomCode).emit("hostState", games[roomCode].hostState);
