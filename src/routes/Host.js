@@ -13,6 +13,7 @@ export default function Host({ _io }) {
   const [gameCycle, setGameCycle] = useState(0);
   const [gameError, setGameError] = useState("");
   var [currentQuestion, setCurrentQuestion] = useState({});
+  const [hostState, setHostState] = useState(0);
 
   var questions = questionsRaw;
 
