@@ -1,15 +1,16 @@
 import "./Play.css";
-import io from "socket.io-client";
 import { useEffect, useState } from "react";
 import clientStates from "../util/ClientStates";
 
 export default function Play({ _io }) {
-  var [socketStatus, setSocketStatus] = useState(_io.connected);
-  var [roomCode, setRoomCode] = useState("");
-  var [clientState, setClientState] = useState(clientStates.joinGameState);
-  var [gameError, setGameError] = useState("");
-  var [questionAnswers, setQuestionAnswers] = useState([]);
-  var [questionResults, setQuestionResults] = useState([]);
+  const [socketStatus, setSocketStatus] = useState(_io.connected);
+  const [roomCode, setRoomCode] = useState("");
+  const [clientState, setClientState] = useState(clientStates.joinGameState);
+  const [gameError, setGameError] = useState("");
+  const [questionAnswers, setQuestionAnswers] = useState([]);
+  const [questionResults, setQuestionResults] = useState([]);
+  const [username, setUsername] = useState("");
+  const [teamName, setTeamName] = useState("");
 
   useEffect(() => {
     _io.connect();
@@ -17,11 +18,24 @@ export default function Play({ _io }) {
     _io.on("connect", () => {
       console.log("Connected to Server");
       setSocketStatus(_io.connected);
+
+      if (window.location.search) {
+        const params = new URLSearchParams(window.location.search);
+        const roomCode = params.get("roomCode");
+        if (roomCode) setRoomCode(roomCode);
+        _io.emit("checkRoom", roomCode);
+      }
     });
 
     _io.on("gameState", (state) => {
-      if (state !== 0) setGameError("");
+      if (state !== clientStates.joinGameState) setGameError("");
       setClientState(state);
+    });
+
+    _io.on("confirmPlayerData", (data) => {
+      console.log("Confirm Player Data", data);
+      setUsername(data.username);
+      setTeamName(data.teamName);
     });
 
     _io.on("gameError", (error) => {
@@ -44,6 +58,11 @@ export default function Play({ _io }) {
     _io.on("disconnect", () => {
       console.log("Disconnected from Server");
       setSocketStatus(_io.connected);
+      setGameError("Disconnected from Server");
+      setClientState(clientStates.joinGameState);
+      // reset game state
+      setQuestionAnswers([]);
+      setQuestionResults([]);
     });
 
     return () => {
@@ -52,12 +71,32 @@ export default function Play({ _io }) {
       // remove event listeners
       _io.off("connect");
       _io.off("gameState");
+      _io.off("confirmPlayerData");
       _io.off("gameError");
+      _io.off("broadcastAnswers");
+      _io.off("questionResults");
+      _io.off("disconnect");
     };
   }, []);
 
+  useEffect(() => {
+    if (clientState === clientStates.enterUsernameTeamGameState) {
+      if (window.location.search) {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("roomCode") !== undefined && roomCode) {
+          params.set("roomCode", roomCode);
+          window.history.replaceState(null, null, "?" + params.toString());
+        }
+      }
+    }
+  }, [clientState, roomCode]);
+
   function joinRoom(e) {
-    e.preventDefault();
+    try {
+      e.preventDefault();
+    } catch (error) {
+      console.log("No Event");
+    }
 
     if (!_io.connected) {
       console.log("No Connection to Server");
@@ -65,8 +104,8 @@ export default function Play({ _io }) {
       return;
     }
 
-    console.log("Joining Room...");
-    _io.emit("joinRoom", roomCode);
+    console.log("Checking Room Before Joining...");
+    _io.emit("checkRoom", roomCode);
   }
 
   return (
@@ -78,7 +117,7 @@ export default function Play({ _io }) {
           <input
             onChange={(e) => setRoomCode(e.target.value)}
             value={roomCode}
-            type="text"
+            type="number"
             placeholder="Room Code"
           />
           <button onClick={joinRoom} type="submit">
@@ -87,10 +126,49 @@ export default function Play({ _io }) {
         </form>
       )}
 
+      {clientState === clientStates.enterUsernameTeamGameState && (
+        <form id="username-team">
+          <input
+            type="text"
+            placeholder="Username"
+            onChange={(e) => setUsername(e.target.value)}
+            maxLength="20"
+            value={username}
+          />
+          <input
+            type="text"
+            placeholder="Team Name"
+            maxLength="12"
+            onChange={(e) => setTeamName(e.target.value)}
+            value={teamName}
+          />
+          <button
+            type="submit"
+            onClick={(e) => {
+              e.preventDefault();
+              _io.emit("joinRoom", {
+                username: username,
+                teamName: teamName,
+                roomCode: roomCode,
+              });
+            }}
+          >
+            Submit
+          </button>
+          <p className="small-text">
+            Leave a field blank for a random username or team name!
+          </p>
+        </form>
+      )}
+
       {/* Add input for username and team creation */}
       {clientState === clientStates.postJoinWaitingGameState && (
         <div id="waiting">
           <h1>Waiting for Game to Start</h1>
+          <div id="info">
+            You are connected as <span id="username">{username}</span> on team{" "}
+            <span id="team-name">{teamName}</span>
+          </div>
         </div>
       )}
 
@@ -129,7 +207,7 @@ export default function Play({ _io }) {
 
       {clientState === clientStates.postAnswerResultsGameState && (
         <div id="results">
-          <h1>Results</h1>
+          <h1>{questionResults.correct ? "Correct!" : "Incorrect"}</h1>
           <div id="answers">
             You answered {questionResults.correct ? "correctly" : "incorrectly"}
             . {questionResults.question.explanation}

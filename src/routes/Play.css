@@ -17,7 +17,8 @@
     font-family: inherit;
 }
 
-#join {
+#join,
+#username-team {
     box-sizing: border-box;
     max-width: 300px;
     margin: 0 auto;
@@ -26,7 +27,8 @@
     padding: 1.25rem 2rem;
 }
 
-#join h1 {
+#join h1,
+#username-team h1 {
     margin: 0;
     text-align: center;
     margin-bottom: 1rem;
@@ -69,6 +71,33 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#waiting #info {
+    text-align: center;
+    background-color: #2F4D1A28;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 1rem;
+    line-height: 2;
+}
+
+#waiting #info #username {
+    background-color: #2F4D1A;
+    color: #ffffff;
+    margin: 0 0.2rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.5rem;
+}
+
+#waiting #info #team-name {
+    background-color: #2F4D1A;
+    color: #ffffff;
+    margin: 0 0.2rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.5rem;
 }
 
 #play #error {
@@ -153,8 +182,16 @@
     width: fit-content;
     margin: 0 auto;
     border-radius: 1rem;
+    max-width: 480px;
+    width: 93.333333%;
 }
 
 #results h1 {
     margin: 0;
+}
+
+#username-team .small-text {
+    margin: 0;
+    margin-top: 1rem;
+    text-align: center;
 }

@@ -1,5 +1,6 @@
-export default Object.freeze({
+const ClientStates = Object.freeze({
   joinGameState: "joinGameState",
+  enterUsernameTeamGameState: "enterUsernameTeamGameState",
   postJoinWaitingGameState: "postJoinWaitingGameState",
   readyGameState: "readyGameState",
   answerGameState: "answerGameState",
@@ -7,3 +8,5 @@ export default Object.freeze({
   postAnswerResultsGameState: "postAnswerResultsGameState",
   endGameState: "endGameState",
 });
+
+export default ClientStates;

@@ -4,15 +4,12 @@ import nobody from "../img/nobody.png";
 import questionsRaw from "../questions.json";
 
 export default function Host({ _io }) {
-  var [socketStatus, setSocketStatus] = useState(_io.connected);
-  var [roomCode, setRoomCode] = useState("");
-  var [localHostState, setLocalHostState] = useState(0);
-  var [remoteHostState, setRemoteHostState] = useState(0);
-  var [completeGameState, setCompleteGameState] = useState({});
-  var [playerList, setPlayerList] = useState([]);
+  const [socketStatus, setSocketStatus] = useState(_io.connected);
+  const [completeGameState, setCompleteGameState] = useState({});
+  const [teamList, setTeamList] = useState([]);
   const [gameCycle, setGameCycle] = useState(0);
   const [gameError, setGameError] = useState("");
-  var [currentQuestion, setCurrentQuestion] = useState({});
+  const [currentQuestion, setCurrentQuestion] = useState({});
   const [hostState, setHostState] = useState(0);
 
   var questions = questionsRaw;
@@ -29,18 +26,25 @@ export default function Host({ _io }) {
       console.log("_io Listener Host State Update", state);
       if (state === 2) startGameCycle();
       // may not need to handle different local and remote host states
-      setRemoteHostState(state);
+      setHostState(state);
     });
 
     _io.on("completeGameState", (gameState) => {
       console.log("Game State Update", gameState);
       setCompleteGameState(gameState);
-      setPlayerList(gameState.players);
+      setTeamList(gameState.teams);
+      setHostState(gameState.hostState);
     });
 
     _io.on("disconnect", () => {
       console.log("Disconnected from Server");
       setSocketStatus(_io.connected);
+      setGameError("Disconnected from Server");
+      // reset game state
+      setCompleteGameState({});
+      setTeamList([]);
+      setHostState(0);
+      setGameCycle(0);
     });
 
     return () => {
@@ -56,8 +60,8 @@ export default function Host({ _io }) {
     if (gameCycle === 2 && completeGameState.currentQuestion) {
       // check if all players have answered
       if (
-        Object.keys(completeGameState.currentQuestion.playerAnswers).length ===
-        completeGameState.players.length
+        Object.keys(completeGameState.currentQuestion.teamAnswers).length ===
+        completeGameState.teams.length
       ) {
         console.log("All players have answered");
         // broadcast answers
@@ -130,7 +134,7 @@ export default function Host({ _io }) {
 
     console.log("Creating Room...");
     // join room
-    _io.emit("createRoom", roomCode);
+    _io.emit("createRoom");
     // do not set local host state, wait for server
   }
 
@@ -138,26 +142,22 @@ export default function Host({ _io }) {
     console.log("Starting Game...");
     // start game
     _io.emit("startGame");
-    // set local host state
-    setLocalHostState(2);
+    // do not set local host state, wait for server
   }
 
   return (
     <div id="play">
       <span id="debug">{socketStatus ? "Connected" : "Disconnected"}</span>
-      {localHostState === 0 && (
+      {hostState === 0 && (
         <div>
           <form id="host">
             <h1>Host Game</h1>
-            <input
-              onChange={(e) => setRoomCode(e.target.value)}
-              value={roomCode}
-              type="text"
-              placeholder="Room Code"
-            />
             <button onClick={createRoom} type="submit">
               Create
             </button>
+            <p className="small-text">
+              A room code will be automatically generated.
+            </p>
           </form>
           {gameError && (
             <div id="error">
@@ -166,36 +166,66 @@ export default function Host({ _io }) {
           )}
         </div>
       )}
-      {localHostState === 1 && (
+
+      {hostState === 1 && (
         <div id="lobby">
           <div id="control-panel">
             <div id="room-code">
-              <h1>{roomCode}</h1>
+              <h1>{completeGameState.roomCode}</h1>
             </div>
-            <button onClick={startGame}>Start Game</button>
+            <button onClick={startGame} disabled={teamList.length === 0}>
+              Start Game
+            </button>
           </div>
-          <div id="player-list">
-            <h2>Players</h2>
-            {playerList.length ? (
-              <ul>
-                {playerList.map((player) => (
-                  <li key={player.id}>{player.id}</li>
+          <div id="team-list">
+            <h2>Teams</h2>
+            {teamList.length ? (
+              <div id="teams">
+                {teamList.map((team) => (
+                  <div key={team.name} className="team-card">
+                    <h3 className="team-name">{team.name}</h3>
+                    {team.players.map((player) => (
+                      <div key={player.name} className="team-player">
+                        <span>{player.name}</span>
+                      </div>
+                    ))}
+                  </div>
                 ))}
-              </ul>
+              </div>
             ) : (
-              <div id="empty-player-list">
-                <img src={nobody} alt="" />
+              <div id="empty-team-list">
+                <p>Create a sharable link for players to quickly join!</p>
+                <button
+                  onClick={(e) => {
+                    navigator.clipboard.writeText(
+                      window.location.host +
+                        "/play?roomCode=" +
+                        completeGameState.roomCode
+                    );
+                    e.target.innerText = "Copied!";
+                    e.target.classList.add("copied");
+                    setTimeout(() => {
+                      e.target.innerText = "Copy Link";
+                      e.target.classList.remove("copied");
+                    }, 1500);
+                  }}
+                >
+                  Copy Link
+                </button>
               </div>
             )}
           </div>
         </div>
       )}
+
       {/* gameCycle does not have 0 state */}
+
       {gameCycle === 1 && (
         <div id="ready">
           <h1>Get Ready!</h1>
         </div>
       )}
+
       {gameCycle === 2 && (
         <div id="host-question">
           <span className="question-text">{currentQuestion.question}</span>
@@ -211,6 +241,7 @@ export default function Host({ _io }) {
           </div>
         </div>
       )}
+
       {gameCycle === 3 && (
         <div id="control-panel">
           <h1>Results</h1>

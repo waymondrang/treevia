@@ -21,3 +21,7 @@ node index.js
 ```
 
 Open [http://localhost:3000](http://localhost:3000), navigate to the "Join" page, enter a room code, and click "Join." This will initiate a WebSocket connection with the server.
+
+### Random Notes
+
+- Players have a maximum username length of 16 characters.

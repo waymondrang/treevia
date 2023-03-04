@@ -32,6 +32,12 @@
     margin-bottom: 1rem;
 }
 
+#host .small-text {
+    margin: 0;
+    margin-top: 1.4rem;
+    text-align: center;
+}
+
 #play input {
     margin: 0;
     margin-bottom: 1rem;
@@ -83,46 +89,37 @@
     flex-direction: column;
 }
 
-#lobby #player-list {
-    margin: 1rem 0;
-    padding: 0;
-    flex: 1;
+#empty-team-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2F4D1A28;
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+    max-width: 300px;
 }
 
-#lobby #player-list ul {
-    list-style: none;
+#empty-team-list button {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+}
+
+#empty-team-list button.copied {
+    background: #ffffff;
+    color: #000000;
+}
+
+#empty-team-list button:not(.copied):hover {
+    background: #3F6623;
+}
+
+#empty-team-list p {
     margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin: -0.4rem;
+    margin-bottom: 1rem;
 }
 
-#lobby #player-list li {
-    margin: 0;
-    padding: 0;
-    margin: 0.4rem;
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 999rem;
-    padding: 0.5rem 1rem;
-    color: #1b1b1b;
-    font-weight: 600;
-    font-size: 1.4rem;
-    width: fit-content;
-}
-
-#empty-player-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin-bottom: 4rem;
-    box-sizing: content-box;
-}
-
-#empty-player-list img {
+#empty-team-list img {
     width: 12rem;
     height: 12rem;
     margin-bottom: 4rem;
@@ -136,6 +133,7 @@
     border-radius: 1rem;
     padding: 1.5rem 2rem;
     z-index: 1;
+    max-width: 800px;
 }
 
 #room-code {
@@ -218,6 +216,8 @@
     font-weight: 600;
 }
 
+/* arbitrary colors */
+
 #host-question #answers .answer.red {
     background-color: #6a1b9a;
 }
@@ -232,4 +232,57 @@
 
 #host-question #answers .answer.yellow {
     background-color: #4e342e;
+}
+
+#team-list {
+    position: relative;
+    margin: 1rem 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#teams {
+    display: grid;
+    grid-column-start: 1;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: auto;
+}
+
+.team-card {
+    background-color: #2F4D1A28;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.team-name {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    /* break long text with ... */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.team-player {
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #2F4D1A;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    /* break long text with ... */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.team-player:not(:last-child) {
+    margin-bottom: 0.4rem;
 }
