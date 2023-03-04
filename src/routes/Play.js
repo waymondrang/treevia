@@ -1,11 +1,12 @@
 import "./Play.css";
 import io from "socket.io-client";
 import { useEffect, useState } from "react";
+import clientStates from "../util/ClientStates";
 
 export default function Play({ _io }) {
   var [socketStatus, setSocketStatus] = useState(_io.connected);
   var [roomCode, setRoomCode] = useState("");
-  var [gameState, setGameState] = useState(0);
+  var [clientState, setClientState] = useState(clientStates.joinGameState);
   var [gameError, setGameError] = useState("");
   var [questionAnswers, setQuestionAnswers] = useState([]);
   var [questionResults, setQuestionResults] = useState([]);
@@ -20,7 +21,7 @@ export default function Play({ _io }) {
 
     _io.on("gameState", (state) => {
       if (state !== 0) setGameError("");
-      setGameState(state);
+      setClientState(state);
     });
 
     _io.on("gameError", (error) => {
@@ -31,13 +32,13 @@ export default function Play({ _io }) {
     _io.on("broadcastAnswers", (answers) => {
       console.log("Answers", answers);
       setQuestionAnswers(answers);
-      setGameState(3);
+      setClientState(clientStates.answerGameState);
     });
 
     _io.on("questionResults", (results) => {
       console.log("Results", results);
       setQuestionResults(results);
-      setGameState(5);
+      setClientState(clientStates.postAnswerResultsGameState);
     });
 
     _io.on("disconnect", () => {
@@ -71,7 +72,7 @@ export default function Play({ _io }) {
   return (
     <div id="play">
       <span id="debug">{socketStatus ? "Connected" : "Disconnected"}</span>
-      {gameState === 0 && (
+      {clientState === clientStates.joinGameState && (
         <form id="join">
           <h1>Join Game</h1>
           <input
@@ -85,17 +86,21 @@ export default function Play({ _io }) {
           </button>
         </form>
       )}
-      {gameState === 1 && (
+
+      {/* Add input for username and team creation */}
+      {clientState === clientStates.postJoinWaitingGameState && (
         <div id="waiting">
           <h1>Waiting for Game to Start</h1>
         </div>
       )}
-      {gameState === 2 && (
+
+      {clientState === clientStates.readyGameState && (
         <div id="game">
           <h1>Get Ready!</h1>
         </div>
       )}
-      {gameState === 3 && (
+
+      {clientState === clientStates.answerGameState && (
         <div id="client-question">
           <div id="answers">
             {questionAnswers.map((answer) => (
@@ -106,7 +111,7 @@ export default function Play({ _io }) {
                   console.log("Answering: " + answer.answer);
                   _io.emit("submitAnswer", answer.answer);
                   // TODO: confirm receipt of answer
-                  setGameState(4);
+                  setClientState(clientStates.postAnswerWaitingGameState);
                 }}
               >
                 <span>{answer.answer}</span>
@@ -115,13 +120,14 @@ export default function Play({ _io }) {
           </div>
         </div>
       )}
-      {gameState === 4 && (
+
+      {clientState === clientStates.postAnswerWaitingGameState && (
         <div id="waiting">
           <h1>Smart or lucky?</h1>
         </div>
       )}
 
-      {gameState === 5 && (
+      {clientState === clientStates.postAnswerResultsGameState && (
         <div id="results">
           <h1>Results</h1>
           <div id="answers">
