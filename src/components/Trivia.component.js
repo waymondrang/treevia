@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Trivia.css";
 import TriviaButton from "./TriviaButton.component";
+import { useNavigate } from "react-router-dom";
 import Stats from "./Stats";
 
 // Shuffle contents of the answers array
@@ -14,7 +15,10 @@ function shuffle(array) {
 }
 
 function Trivia({ questionData, nextQuestion }) {
-
+  const navigate = useNavigate();
+  if(questionData == undefined){
+    navigate("/local");
+  }
   const [showResults, setShowResults] = useState(false);
   const [showCorrect, setShowCorrect] = useState(false);
   const [showNotCorrect, setShowNotCorrect] = useState(false);
@@ -35,6 +39,9 @@ function Trivia({ questionData, nextQuestion }) {
     setShowNotCorrect(false);
     setShowResults(false);
     nextQuestion(...args);
+    if(nextQuestion == undefined){
+      navigate("/local");
+    }
   }
 
   return (
