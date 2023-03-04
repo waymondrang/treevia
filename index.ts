@@ -376,12 +376,14 @@ io.on("connection", function (socket) {
       // notify team members of gameState change
       games[roomCode].teams.forEach((t) => {
         if (t.name === teamName) {
-          t.players.forEach((p) => {
-            io.to(p.id).emit(
-              "gameState",
-              ClientStates.postAnswerWaitingGameState
-            );
-          });
+          t.players
+            .filter((p) => p.id !== socket.id)
+            .forEach((p) => {
+              io.to(p.id).emit(
+                "gameState",
+                ClientStates.postTeamAnswerWaitingGameState
+              );
+            });
         }
       });
     } catch (e) {

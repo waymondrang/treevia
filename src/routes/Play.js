@@ -202,6 +202,21 @@ export default function Play({ _io }) {
       {clientState === clientStates.postAnswerWaitingGameState && (
         <div id="waiting">
           <h1>Smart or lucky?</h1>
+          <div id="info">You've submitted the answer for your team!</div>
+        </div>
+      )}
+
+      {clientState === clientStates.postTeamAnswerWaitingGameState && (
+        <div id="waiting">
+          {/* random string from array */}
+          <h1>
+            {
+              ["Guesswork or genius?", "Whodunnit?", "Who's the smartest?"][
+                Math.floor(Math.random() * 3)
+              ]
+            }
+          </h1>
+          <div id="info">Someone on your team has answered this question.</div>
         </div>
       )}
 

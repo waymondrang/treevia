@@ -5,6 +5,7 @@ const ClientStates = Object.freeze({
   readyGameState: "readyGameState",
   answerGameState: "answerGameState",
   postAnswerWaitingGameState: "postAnswerWaitingGameState",
+  postTeamAnswerWaitingGameState: "postTeamAnswerWaitingGameState",
   postAnswerResultsGameState: "postAnswerResultsGameState",
   endGameState: "endGameState",
 });
