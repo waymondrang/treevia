@@ -302,7 +302,7 @@ io.on("connection", function (socket) {
   /**
    * Broadcasts the results of the current question to all players.
    */
-  socket.on("broadcastResults", function () {
+  socket.on("requestResults", function () {
     if (games[roomCode].host !== socket.id) {
       socket.emit("gameError", "You are not the host.");
       return;
@@ -348,6 +348,9 @@ io.on("connection", function (socket) {
 
     // console log scores
     console.log("Player Data", games[roomCode].teams);
+
+    // send update
+    io.to(games[roomCode].host).emit("completeGameState", games[roomCode]);
   });
 
   socket.on("submitAnswer", function (answer) {

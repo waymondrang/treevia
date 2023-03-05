@@ -65,9 +65,7 @@ export default function Host({ _io }) {
       ) {
         console.log("All players have answered");
         // broadcast answers
-        _io.emit("broadcastResults");
-        // set game state
-        setGameCycle(3);
+        _io.emit("requestResults");
       }
     }
   }, [completeGameState, gameCycle, _io]);
@@ -220,13 +218,13 @@ export default function Host({ _io }) {
 
       {/* gameCycle does not have 0 state */}
 
-      {gameCycle === 1 && (
+      {hostState === 2 && (
         <div id="ready">
           <h1>Get Ready!</h1>
         </div>
       )}
 
-      {gameCycle === 2 && (
+      {hostState === 3 && (
         <div id="host-question">
           <span className="question-text">{currentQuestion.question}</span>
           <div id="answers">
@@ -243,9 +241,24 @@ export default function Host({ _io }) {
       )}
 
       {gameCycle === 3 && (
-        <div id="control-panel">
-          <h1>Results</h1>
-          <button onClick={nextQuestion}>Next Question</button>
+        <div>
+          <div id="control-panel">
+            <h1>Results</h1>
+            <button onClick={nextQuestion}>Next Question</button>
+          </div>
+          <div id="results">
+            {/* top 5 teams */}
+            {completeGameState.teams
+              .sort((a, b) => b.score - a.score)
+              .slice(0, 5)
+              .map((team, index) => (
+                <div key={team.name} className="result-team">
+                  <h3 className="result-team-name">
+                    ({index}) {team.name}
+                  </h3>
+                </div>
+              ))}
+          </div>
         </div>
       )}
     </div>
