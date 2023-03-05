@@ -138,7 +138,7 @@ export default function Play({ _io }) {
           <input
             type="text"
             placeholder="Team Name"
-            maxLength="12"
+            maxLength="16"
             onChange={(e) => setTeamName(e.target.value)}
             value={teamName}
           />
@@ -221,12 +221,12 @@ export default function Play({ _io }) {
       )}
 
       {clientState === clientStates.postAnswerResultsGameState && (
-        <div id="results">
+        <div
+          id="client-results"
+          className={questionResults.correct ? "correct" : "incorrect"}
+        >
           <h1>{questionResults.correct ? "Correct!" : "Incorrect"}</h1>
-          <div id="answers">
-            You answered {questionResults.correct ? "correctly" : "incorrectly"}
-            . {questionResults.question.explanation}
-          </div>
+          <div id="answers">{questionResults.question.explanation}</div>
         </div>
       )}
 

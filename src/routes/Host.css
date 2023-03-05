@@ -251,13 +251,13 @@
     overflow: auto;
 }
 
-.team-card {
+#teams .team-card {
     background-color: #2F4D1A28;
     border-radius: 0.5rem;
     padding: 1rem;
 }
 
-.team-name {
+#teams .team-name {
     font-size: 2.1rem;
     font-weight: 600;
     color: #ffffff;
@@ -270,7 +270,7 @@
     overflow: hidden;
 }
 
-.team-player {
+#teams .team-player {
     font-weight: 600;
     color: #ffffff;
     background-color: #2F4D1A;
@@ -282,6 +282,168 @@
     overflow: hidden;
 }
 
-.team-player:not(:last-child) {
+#teams .team-player:not(:last-child) {
     margin-bottom: 0.4rem;
+}
+
+#host-results {
+    max-width: 1200px;
+    width: 93.333333%;
+    margin: 0 auto;
+    height: 100vh;
+    max-height: 1000px;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#host-results #winning-teams {
+    margin: 0 auto;
+    margin-top: 1rem;
+    flex: 1;
+    display: grid;
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+}
+
+#host-results .team {
+    background-color: #2F4D1A28;
+    border-radius: 0.5rem;
+    padding: 1rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    position: relative;
+    min-width: 400px;
+}
+
+#host-results .team.first {
+    background: #2F4D1A;
+    background: linear-gradient(110deg, #2F4D1A 10%, #3F6623 40%, #2F4D1A 60%);
+    background-size: 200% 100%;
+    -webkit-animation: 3s shine cubic-bezier(0.6, 0.1, 0.4, 0.9) infinite;
+    animation: 3s shine cubic-bezier(0.6, 0.1, 0.4, 0.9) infinite;
+    color: #ffffff;
+}
+
+#host-results .team-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    /* break long text with ... */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#host-results .team-placement {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 999rem;
+    padding: 0.5rem 1rem;
+}
+
+#host-results .team-score {
+    margin-top: 0.2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#host-final-results {
+    max-width: 1200px;
+    width: 93.333333%;
+    margin: 0 auto;
+    height: 100vh;
+    max-height: 1000px;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#host-final-results #winning-teams {
+    margin: 0 auto;
+    margin-top: 1rem;
+    flex: 1;
+    display: grid;
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+}
+
+#host-final-results .team {
+    background-color: #2F4D1A28;
+    border-radius: 0.5rem;
+    padding: 1rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    position: relative;
+    min-width: 400px;
+}
+
+#host-final-results .team.first {
+    background: #2F4D1A;
+    background: linear-gradient(110deg, #2F4D1A 10%, #3F6623 40%, #2F4D1A 60%);
+    background-size: 200% 100%;
+    -webkit-animation: 3s shine cubic-bezier(0.6, 0.1, 0.4, 0.9) infinite;
+    animation: 3s shine cubic-bezier(0.6, 0.1, 0.4, 0.9) infinite;
+    color: #ffffff;
+}
+
+#host-final-results .team-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    /* break long text with ... */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#host-final-results .team-placement {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 999rem;
+    padding: 0.5rem 1rem;
+}
+
+#host-final-results .team-score {
+    margin-top: 0.2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#host-final-results button {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    background: #000000;
+    color: #ffffff;
 }

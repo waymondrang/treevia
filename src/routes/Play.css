@@ -175,7 +175,7 @@
     background-color: #4e342e;
 }
 
-#results {
+#client-results {
     text-align: center;
     padding: 1rem 2rem;
     background-color: #1b1b1b;
@@ -186,8 +186,17 @@
     width: 93.333333%;
 }
 
-#results h1 {
+#client-results.correct {
+    background-color: #2e7d32;
+}
+
+#client-results.incorrect {
+    background-color: #C95036;
+}
+
+#client-results h1 {
     margin: 0;
+    margin-bottom: 0.2rem;
 }
 
 #username-team .small-text {

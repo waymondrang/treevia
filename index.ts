@@ -2,6 +2,7 @@ import socketio from "socket.io";
 import express from "express";
 import http from "http";
 import ClientStates from "./src/util/ClientStates";
+import HostStates from "./src/util/HostStates";
 
 const adjectives = require("./adjectives.json") as string[];
 const nouns = require("./nouns.json") as string[];
@@ -70,7 +71,7 @@ type Game = {
   teams: Team[];
   host: SocketID;
   gameState: string;
-  hostState: number;
+  hostState: string;
   currentQuestion?: Question;
 };
 
@@ -79,8 +80,8 @@ var games = {
   "0": {
     roomCode: "0",
     teams: [],
-    gameState: "postJoinWaitingGameState",
-    hostState: 1,
+    gameState: ClientStates.joinGameState,
+    hostState: HostStates.createGameHostState,
     host: "0",
   },
 } as {
@@ -147,6 +148,13 @@ io.on("connection", function (socket) {
 
     if (games[rc] === undefined) {
       socket.emit("gameError", "Room does not exist.");
+      socket.emit("gameState", ClientStates.joinGameState);
+      return;
+    }
+
+    // check if room is closed
+    if (games[rc].hostState !== HostStates.lobbyHostState) {
+      socket.emit("gameError", "This game has already started.");
       socket.emit("gameState", ClientStates.joinGameState);
       return;
     }
@@ -218,6 +226,12 @@ io.on("connection", function (socket) {
       return;
     }
 
+    if (games[rc].hostState !== HostStates.lobbyHostState) {
+      socket.emit("gameError", "This game has already started.");
+      socket.emit("gameState", ClientStates.joinGameState);
+      return;
+    }
+
     socket.emit("gameState", ClientStates.enterUsernameTeamGameState);
   });
 
@@ -233,14 +247,16 @@ io.on("connection", function (socket) {
     games[rc] = {
       roomCode: rc,
       teams: [],
-      gameState: "postJoinWaitingGameState",
-      hostState: 1,
+      gameState: ClientStates.postJoinWaitingGameState,
+      hostState: HostStates.lobbyHostState,
       host: socket.id,
     };
 
     // is this emitting to any clients?
-    io.to(rc).emit("gameState", games[rc].gameState);
+    // io.to(rc).emit("gameState", games[rc].gameState);
+
     io.to(games[rc].host).emit("completeGameState", games[rc]);
+    socket.emit("hostState", games[rc].hostState);
 
     roomCode = rc;
   });
@@ -269,10 +285,10 @@ io.on("connection", function (socket) {
     }
 
     console.log("[" + socket.id + "] Starting Game: " + roomCode);
-    games[roomCode].gameState = "readyGameState";
-    games[roomCode].hostState = 2;
+    games[roomCode].gameState = ClientStates.readyGameState;
+    games[roomCode].hostState = HostStates.getReadyHostState;
     io.to(roomCode).emit("gameState", games[roomCode].gameState);
-    io.to(roomCode).emit("hostState", games[roomCode].hostState);
+    io.to(games[roomCode].host).emit("hostState", games[roomCode].hostState);
   });
 
   socket.on("broadcastQuestion", function (question: QuestionData) {
@@ -351,6 +367,7 @@ io.on("connection", function (socket) {
 
     // send update
     io.to(games[roomCode].host).emit("completeGameState", games[roomCode]);
+    io.to(roomCode).emit("hostState", HostStates.resultsHostState);
   });
 
   socket.on("submitAnswer", function (answer) {
