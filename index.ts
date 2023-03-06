@@ -46,6 +46,7 @@ type TeamAnswer = {
   team: string;
   answer: string;
   player: Player;
+  timeAnswered: Date;
 };
 
 type QuestionData = {
@@ -59,11 +60,7 @@ type Question = {
   teamAnswers: {
     [key: string]: TeamAnswer;
   };
-};
-
-type BroadcastedQuestion = {
-  question: string;
-  answers: Answer[];
+  timeBroadcasted: Date;
 };
 
 type Game = {
@@ -76,15 +73,7 @@ type Game = {
 };
 
 // main game object
-var games = {
-  "0": {
-    roomCode: "0",
-    teams: [],
-    gameState: ClientStates.joinGameState,
-    hostState: HostStates.createGameHostState,
-    host: "0",
-  },
-} as {
+var games = {} as {
   [key: string]: Game;
 };
 
@@ -301,6 +290,7 @@ io.on("connection", function (socket) {
       games[roomCode].currentQuestion = {
         question: question,
         teamAnswers: {},
+        timeBroadcasted: new Date(),
       };
 
       io.to(roomCode).emit(
@@ -340,12 +330,32 @@ io.on("connection", function (socket) {
           (a) => a.correct && a.answer === teamAnswer.answer
         );
         if (correctAnswer) {
+          // calculate score, minimum of 500, with buffer of .1 seconds
+          console.log(
+            (teamAnswer.timeAnswered.getTime() -
+              games[roomCode].currentQuestion!.timeBroadcasted.getTime()) /
+              10
+          );
+          let score = Math.min(
+            1000,
+            Math.max(
+              500,
+              1010 - // buffer of 0.1 seconds
+                Math.floor(
+                  (teamAnswer.timeAnswered.getTime() -
+                    games[
+                      roomCode
+                    ].currentQuestion!.timeBroadcasted.getTime()) /
+                    10
+                )
+            )
+          );
           // increase team score
-          p.score += 1;
+          p.score += score;
           // increase player score
           p.players.forEach((player) => {
             if (player.id === teamAnswer.player.id) {
-              player.score += 1;
+              player.score += score;
             }
           });
         }
@@ -390,6 +400,7 @@ io.on("connection", function (socket) {
         team: teamName,
         answer: answer,
         player: player,
+        timeAnswered: new Date(),
       } as TeamAnswer;
       io.to(roomCode).emit("completeGameState", games[roomCode]);
 

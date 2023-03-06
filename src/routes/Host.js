@@ -1,7 +1,7 @@
 import "./Host.css";
 import { useEffect, useRef, useState } from "react";
 import nobody from "../img/nobody.png";
-import questionsRaw from "../questions.json";
+import questionsRaw from "../demoquestions.json";
 import HostStates from "../util/HostStates";
 
 const maxQuestions = 10;
@@ -14,8 +14,7 @@ export default function Host({ _io }) {
   const [currentQuestion, setCurrentQuestion] = useState({});
   const [hostState, setHostState] = useState(HostStates.createGameHostState);
   const [questionCount, setQuestionCount] = useState(0);
-
-  var questions = questionsRaw;
+  const [questionSet, setQuestionSet] = useState(questionsRaw);
 
   useEffect(() => {
     _io.connect();
@@ -130,7 +129,7 @@ export default function Host({ _io }) {
     }
 
     // choose question and update question set
-    let question = questions[Math.floor(Math.random() * questions.length)];
+    let question = questionSet[Math.floor(Math.random() * questionSet.length)];
     question = scrambleAnswers(question);
     question = assignColorsToQuestion(question);
 
@@ -143,7 +142,7 @@ export default function Host({ _io }) {
 
     setCompleteGameState(newCompleteGameState);
 
-    questions = questions.filter((q) => q !== question);
+    setQuestionSet(questionSet.filter((q) => q !== question));
 
     setQuestionCount(questionCount + 1);
 
