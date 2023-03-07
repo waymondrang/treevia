@@ -1,13 +1,13 @@
 .Stats{
     position: absolute;
     border-style: double;
-    width: 12%;
+    width: 15%;
     margin-right: 5%;
-    background-color: #b3efae;
-    border: 3px solid #0c0c0c;
+    background-color: #dfdf89;
+    border: 3px solid #041B15;
     border-radius: 5px;
     right:2%;
-    color: #2a3422;
+    color: #041B15;
 }
 .Stats h1{
     text-align: center;
@@ -16,9 +16,9 @@
     padding-bottom: 10px;
     padding-left: 0%;
     padding-right: 0%;
-    background-color: #b3efae;
     border-style: double;
-    border: 2px dotted #0c0c0c;
+    border: 2px dotted #041B15;
+    background-color: #dfdf89;
     border-radius: 0px;
 }
 .Stat-vals{

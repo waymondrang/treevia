@@ -1,5 +1,5 @@
 .MainPage {
-  
+  background-color: #bca069;
   width: 100%;
   height: 100%;
 
@@ -7,11 +7,11 @@
   .MainPage h1{
     text-align: center;
     margin: 0;
-    background-color: #aa7125;
+    background-color: #994636;
     padding-top: 30px;
     padding-bottom: 30px;
     border-style: double;
-    border: 3px solid #0c0c0c;
+    border: 3px solid #041B15;
     border-radius: 5px;
     font-family: Object Sans;
   }
@@ -29,9 +29,9 @@
   height: fit-content;
   border: none;
   border-radius: 0.25em;
-  background-color: #c5e1a5;
+  background-color: #b9d07b;
   margin: 0.25rem;
-  box-shadow: inset 0 0 0 0 #558b2f;
+  box-shadow: inset 0 0 0 0 #34623F;
   transition: all 0.25s cubic-bezier(0, 0, .01, 1);
   color: #2a3422;
   font-weight: bold;
@@ -48,9 +48,9 @@
 }
 
 .button:not(:disabled):hover {
-  box-shadow: inset 13.5rem 0 0 0 #558b2f;
+  box-shadow: inset 13.5rem 0 0 0 #34623F;
   color: #fff;
-  background-color: #558b2f;
+  background-color: #34623F;
 }
 .button:not(:disabled):active {
   color: #fff;
