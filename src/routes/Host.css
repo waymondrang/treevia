@@ -203,36 +203,6 @@
     grid-gap: 1rem;
 }
 
-#host-question #answers .answer {
-    background-color: #2F4D1A28;
-    border-radius: 0.5rem;
-    padding: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1.7rem;
-    font-weight: 600;
-}
-
-/* arbitrary colors */
-
-#host-question #answers .answer.red {
-    background-color: #6a1b9a;
-}
-
-#host-question #answers .answer.green {
-    background-color: #1565c0;
-}
-
-#host-question #answers .answer.blue {
-    background-color: #2e7d32;
-}
-
-#host-question #answers .answer.yellow {
-    background-color: #4e342e;
-}
-
 #team-list {
     position: relative;
     margin: 1rem 0;

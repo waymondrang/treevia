@@ -24,6 +24,11 @@ export default function Host({ _io }) {
       setSocketStatus(_io.connected);
     });
 
+    _io.on("gameError", (error) => {
+      console.log("Game Error", error);
+      setGameError(error);
+    });
+
     _io.on("hostState", (state) => {
       console.log("_io Listener Host State Update", state);
       if (state === HostStates.getReadyHostState) startGameCycle();
@@ -63,7 +68,7 @@ export default function Host({ _io }) {
    */
   useEffect(() => {
     if (
-      hostState === HostStates.questionHostState &&
+      hostState === HostStates.answerHostState &&
       completeGameState.currentQuestion
     ) {
       if (
@@ -121,7 +126,7 @@ export default function Host({ _io }) {
     nextQuestion();
   }
 
-  function nextQuestion() {
+  async function nextQuestion() {
     if (questionCount === maxQuestions) {
       console.log("Game Over");
       setHostState(HostStates.finalResultsHostState);
@@ -130,6 +135,7 @@ export default function Host({ _io }) {
 
     // choose question and update question set
     let question = questionSet[Math.floor(Math.random() * questionSet.length)];
+    console.log("Question", question);
     question = scrambleAnswers(question);
     question = assignColorsToQuestion(question);
 
@@ -145,6 +151,12 @@ export default function Host({ _io }) {
 
     // start game
     setHostState(HostStates.questionHostState);
+
+    // display question for random seconds from 3 to 5
+    await waitForTimeout(Math.floor(Math.random() * 3) + 3);
+
+    // show answers
+    setHostState(HostStates.answerHostState);
 
     // broadcast question
     _io.emit("broadcastQuestion", question);
@@ -253,6 +265,12 @@ export default function Host({ _io }) {
       )}
 
       {hostState === HostStates.questionHostState && (
+        <div id="host-question">
+          <span className="question-text">{currentQuestion.question}</span>
+        </div>
+      )}
+
+      {hostState === HostStates.answerHostState && (
         <div id="host-question">
           <span className="question-text">{currentQuestion.question}</span>
           <div id="answers">

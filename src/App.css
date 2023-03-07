@@ -148,3 +148,89 @@ a {
 html {
   scroll-behavior: smooth;
 }
+
+#answers .answer {
+  /* background-color: #2F4D1A28;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  height: 100%;
+  font-weight: 600;
+
+  appearance: button;
+  border: solid transparent;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  text-align: center;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+#answers .answer:after {
+  background-clip: padding-box;
+  border: solid transparent;
+  border-radius: 0.5rem;
+  border-width: 0 0 4px;
+  bottom: -0.1rem;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+
+#answers .answer.red {
+  background-color: #332623;
+}
+
+#answers .answer.red::after {
+  background-color: #4e342e;
+}
+
+#answers .answer.green {
+  background-color: #1b2513;
+}
+
+#answers .answer.green::after {
+  background-color: #2F4D1A;
+}
+
+#answers .answer.blue {
+  background-color: #804436;
+}
+
+#answers .answer.blue::after {
+  background-color: #C95036;
+}
+
+#answers .answer.yellow {
+  background-color: #3c408d;
+}
+
+#answers .answer.yellow::after {
+  background-color: #4E54C7;
+}

@@ -18,7 +18,7 @@ function App() {
         <div id="about-section-contents">
           <h2>About</h2>
           <p>
-            __________ is a trivia question-answer style game created by Shilpa
+            Treevia is a trivia question-answer style game created by Shilpa
             Chowbey, Sophia Conti, Annabella Macaluso, Jessica Wang and Raymond
             Wang. The questions in this game target various climate issues that
             relate to agriculture and the effect of climate change on farming.

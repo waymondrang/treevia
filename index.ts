@@ -10,7 +10,7 @@ const emojis = require("./emojis.json") as string[];
 
 // Add comments!!!!@!!!!!!!! -adhi no -ray
 
-const PORT = 3000;
+const PORT = 3001;
 
 const app = express();
 
@@ -334,7 +334,7 @@ io.on("connection", function (socket) {
           console.log(
             (teamAnswer.timeAnswered.getTime() -
               games[roomCode].currentQuestion!.timeBroadcasted.getTime()) /
-              10
+              20
           );
           let score = Math.min(
             1000,
@@ -346,7 +346,7 @@ io.on("connection", function (socket) {
                     games[
                       roomCode
                     ].currentQuestion!.timeBroadcasted.getTime()) /
-                    10
+                    20
                 )
             )
           );
@@ -437,11 +437,16 @@ io.on("connection", function (socket) {
         (t) => t.players.length > 0
       );
 
-      // if host disconnects, delete game
-      if (games[roomCode].host === socket.id) {
+      // if host disconnects, delete game (or if no players left)
+      if (
+        games[roomCode].host === socket.id ||
+        (games[roomCode].teams.length === 0 &&
+          games[roomCode].hostState !== HostStates.lobbyHostState)
+      ) {
         console.log("[" + socket.id + "] Deleting Game: " + roomCode);
-        io.to(roomCode).emit("gameError", "Host has disconnected.");
+        io.to(roomCode).emit("gameError", "Game has closed.");
         io.to(roomCode).emit("gameState", ClientStates.joinGameState);
+        io.to(roomCode).emit("hostState", HostStates.createGameHostState);
         // remove room
         io.of("/")
           .in(roomCode)
