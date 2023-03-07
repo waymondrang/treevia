@@ -3,6 +3,7 @@ const HostStates = Object.freeze({
   lobbyHostState: "lobbyHostState",
   getReadyHostState: "getReadyHostState",
   questionHostState: "questionHostState",
+  answerHostState: "answerHostState",
   resultsHostState: "resultsHostState",
   finalResultsHostState: "finalResultsHostState",
 });

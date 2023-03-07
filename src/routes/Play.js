@@ -226,7 +226,9 @@ export default function Play({ _io }) {
           className={questionResults.correct ? "correct" : "incorrect"}
         >
           <h1>{questionResults.correct ? "Correct!" : "Incorrect"}</h1>
-          <div id="answers">{questionResults.question.explanation}</div>
+          {questionResults.question.explanation && (
+            <div id="answers">{questionResults.question.explanation}</div>
+          )}
         </div>
       )}
 
