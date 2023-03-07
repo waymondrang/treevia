@@ -17,7 +17,9 @@ import Play from "./routes/Play";
 import Trivia from "./routes/TriviaTestPage";
 import io from "socket.io-client";
 
-const _io = io();
+const _io = io(
+  process.env.NODE_ENV === "development" ? "http://localhost:3001" : ""
+);
 _io.disconnect();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

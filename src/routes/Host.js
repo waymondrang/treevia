@@ -1,19 +1,20 @@
 import "./Host.css";
 import { useEffect, useRef, useState } from "react";
 import nobody from "../img/nobody.png";
-import questionsRaw from "../questions.json";
+import questionsRaw from "../util/general_questions.json";
+import HostStates from "../util/HostStates";
+
+const maxQuestions = 10;
 
 export default function Host({ _io }) {
-  var [socketStatus, setSocketStatus] = useState(_io.connected);
-  var [roomCode, setRoomCode] = useState("");
-  var [localHostState, setLocalHostState] = useState(0);
-  var [remoteHostState, setRemoteHostState] = useState(0);
-  var [completeGameState, setCompleteGameState] = useState({});
-  var [playerList, setPlayerList] = useState([]);
-  const [gameCycle, setGameCycle] = useState(0);
-  var [currentQuestion, setCurrentQuestion] = useState({});
-
-  var questions = questionsRaw;
+  const [socketStatus, setSocketStatus] = useState(_io.connected);
+  const [completeGameState, setCompleteGameState] = useState({});
+  const [teamList, setTeamList] = useState([]);
+  const [gameError, setGameError] = useState("");
+  const [currentQuestion, setCurrentQuestion] = useState({});
+  const [hostState, setHostState] = useState(HostStates.createGameHostState);
+  const [questionCount, setQuestionCount] = useState(0);
+  const [questionSet, setQuestionSet] = useState(questionsRaw);
 
   useEffect(() => {
     _io.connect();
@@ -25,20 +26,27 @@ export default function Host({ _io }) {
 
     _io.on("hostState", (state) => {
       console.log("_io Listener Host State Update", state);
-      if (state === 2) startGameCycle();
+      if (state === HostStates.getReadyHostState) startGameCycle();
       // may not need to handle different local and remote host states
-      setRemoteHostState(state);
+      setHostState(state);
     });
 
     _io.on("completeGameState", (gameState) => {
       console.log("Game State Update", gameState);
       setCompleteGameState(gameState);
-      setPlayerList(gameState.players);
+      setTeamList(gameState.teams);
+      // do not update hostState via completeGameState listener
     });
 
     _io.on("disconnect", () => {
       console.log("Disconnected from Server");
       setSocketStatus(_io.connected);
+      setGameError("Disconnected from Server");
+      // reset game state
+      setHostState(HostStates.createGameHostState);
+      setCompleteGameState({});
+      setTeamList([]);
+      setQuestionCount(0);
     });
 
     return () => {
@@ -50,21 +58,24 @@ export default function Host({ _io }) {
     };
   }, []);
 
+  /**
+   * Check if all players have answered
+   */
   useEffect(() => {
-    if (gameCycle === 2 && completeGameState.currentQuestion) {
-      // check if all players have answered
+    if (
+      hostState === HostStates.questionHostState &&
+      completeGameState.currentQuestion
+    ) {
       if (
-        Object.keys(completeGameState.currentQuestion.playerAnswers).length ===
-        completeGameState.players.length
+        Object.keys(completeGameState.currentQuestion.teamAnswers).length ===
+        completeGameState.teams.length
       ) {
         console.log("All players have answered");
         // broadcast answers
-        _io.emit("broadcastResults");
-        // set game state
-        setGameCycle(3);
+        _io.emit("requestResults");
       }
     }
-  }, [completeGameState, gameCycle, _io]);
+  }, [completeGameState, hostState, _io]);
 
   function waitForTimeout(seconds) {
     return new Promise((resolve) => {
@@ -86,10 +97,24 @@ export default function Host({ _io }) {
     return question;
   }
 
+  function scrambleAnswers(question) {
+    let answers = question.answers;
+    let scrambledAnswers = [];
+
+    while (answers.length > 0) {
+      let index = Math.floor(Math.random() * answers.length);
+      scrambledAnswers.push(answers[index]);
+      answers.splice(index, 1);
+    }
+
+    question.answers = scrambledAnswers;
+    return question;
+  }
+
   async function startGameCycle() {
     console.log("Starting Game Cycle...");
     // start game cycle
-    setGameCycle(1);
+    setHostState(HostStates.getReadyHostState);
     // wait for 3 seconds
     await waitForTimeout(1);
     // start game
@@ -97,21 +122,29 @@ export default function Host({ _io }) {
   }
 
   function nextQuestion() {
+    if (questionCount === maxQuestions) {
+      console.log("Game Over");
+      setHostState(HostStates.finalResultsHostState);
+      return;
+    }
+
     // choose question and update question set
-    let question = questions[Math.floor(Math.random() * questions.length)];
+    let question = questionSet[Math.floor(Math.random() * questionSet.length)];
+    question = scrambleAnswers(question);
     question = assignColorsToQuestion(question);
 
     console.log("Question", question);
-
     setCurrentQuestion(question);
+
     let newCompleteGameState = { ...completeGameState };
     newCompleteGameState.currentQuestion = undefined;
 
     setCompleteGameState(newCompleteGameState);
+    setQuestionSet(questionSet.filter((q) => q !== question));
+    setQuestionCount(questionCount + 1);
 
-    questions = questions.filter((q) => q !== question);
     // start game
-    setGameCycle(2);
+    setHostState(HostStates.questionHostState);
 
     // broadcast question
     _io.emit("broadcastQuestion", question);
@@ -120,69 +153,106 @@ export default function Host({ _io }) {
   function createRoom(e) {
     e.preventDefault();
 
+    if (!_io.connected) {
+      console.log("No connection to server");
+      setGameError("No connection to server.");
+      return;
+    }
+
     console.log("Creating Room...");
     // join room
-    _io.emit("createRoom", roomCode);
-    // set local host state
-    setLocalHostState(1);
+    _io.emit("createRoom");
+    // set local host state (no)
+    // setHostState(HostStates.lobbyHostState);
   }
 
   function startGame() {
     console.log("Starting Game...");
     // start game
     _io.emit("startGame");
-    // set local host state
-    setLocalHostState(2);
+    // do not set local host state, wait for server
   }
 
   return (
     <div id="play">
       <span id="debug">{socketStatus ? "Connected" : "Disconnected"}</span>
-      {localHostState === 0 && (
-        <form id="host">
-          <h1>Host Game</h1>
-          <input
-            onChange={(e) => setRoomCode(e.target.value)}
-            value={roomCode}
-            type="text"
-            placeholder="Room Code"
-          />
-          <button onClick={createRoom} type="submit">
-            Create
-          </button>
-        </form>
+      {hostState === HostStates.createGameHostState && (
+        <div>
+          <form id="host">
+            <h1>Host Game</h1>
+            <button onClick={createRoom} type="submit">
+              Create
+            </button>
+            <p className="small-text">
+              A room code will be automatically generated.
+            </p>
+          </form>
+          {gameError && (
+            <div id="error">
+              <span>Oops! {gameError}</span>
+            </div>
+          )}
+        </div>
       )}
-      {localHostState === 1 && (
+
+      {hostState === HostStates.lobbyHostState && (
         <div id="lobby">
           <div id="control-panel">
             <div id="room-code">
-              <h1>{roomCode}</h1>
+              <h1>{completeGameState.roomCode}</h1>
             </div>
-            <button onClick={startGame}>Start Game</button>
+            <button onClick={startGame} disabled={teamList.length === 0}>
+              Start Game
+            </button>
           </div>
-          <div id="player-list">
-            <h2>Players</h2>
-            {playerList.length ? (
-              <ul>
-                {playerList.map((player) => (
-                  <li key={player.id}>{player.id}</li>
+          <div id="team-list">
+            <h2>Teams</h2>
+            {teamList.length ? (
+              <div id="teams">
+                {teamList.map((team) => (
+                  <div key={team.name} className="team-card">
+                    <h3 className="team-name">{team.name}</h3>
+                    {team.players.map((player) => (
+                      <div key={player.name} className="team-player">
+                        <span>{player.name}</span>
+                      </div>
+                    ))}
+                  </div>
                 ))}
-              </ul>
+              </div>
             ) : (
-              <div id="empty-player-list">
-                <img src={nobody} alt="" />
+              <div id="empty-team-list">
+                <p>Create a sharable link for players to quickly join!</p>
+                <button
+                  onClick={(e) => {
+                    navigator.clipboard.writeText(
+                      window.location.host +
+                        "/play?roomCode=" +
+                        completeGameState.roomCode
+                    );
+                    e.target.innerText = "Copied!";
+                    e.target.classList.add("copied");
+                    setTimeout(() => {
+                      e.target.innerText = "Copy Link";
+                      e.target.classList.remove("copied");
+                    }, 1500);
+                  }}
+                >
+                  Copy Link
+                </button>
               </div>
             )}
           </div>
         </div>
       )}
-      {/* gameCycle does not have 0 state */}
-      {gameCycle === 1 && (
+
+      {hostState === HostStates.getReadyHostState && (
         <div id="ready">
           <h1>Get Ready!</h1>
         </div>
       )}
-      {gameCycle === 2 && (
+
+      {hostState === HostStates.questionHostState && (
         <div id="host-question">
           <span className="question-text">{currentQuestion.question}</span>
           <div id="answers">
@@ -197,10 +267,103 @@ export default function Host({ _io }) {
           </div>
         </div>
       )}
-      {gameCycle === 3 && (
-        <div id="control-panel">
-          <h1>Results</h1>
-          <button onClick={nextQuestion}>Next Question</button>
+
+      {hostState === HostStates.resultsHostState && (
+        <div id="host-results">
+          <div id="control-panel">
+            <h1>Question {questionCount} Results</h1>
+            <button onClick={nextQuestion}>
+              {questionCount === maxQuestions ? "Results" : "Next Question"}
+            </button>
+          </div>
+          <div id="winning-teams">
+            {/* top 5 teams */}
+            {completeGameState.teams
+              .sort((a, b) => b.score - a.score)
+              .slice(0, 5)
+              .map((team, index) => (
+                <div
+                  key={team.name}
+                  className={"team" + (index === 0 ? " first" : "")}
+                >
+                  <div>
+                    <span className="team-placement">
+                      {index + 1}
+                      {index === 0
+                        ? "st"
+                        : index === 1
+                        ? "nd"
+                        : index === 2
+                        ? "rd"
+                        : "th"}
+                    </span>
+                    <span className="team-name">{team.name}</span>
+                  </div>
+                  <span className="team-score small-text">
+                    {team.score} {team.score === 1 ? "point" : "points"}
+                  </span>
+                </div>
+              ))}
+            {/* fill if less than 5 teams */}
+            {completeGameState.teams.length < 5 &&
+              Array(5 - completeGameState.teams.length)
+                .fill(0)
+                .map((_, index) => (
+                  <div key={index} className="team">
+                    <span className="team-name"></span>
+                  </div>
+                ))}
+          </div>
+        </div>
+      )}
+
+      {hostState === HostStates.finalResultsHostState && (
+        <div id="host-final-results">
+          <div id="winning-teams">
+            {/* top 3 teams */}
+            {completeGameState.teams
+              .sort((a, b) => b.score - a.score)
+              .slice(0, 3)
+              .map((team, index) => (
+                <div
+                  key={team.name}
+                  className={"team " + ["first", "second", "third"][index]}
+                >
+                  <div>
+                    <span className="team-placement">
+                      {index + 1}
+                      {index === 0
+                        ? "st"
+                        : index === 1
+                        ? "nd"
+                        : index === 2
+                        ? "rd"
+                        : "th"}
+                    </span>
+                    <span className="team-name">{team.name}</span>
+                  </div>
+                  <span className="team-score small-text">
+                    {team.score} {team.score === 1 ? "point" : "points"}
+                  </span>
+                </div>
+              ))}
+            {/* fill if less than 3 teams */}
+            {completeGameState.teams.length < 3 &&
+              Array(3 - completeGameState.teams.length)
+                .fill(0)
+                .map((_, index) => (
+                  <div key={index} className="team">
+                    <span className="team-name"></span>
+                  </div>
+                ))}
+          </div>
+          <button
+            onClick={() => {
+              window.location.reload();
+            }}
+          >
+            Restart Game (Reload)
+          </button>
         </div>
       )}
     </div>
