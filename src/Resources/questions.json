@@ -19,7 +19,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "sustainability",
         "explanation": " Hydroponics is a soil-less method where the roots of the plant are immersed in a nutrient solution (Sardare)."
     },
 
@@ -43,7 +43,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "sustainability",
         "explanation": "Aeroponics is the best for leafy vegetables like cabbage, spinach, kale, etc (Sardare)."
     },
 
@@ -67,7 +67,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "sustainability",
         "explanation": "These growing methods allow for year-round growing which is one of the most valuable features it has. Using grow lights, plants are able to sustain life in any location throughout the year (Sardare)."
     },
 
@@ -91,7 +91,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "sustainability",
         "explanation": "The best time to water plants is in the morning or evening when the sun is not as prominent. Watering during the day will increase the chances that the water will evaporate instead of absorbing into the soil and into the roots of plants (Sardare)."
     },
 
@@ -115,7 +115,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "sustainability",
         "explanation": "Both plants and aquatic animals benefit from being in an aquaponic environment. Generally, fish are utilized and they produce ammonia. Plant bacteria transform this into nutrients that can be uptaken and act as a natural filter to detoxify the water for recirculation."
     },
 
@@ -139,7 +139,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "sustainability",
         "explanation": "\"Drip irrigation uses 30-50% less water than surface irrigation, reduces salinization and waterlogging, and achieves up to 95% irrigation efficiency” (World Bank, 2006: 163)."
     },
 
@@ -163,7 +163,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "sustainability",
         "explanation": "Natural fertilizers are organic substances that contain vital nutrients for plant growth whereas synthetic fertilizers are made of synthesized chemicals like nitrogen, potassium, and phosphorus (Hazra)."
     },
 
@@ -187,7 +187,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "sustainability",
         "explanation": "Sodium is not an essential nutrient for plants but can be used in micro amounts to aid in water retention and metabolism. Nitrogen, potassium, and phosphorus are three nutrients used in large amounts by plants so it is important for these elements to be restored in order to maintain productivity (Hazra)."
     },
 
@@ -211,7 +211,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "sustainability",
         "explanation": "Drip irrigation is when water and nutrients are delivered in small periodic amounts to a plant. This reduces the need for excessive fertilizer application which results in a lower salinity of the soil."
     },
 
@@ -235,7 +235,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "sustainability",
         "explanation": "Perennials are plants that come back every year. Perennials only require being planted once which is more soil sustainable compared to annual crops that require constant tillage. The main concepts of permaculture are based on closed-loop systems, multiple functionalities, water conservation, and letting nature do the work for you (Ferguson)."
     },
 
@@ -259,7 +259,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "sustainability",
         "explanation": "Permaculture is creating an efficient and self-sustainable environment. These examples given are all based on the core principles of permaculture (Ferguson)."
     },
 
@@ -283,7 +283,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "soil",
         "explanation": "Soil sealing is the destruction or covering of the ground by an impermeable material and is one of the main causes of soil degradation. Therefore, decreasing the amount of soil sealing helps increase soil productivity (Rojas)."
     },
 
@@ -307,7 +307,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "soil",
         "explanation": "Most soil microbes can be classified into one of the five different microbes: actinomycetes, bacteria, fungi, nematodes, and protozoa (Rojas)."
     },
 
@@ -331,7 +331,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "soil",
         "explanation": "One gram of soil can have up to 1 billion bacteria. Although they are small, they make up the majority of the soil's biomass (Raynaud)."
 
     },
@@ -356,7 +356,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "soil",
         "explanation": "Soil pH should be close to neutral so a range of a slightly acidic pH of 5.5 to a slightly alkaline pH of 7.5 is considered good for plant growth (Neina)."
         
     },
@@ -381,7 +381,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "soil",
         "explanation": "A pH value is the measure of hydrogen concentration so soil pH is the measure of the acidity or alkalinity of the soil. Lower pH corresponds to more acidic soil whereas higher pH is alkaline (Neina)."
         
     },
@@ -406,7 +406,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "soil",
         "explanation": "Through a process called nitrogen fixation, microorganisms capture atmospheric nitrogen and convert it to ammonia. This new form of nitrogen can now be absorbed and utilized by plants to make organic molecules (Qu)."
         
     },
@@ -431,7 +431,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "soil",
         "explanation": "Soil pH is affected by factors like climate, minerals present in the soil, and soil texture (Qu)."
         
     },
@@ -456,7 +456,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "soil",
         "explanation": "All of the choices are a potential result. Chemical fertilizers are often used to enhance crop yield and decrease pest problems, but a long time use of them can damage the soil’s microbiome (Lin)."
         
     },
@@ -481,7 +481,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "soil",
         "explanation": "Soil erosion removes valuable topsoil which is the most productive part of the soil for agricultural purposes and results in lower crop yield (Nearing)."
         
     },
@@ -506,7 +506,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "soil",
         "explanation": "According to a study done by the University of Massachusetts Amherst, midwestern US farmland loses on average 2mm of soil per year. This is double the erosion rate that the USDA deems to be sustainable (Nearing)."
         
     },
@@ -531,7 +531,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "disaster",
         "explanation": "Agriculture depends on the climate and accessibility of water so natural disasters affect the growth and output of crops significantly."
         
     },
@@ -556,7 +556,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "disaster",
         "explanation": "Drought causes 44% of crop and livestock production loss compared to floods that result in a 39% production loss (Sivakumar)."
         
     },
@@ -581,7 +581,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "disaster",
         "explanation": "Earthquakes cause the soil underneath crops to become loose which results in damaged root systems (Sivakumar)."
         
     },
@@ -606,7 +606,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "disaster",
         "explanation": "Natural disasters resulted in a domestic food production loss of over $12.5 billion in 2021. Drought and wildfires contributed to over $3.3 billion alone (Sivakumar)."
         
     },
@@ -631,7 +631,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "disaster",
         "explanation": "In the past decade, the US lost a total of $140 billion in damages across all sectors due to disasters. The agriculture sector occupies 14% of damages and 29% of loss across all sectors for a combined percentage of 22% in damage and loss in agriculture (Cutter)."
         
     },
@@ -656,7 +656,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "disaster",
         "explanation": "Storms which include hurricanes and typhoons have the greatest impact on the forestry subsector (Banholzer)."
         
     },
@@ -681,7 +681,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "disaster",
         "explanation": "Raising temperatures due to climate change increases the chances and frequencies of storms."
         
     },
@@ -706,7 +706,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "disaster",
         "explanation": "As global warming continues to progress, the number of climate-related disasters has tripled in the past 30 years (Banholzer)."
         
     },
@@ -731,7 +731,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "disaster",
         "explanation": "Sea levels have risen 3 inches in the past 20 years. Since 1950, sea levels have increased by nearly 6.5 inches (Banholzer)."
         
     },
@@ -756,7 +756,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "disaster",
         "explanation": "The US government provides a variety of disaster relief programs like the Noninsured Disaster Assistance Program (NAP), Family Farm Disaster Fund, etc to help farmers out after they are affected by a natural disaster (Cutter)."
         
     },
@@ -781,7 +781,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "carbon",
         "explanation": "Carbon Dioxide, Methane, and Nitrous Oxide are the three most infamous contributors to global warming, particularly in agriculture (Pant, K. P.)."
         
     },
@@ -806,7 +806,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "carbon",
         "explanation": "Deforestation takes away a natural carbon sink — which is a system that absorbs carbon. Without it, more carbon is staying in the atmosphere (Pant, K. P.)."
         
     },
@@ -831,7 +831,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "carbon",
         "explanation": "All plants perform photosynthesis where they convert CO2 to O2 (Pant, K. P.)."
         
     },
@@ -856,7 +856,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "carbon",
         "explanation": "Machinery, livestock, and transportation all contribute to carbon emissions (Pant, K. P.)."
         
     },
@@ -881,7 +881,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "carbon",
         "explanation": "Buying things locally means there is less travel time for the customer, so less fuel is burned (Pant, K. P.)."
         
     },
@@ -906,7 +906,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "carbon",
         "explanation": "Carbon Sequestration is the stabilization and trapping of carbon, usually in its solid compound form (West, T.O., Marland, G.)."
         
     },
@@ -931,7 +931,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "carbon",
         "explanation": "If crop yields decrease because you use a field with vegetation that stores carbon, another field will have to be used to compensate for the loss. This may set back CO2 mitigation (West, T.O., Marland, G.)."
         
     },
@@ -956,7 +956,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "carbon",
         "explanation": "All options are true (West, T.O., Marland, G.)."
         
     },
@@ -981,7 +981,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "carbon",
         "explanation": "Importing materials requires transportation which often burns fossil fuels (West, T.O., Marland, G.)."
         
     },
@@ -1006,7 +1006,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "carbon",
         "explanation": "This is true; making more efficient use of a field will cause a decrease in both emissions and carbon accumulation (West, T.O., Marland, G.)."
         
     },
@@ -1031,7 +1031,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "water",
         "explanation": "Irrigation is considered inefficient because only about half of the water used goes to the plant. The outlying percentages of water go to other areas of the farm or are lost (Chartzoulakis K., and Maria B.)."
         
     },
@@ -1056,7 +1056,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "water",
         "explanation": "As water availability increases, crop yield will increase, but only till the saturation point of the crop.  (Chartzoulakis K., and Maria B.)."
         
     },
@@ -1081,7 +1081,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "water",
         "explanation": "Crop yield typically decreases with overirrigation meaning that the productivity of the farm also goes down. (Chartzoulakis K., and Maria B.)."
         
     },
@@ -1106,7 +1106,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "water",
         "explanation": "Drip irrigation (a type of localized irrigation) reduces water use by 30% and increases crop yields by 20%. (Chartzoulakis K., and Maria B.)."
         
     },
@@ -1131,7 +1131,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "water",
         "explanation": "Localized irrigation is expensive and watering each plant individually leads to more water clogging (Chartzoulakis K., and Maria B.)."
         
     },
@@ -1156,7 +1156,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "water",
         "explanation": "All of those metrics provide insight to what a plant requires and what its limits are. Factors to consider are the climate and soil potential  (Chartzoulakis K., and Maria B.)."
         
     },
@@ -1181,7 +1181,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "water",
         "explanation": "Technologies such as remote sensing can detect the loss as soon as it happens so the farmer can take care of it  (Chartzoulakis K., and Maria B.)."
         
     },
@@ -1206,7 +1206,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "water",
         "explanation": "An overwhelming majority of water usage is from agriculture. Other sectors include residential, industrial, etc (Chartzoulakis K., and Maria B.)."
         
     },
@@ -1231,7 +1231,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "water",
         "explanation": "A sizable portion of the world's food comes from irrigated lands, especially considering that only 18% of the croplands are irrigated. (Chartzoulakis K., and Maria B.)."
         
     },
@@ -1256,7 +1256,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "water",
         "explanation": "Crop demand is only increasing, so water reliability is much more critical. Water wastage is not tolerable because that deficit will be felt by other users. (Chartzoulakis K., and Maria B.)."
         
     },
@@ -1281,7 +1281,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "productivity",
         "explanation": "Indigenous practices often form a harmonious system with the earth which can make their crops more resilient (Nkomwa, Emmanuel Charles, et al.)."
         
     },
@@ -1306,7 +1306,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "productivity",
         "explanation": "These are natural indicators that are especially utilized by indigenous practices. They are more small-scale, so they have the ability to be more attentive to all of these factors.  (Nkomwa, Emmanuel Charles, et al.)."
         
     },
@@ -1331,7 +1331,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "productivity",
         "explanation": "25% of the economy in developing countries is due to agriculture; however, their productivity is generally low (Gollin, Douglas)."
         
     },
@@ -1356,7 +1356,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "productivity",
         "explanation": "On average, 40% of workers earn money from agriculture; that number is much higher in developing countries — around 60-75%. (Gollin, Douglas)."
         
     },
@@ -1381,7 +1381,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "productivity",
         "explanation": "73.2% of Eastern Africans work in agriculture and contribute to the economy (Gollin, Douglas)."
         
     },
@@ -1406,7 +1406,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "productivity",
         "explanation": "Though the infrastructure may eventually lead to adverse growing conditions, the environment is not an inherent reason why their crop productivity is lower (Gollin, Douglas)."
         
     },
@@ -1431,7 +1431,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "productivity",
         "explanation": "Developed countries import a large percentage of their food, so less of their economy and culture is dedicated to the growing of food (Gollin, Douglas)."
         
     },
@@ -1456,7 +1456,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "productivity",
         "explanation": "Workers have less income to buy food, so their food prices are relatively higher. In addition, the supply of food is reduced which also raises the prices  (Gollin, Douglas)."
         
     },
@@ -1481,7 +1481,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "productivity",
         "explanation": "Over half of a household income was often spent on food; in some cases, up to 80% was spent  (Gollin, Douglas)."
         
     },
@@ -1506,7 +1506,7 @@
                 "correct": false
             }
         ],
-        "category": "...",
+        "category": "productivity",
         "explanation": "Increased agricultural productivity has the potential to affect every other part of the economy which is why it is one of the key distinguishers between developing and developed countries  (Gollin, Douglas)."
         
     }

@@ -1,8 +1,11 @@
 import "../Stats.css";
 import "../Farm.css";
+import { Cookies } from 'react-cookie';
 import React, { Component } from 'react';
 
+const cookies = new Cookies();
 class Stats extends Component{
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +20,7 @@ class Stats extends Component{
     console.log("constructor ran");
   }
 
-  
+  /*
   componentDidMount(){
     if(this.props.data !== null){
       this.setState(
@@ -26,16 +29,15 @@ class Stats extends Component{
                 CarbonEmissions:0,
                 NaturalDistasters:0,
                 Water:0,
-                Misc:0,
-                Average:(((this.state.Productivity + this.props.data.Productivity)+(this.state.Resilience + this.props.data.Resilience)+(this.state.Ecofriendliness + this.props.data.Ecofriendliness))/3).toFixed(2) 
+                Productivity:0,
               });
-              console.log("Did mount and state is now"+ this.state.Productivity +", "+ this.state.Ecofriendliness+", "+this.state.Resilience);
+             
     }
-  }
+  }*/
   
 
     render(){
-      console.log("Render running and state is Productivity:"+ this.state.Productivity +", Ecofriendliness:"+ this.state.Ecofriendliness+", Resilience:"+this.state.Resilience);
+      
         return (
             <div className="Stats">
               <header>
@@ -43,22 +45,20 @@ class Stats extends Component{
               </header>
               <body>
               <div className="Stat-vals">
-                  <p className="Sustainability">{this.state.Sustainability}</p>
-                  <p className="Soil">{this.state.Soil}</p>
-                  <p className="CarbonEmissions">{this.state.CarbonEmissions}</p>
-                  <p className="NaturalDistasters">{this.state.NaturalDistasters}</p>
-                  <p>{this.state.Water}</p>
-                  <p>{this.state.Misc}</p>
-                  <p>{this.state.Average}</p>
+                  <p className="Sustainability">{cookies.get('sustainability')}</p>
+                  <p className="Productivity">{cookies.get('productivity')}</p>
+                  <p className="Soil">{cookies.get('soil')}</p>
+                  <p className="CarbonEmissions">{cookies.get('carbon')}</p>
+                  <p className="NaturalDistasters">{cookies.get('disaster')}</p>
+                  <p className="Water">{cookies.get('water')}</p>
                 </div>
                 <div className="Stat-names">
                   <p>Sustainability:</p>
+                  <p>Productivity:</p>
                   <p>Soil:</p>
                   <p>Carbon Emissions:</p>
                   <p>Natural Distasters:</p>
                   <p>Water:</p>
-                  <p>Misc:</p>
-                  <p>Average:</p>
                 </div>
               </body>
             </div> 

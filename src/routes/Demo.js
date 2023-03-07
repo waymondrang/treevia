@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLocation } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 import Trivia from "../components/Trivia.component";
 /*
 const questions = [
@@ -48,7 +49,7 @@ export default function Demo() {
   console.log("Demo ran");
   
   const [questionIndex, setQuestionIndex] = useState(0);
-
+ 
   function nextQuestion() {
     setQuestionIndex((prev) => prev + 1);
   }

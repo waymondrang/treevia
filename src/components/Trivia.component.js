@@ -1,9 +1,8 @@
 import React, { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { useCookies } from 'react-cookie';
+import { useNavigate } from "react-router-dom";
 import "./Trivia.css";
 import TriviaButton from "./TriviaButton.component";
-import { useNavigate } from "react-router-dom";
-import Stats from "./Stats";
 
 // Shuffle contents of the answers array
 function shuffle(array) {
@@ -16,9 +15,11 @@ function shuffle(array) {
 
 function Trivia({ questionData, nextQuestion }) {
   const navigate = useNavigate();
+  const [cookies, setCookie, removeCookie] = useCookies(["sustainability","productivity","soil","carbon","disaster","water"]);
   if(questionData == undefined){
     navigate("/local");
   }
+
   const [showResults, setShowResults] = useState(false);
   const [showCorrect, setShowCorrect] = useState(false);
   const [showNotCorrect, setShowNotCorrect] = useState(false);
@@ -31,6 +32,32 @@ function Trivia({ questionData, nextQuestion }) {
   function evaluateAnswer(correct) {
     correct ? setShowCorrect(true) : setShowNotCorrect(true);
     setShowResults(true);
+    if(correct){
+      switch(questionData.category) {
+        case 'sustainability':
+          setCookie("sustainability", parseInt(cookies.sustainability) + 1, { path: "/" });
+          console.log("Switch sustainability now " + cookies.sustainability);
+          break;
+        case 'productivity':
+          setCookie("productivity",  parseInt(cookies.productivity) + 1, { path: "/" });
+          console.log("Switch productivity now " + cookies.productivity);
+          break;
+        case 'soil':
+          setCookie("soil",  parseInt(cookies.soil) + 1, { path: "/" });
+          break;
+        case 'carbon':
+          setCookie("carbon",  parseInt(cookies.carbon) + 1, { path: "/" });
+          break;
+        case 'disaster':
+          setCookie("disaster",  parseInt(cookies.disaster) + 1, { path: "/" });
+          break;
+        case 'water':
+          setCookie("water",  parseInt(cookies.water) + 1, { path: "/" });
+          break;  
+        default:
+          break;
+      }
+    }
   }
 
   function triviaNextQuestion(...args) {
@@ -39,9 +66,6 @@ function Trivia({ questionData, nextQuestion }) {
     setShowNotCorrect(false);
     setShowResults(false);
     nextQuestion(...args);
-    if(nextQuestion == undefined){
-      navigate("/local");
-    }
   }
 
   return (
