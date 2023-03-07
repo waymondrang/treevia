@@ -53,10 +53,10 @@ p.explanation {
     background-color: red;
 }
 
-.correct {
+#trivia .correct {
     color: green
 }
 
-.error {
+#trivia .error {
     color: red
 }

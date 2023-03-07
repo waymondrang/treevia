@@ -56,6 +56,10 @@
   margin: 0.25rem;
 }
 
+.small-text {
+  font-size: 0.8rem;
+}
+
 button {
   font-family: "Object Sans";
   width: 12rem;

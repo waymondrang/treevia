@@ -1,0 +1,660 @@
+[
+    {
+        "question": "What is the most commonly known slogan associated with sustainability?",
+        "answers": [
+            {
+                "answer": "Reduce, Reuse, Recycle",
+                "correct": true
+            },
+            {
+                "answer": "Be sustainable",
+                "correct": false
+            },
+            {
+                "answer": "Regenerate, Recycle, Redo",
+                "correct": false
+            },
+            {
+                "answer": "Don’t waste.",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": ""
+    },
+    {
+        "question": "What is the term for water that has been used once but can be used again?",
+        "answers": [
+            {
+                "answer": "Grey water",
+                "correct": true
+            },
+            {
+                "answer": "Stale water",
+                "correct": false
+            },
+            {
+                "answer": "Black water",
+                "correct": false
+            },
+            {
+                "answer": "Blue water",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Gray water is the term for wastewater that has the potential to be used again."
+    },
+    {
+        "question": "What percentage of planet earth is water?",
+        "answers": [
+            {
+                "answer": "71%",
+                "correct": true
+            },
+            {
+                "answer": "30%",
+                "correct": false
+            },
+            {
+                "answer": "95%",
+                "correct": false
+            },
+            {
+                "answer": "56%",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": ""
+    },
+    {
+        "question": "How long can it take for plastic bottles to decompose?",
+        "answers": [
+            {
+                "answer": "450 years",
+                "correct": true
+            },
+            {
+                "answer": "10 years",
+                "correct": false
+            },
+            {
+                "answer": "1500 years",
+                "correct": false
+            },
+            {
+                "answer": "1 year",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": ""
+    },
+    {
+        "question": "What day is recognized as Earth Day?",
+        "answers": [
+            {
+                "answer": "April 22",
+                "correct": true
+            },
+            {
+                "answer": "June 7",
+                "correct": false
+            },
+            {
+                "answer": "March 3",
+                "correct": false
+            },
+            {
+                "answer": "May 16",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": ""
+    },
+    {
+        "question": "What is the largest waste item in American landfills?",
+        "answers": [
+            {
+                "answer": "Food",
+                "correct": true
+            },
+            {
+                "answer": "Electronics",
+                "correct": false
+            },
+            {
+                "answer": "Furniture",
+                "correct": false
+            },
+            {
+                "answer": "Clothing",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "In California, food waste accounts for 18% of the total landfill waste. "
+    },
+    {
+        "question": "Which country emits the most carbon emissions?",
+        "answers": [
+            {
+                "answer": "China",
+                "correct": true
+            },
+            {
+                "answer": "Canada",
+                "correct": false
+            },
+            {
+                "answer": "China",
+                "correct": false
+            },
+            {
+                "answer": "USA",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "China emits the most carbon dioxide annually."
+    },
+    {
+        "question": "What area of the earth absorbs the most heat?",
+        "answers": [
+            {
+                "answer": "Ocean",
+                "correct": true
+            },
+            {
+                "answer": "Forests",
+                "correct": false
+            },
+            {
+                "answer": "Animals",
+                "correct": false
+            },
+            {
+                "answer": "Ground",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "The ocean absorbs 90% of the heat in the atmosphere."
+    },
+    {
+        "question": "In future years, the usage of ___ is expected to increase.",
+        "answers": [
+            {
+                "answer": "Renewable energy",
+                "correct": true
+            },
+            {
+                "answer": "Coal",
+                "correct": false
+            },
+            {
+                "answer": "Oil",
+                "correct": false
+            },
+            {
+                "answer": "Natural gases",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": ""
+    },
+    {
+        "question": "What is the term for the greenhouse gasses emitted by an individual person’s activities over one year?",
+        "answers": [
+            {
+                "answer": "Carbon footprint",
+                "correct": true
+            },
+            {
+                "answer": "Environmental impact",
+                "correct": false
+            },
+            {
+                "answer": "Carbon shell",
+                "correct": false
+            },
+            {
+                "answer": "Personal pollution",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Carbon footprint is the amount of greenhouse gasses annually emitted by an individual."
+    },
+    {
+        "question": "What is not an example of renewable energy?",
+        "answers": [
+            {
+                "answer": "Coal",
+                "correct": true
+            },
+            {
+                "answer": "Solar",
+                "correct": false
+            },
+            {
+                "answer": "Wind",
+                "correct": false
+            },
+            {
+                "answer": "Hydro",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Solar, wind, and hydro are all types of renewable energy."
+    },
+    {
+        "question": "Fossil fuels are always cheaper than renewable energy.",
+        "answers": [
+            {
+                "answer": "False",
+                "correct": true
+            },
+            {
+                "answer": "True",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Some renewable energies have become so efficient that they are cheaper than fossil fuels."
+    },
+    {
+        "question": "Glass is 100% recyclable.",
+        "answers": [
+            {
+                "answer": "True",
+                "correct": true
+            },
+            {
+                "answer": "False",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": ""
+    },
+    {
+        "question": "Which of the following materials is the easiest to recycle?",
+        "answers": [
+            {
+                "answer": "Metal",
+                "correct": true
+            },
+            {
+                "answer": "Glass",
+                "correct": false
+            },
+            {
+                "answer": "Newspaper",
+                "correct": false
+            },
+            {
+                "answer": "Plastics",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Metals are the most easily recyclable materials."
+    },
+    {
+        "question": "What is not an example of a fossil fuel?",
+        "answers": [
+            {
+                "answer": "Ethanol",
+                "correct": true
+            },
+            {
+                "answer": "Coal",
+                "correct": false
+            },
+            {
+                "answer": "Oil",
+                "correct": false
+            },
+            {
+                "answer": "Natural gas",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Ethanol is a renewable fuel, not a fossil fuel."
+    },
+    {
+        "question": "We are currently in a mass extinction.",
+        "answers": [
+            {
+                "answer": "True",
+                "correct": true
+            },
+            {
+                "answer": "False",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "The world's sixth mass extinction is occurring in the present, and it has largely been instigated by humans."
+    },
+    {
+        "question": "Why are the glaciers and ice caps melting?",
+        "answers": [
+            {
+                "answer": "Global warming",
+                "correct": true
+            },
+            {
+                "answer": "Rising sea levels",
+                "correct": false
+            },
+            {
+                "answer": "Increased storms",
+                "correct": false
+            },
+            {
+                "answer": "Air pollution",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "The melting of ice caps is caused by global warming and contributes to rising sea levels which can cause more storms."
+    },
+    {
+        "question": "Which type of region is becoming more common due to climate change?",
+        "answers": [
+            {
+                "answer": "Deserts",
+                "correct": true
+            },
+            {
+                "answer": "Glaciers",
+                "correct": false
+            },
+            {
+                "answer": "Forests",
+                "correct": false
+            },
+            {
+                "answer": "Mountains",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "As the earth becomes warmer and more damaged, desert regions are becoming more common."
+    },
+    {
+        "question": "What is the term for the widespread elimination of the population of a species?",
+        "answers": [
+            {
+                "answer": "Extinction",
+                "correct": true
+            },
+            {
+                "answer": "Endangerment",
+                "correct": false
+            },
+            {
+                "answer": "Extermination",
+                "correct": false
+            },
+            {
+                "answer": "Expulsion",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Extinction is when entire species die off."
+    },
+    {
+        "question": "The average speed of biking is how many times faster than that of walking?",
+        "answers": [
+            {
+                "answer": "4",
+                "correct": true
+            },
+            {
+                "answer": "2",
+                "correct": false
+            },
+            {
+                "answer": "6",
+                "correct": false
+            },
+            {
+                "answer": "1",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": ""
+    },
+    {
+        "question": "Reducing the usage of pesticides in agriculture can help sustainability.",
+        "answers": [
+            {
+                "answer": "True",
+                "correct": true
+            },
+            {
+                "answer": "False",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": ""
+    },
+    {
+        "question": "What term refers to changing our systems so they don't contribute to warming the planet?",
+        "answers": [
+            {
+                "answer": "Climate action",
+                "correct": true
+            },
+            {
+                "answer": "Climate change",
+                "correct": false
+            },
+            {
+                "answer": "Ecological agenda",
+                "correct": false
+            },
+            {
+                "answer": "Carbon legislation",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": ""
+    },
+    {
+        "question": "What term refers to low and zero-emission, energy efficient, efficient modes of transport such as electric and alternate fuel vehicles?",
+        "answers": [
+            {
+                "answer": "Sustainable transportation",
+                "correct": true
+            },
+            {
+                "answer": "Hybrid car ",
+                "correct": false
+            },
+            {
+                "answer": "Carpooling",
+                "correct": false
+            },
+            {
+                "answer": "Public transport",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": ""
+    },
+    {
+        "question": "What is the name of the scale that measures wind speed?",
+        "answers": [
+            {
+                "answer": "Beaufort scale",
+                "correct": true
+            },
+            {
+                "answer": "Kelvin Scale",
+                "correct": false
+            },
+            {
+                "answer": "Celsius scale",
+                "correct": false
+            },
+            {
+                "answer": "Richter scale",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "The Beaufort scale relates wind speed to observed conditions at sea or land. "
+    },
+    {
+        "question": "What is the term for a large body of air with uniform temperature and humidity",
+        "answers": [
+            {
+                "answer": "Air mass",
+                "correct": true
+            },
+            {
+                "answer": "Jet stream",
+                "correct": false
+            },
+            {
+                "answer": "Front",
+                "correct": false
+            },
+            {
+                "answer": "Cumulonimbus",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "An air mass is a body of air with horizontally uniform temperature and humidity. "
+    },
+    {
+        "question": "What is the term for a long-term pattern of weather conditions in a region?",
+        "answers": [
+            {
+                "answer": "Climate",
+                "correct": true
+            },
+            {
+                "answer": "Season",
+                "correct": false
+            },
+            {
+                "answer": "Biome",
+                "correct": false
+            },
+            {
+                "answer": "Weather",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Climate is the average weather in a given area over a range of time."
+    },
+    {
+        "question": "What is the word for the wearing away of the earth?",
+        "answers": [
+            {
+                "answer": "Erosion",
+                "correct": true
+            },
+            {
+                "answer": "Mitigation",
+                "correct": false
+            },
+            {
+                "answer": "Sea levels rise",
+                "correct": false
+            },
+            {
+                "answer": "Sequestration",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Erosion is the wearing away of the earth from wind and water."
+    },
+    {
+        "question": "What is the main accelerator of climate change?",
+        "answers": [
+            {
+                "answer": "Humans",
+                "correct": true
+            },
+            {
+                "answer": "Animals",
+                "correct": false
+            },
+            {
+                "answer": "Plants",
+                "correct": false
+            },
+            {
+                "answer": "Sun",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Humans are the biggest catalyst and accelerator of climate change."
+    },
+    {
+        "question": "What color are recycling bins in San Diego county?",
+        "answers": [
+            {
+                "answer": "Blue",
+                "correct": true
+            },
+            {
+                "answer": "Green",
+                "correct": false
+            },
+            {
+                "answer": "Red",
+                "correct": false
+            },
+            {
+                "answer": "Brown",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Recycling bins are blue and are meant to collect materials that are recyclable. "
+    },
+    {
+        "question": "What is an example of a non renewable energy resource?",
+        "answers": [
+            {
+                "answer": "Oil",
+                "correct": true
+            },
+            {
+                "answer": "Sun",
+                "correct": false
+            },
+            {
+                "answer": "Rain",
+                "correct": false
+            },
+            {
+                "answer": "Wind",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "An example of a non-renewable energy resource is oil. "
+    }
+]
