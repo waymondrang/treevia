@@ -6,11 +6,13 @@ function App() {
     <div className="App">
       <div className="centered" id="top-section">
         <Outlet />
-        <div className="expand-container">
-          <span className="material-symbols-rounded expand-icon">
-            expand_more
-          </span>
-        </div>
+        <a href="#about-section">
+          <div className="expand-container">    
+            <span className="material-symbols-rounded expand-icon">
+              expand_more
+            </span>
+          </div>
+        </a>
       </div>
       <div className="centered" id="about-section">
         <div id="about-section-contents">
