@@ -1,7 +1,7 @@
 import "./Host.css";
 import { useEffect, useRef, useState } from "react";
 import nobody from "../img/nobody.png";
-import questionsRaw from "../demoquestions.json";
+import questionsRaw from "../util/general_questions.json";
 import HostStates from "../util/HostStates";
 
 const maxQuestions = 10;
@@ -134,16 +134,13 @@ export default function Host({ _io }) {
     question = assignColorsToQuestion(question);
 
     console.log("Question", question);
-
     setCurrentQuestion(question);
 
     let newCompleteGameState = { ...completeGameState };
     newCompleteGameState.currentQuestion = undefined;
 
     setCompleteGameState(newCompleteGameState);
-
     setQuestionSet(questionSet.filter((q) => q !== question));
-
     setQuestionCount(questionCount + 1);
 
     // start game
