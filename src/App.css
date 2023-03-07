@@ -135,3 +135,12 @@ button:not(:disabled) {
   color: #fff;
   background-color: #132A33;
 }
+
+a {
+  color: #fff;
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
