@@ -32,7 +32,8 @@ function App() {
           view agriculture and growing/raising food.
 
           <h2>Works Cited</h2>
-          To view the academic sources that inspired our questions please visit our Work's Cited Page.
+          To view the academic sources that inspired our questions please visit our
+          <a href="https://docs.google.com/document/d/1H7Azjt2KjgiOQvH1CjradjMEeKGepyI14xim5sDZ7MU/edit?usp=sharing">Work's Cited Document</a>.
 
           <h2>How to Play</h2>
           Our game comes in two modes! Play in either online multiplayer format with your 
