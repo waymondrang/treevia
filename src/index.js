@@ -44,10 +44,6 @@ root.render(
               path: "/local",
               element: <Local />,
             },
-            {
-              path: "/demo",
-              element: <Demo />,
-            },
           ],
         },
       ])}

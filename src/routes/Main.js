@@ -20,11 +20,6 @@ export default function Main() {
             <span>Local</span>
           </button>
         </Link>
-        <Link to={`/demo`} className="button-link">
-          <button>
-            <span>Demo</span>
-          </button>
-        </Link>
       </div>
     </div>
   );
