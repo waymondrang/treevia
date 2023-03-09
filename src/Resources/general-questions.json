@@ -1350,5 +1350,29 @@
         "category": "general",
         "explanation": "These are all current symptoms of climate change."
         
+    },
+    {
+        "question": "What does the number on the recycle symbol mean?",
+        "answers": [
+            {
+                "answer": "Plastic material",
+                "correct": true
+            },
+            {
+                "answer": "Lifespan",
+                "correct": false
+            },
+            {
+                "answer": "Color",
+                "correct": false
+            },
+            {
+                "answer": "Contents",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "The number on the recycle symbol indicates the type of plastic material. Certain numbers are not recyclable depending on the collector."
+        
     }
 ]
