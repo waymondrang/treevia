@@ -1,0 +1,1354 @@
+[
+    {
+        "question": "What is the most commonly known slogan associated with sustainability?",
+        "answers": [
+            {
+                "answer": "Reduce, Reuse, Recycle",
+                "correct": true
+            },
+            {
+                "answer": "Be sustainable",
+                "correct": false
+            },
+            {
+                "answer": "Regenerate, Recycle, Redo",
+                "correct": false
+            },
+            {
+                "answer": "Don't waste.",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Reduce, reuse, and recycle is a common slogan used for sustainability; it is also referred to as the three r's."
+        
+    },
+    {
+        "question": "What is the term for water that has been used once but can be used again?",
+        "answers": [
+            {
+                "answer": "Grey water",
+                "correct": true
+            },
+            {
+                "answer": "Stale water",
+                "correct": false
+            },
+            {
+                "answer": "Black water",
+                "correct": false
+            },
+            {
+                "answer": "Blue water",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Gray water is the term for wastewater that has the potential to be used again."
+        
+    },
+    {
+        "question": "What percentage of planet earth is water?",
+        "answers": [
+            {
+                "answer": "71%",
+                "correct": true
+            },
+            {
+                "answer": "30%",
+                "correct": false
+            },
+            {
+                "answer": "95%",
+                "correct": false
+            },
+            {
+                "answer": "56%",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "71% of the planet is made up of water."
+        
+    },
+    {
+        "question": "How long can it take for plastic bottles to decompose?",
+        "answers": [
+            {
+                "answer": "450 years",
+                "correct": true
+            },
+            {
+                "answer": "10 years",
+                "correct": false
+            },
+            {
+                "answer": "1500 years",
+                "correct": false
+            },
+            {
+                "answer": "1 year",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "It can take up to 450 years for plastic to decompose, making it a relatively unsustainable material."
+        
+    },
+    {
+        "question": "What day is recognized as Earth Day?",
+        "answers": [
+            {
+                "answer": "April 22",
+                "correct": true
+            },
+            {
+                "answer": "June 7",
+                "correct": false
+            },
+            {
+                "answer": "March 3",
+                "correct": false
+            },
+            {
+                "answer": "May 16",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "April 22nd is recognized as Earth Day."
+        
+    },
+    {
+        "question": "What is the largest waste item in American landfills?",
+        "answers": [
+            {
+                "answer": "Food",
+                "correct": true
+            },
+            {
+                "answer": "Electronics",
+                "correct": false
+            },
+            {
+                "answer": "Furniture",
+                "correct": false
+            },
+            {
+                "answer": "Clothing",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "In California, food waste accounts for 18% of the total landfill waste. "
+        
+    },
+    {
+        "question": "Which country emits the most carbon emissions?",
+        "answers": [
+            {
+                "answer": "China",
+                "correct": true
+            },
+            {
+                "answer": "Canada",
+                "correct": false
+            },
+            {
+                "answer": "Australia",
+                "correct": false
+            },
+            {
+                "answer": "USA",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "China emits the most carbon dioxide annually."
+        
+    },
+    {
+        "question": "What area of the earth absorbs the most heat?",
+        "answers": [
+            {
+                "answer": "Ocean",
+                "correct": true
+            },
+            {
+                "answer": "Forests",
+                "correct": false
+            },
+            {
+                "answer": "Animals",
+                "correct": false
+            },
+            {
+                "answer": "Ground",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "The ocean absorbs 90% of the heat in the atmosphere."
+        
+    },
+    {
+        "question": "In future years, the usage of ___ is expected to increase.",
+        "answers": [
+            {
+                "answer": "Renewable energy",
+                "correct": true
+            },
+            {
+                "answer": "Coal",
+                "correct": false
+            },
+            {
+                "answer": "Oil",
+                "correct": false
+            },
+            {
+                "answer": "Natural gases",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "The usage of renewable energy is expected to increase by 80% in 2026 compared to 2020."
+        
+    },
+    {
+        "question": "What is the term for the greenhouse gasses emitted by an individual person's activities over one year?",
+        "answers": [
+            {
+                "answer": "Carbon footprint",
+                "correct": true
+            },
+            {
+                "answer": "Environmental impact",
+                "correct": false
+            },
+            {
+                "answer": "Carbon shell",
+                "correct": false
+            },
+            {
+                "answer": "Personal pollution",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Carbon footprint is the amount of greenhouse gasses annually emitted by an individual."
+        
+    },
+    {
+        "question": "What is not an example of renewable energy?",
+        "answers": [
+            {
+                "answer": "Coal",
+                "correct": true
+            },
+            {
+                "answer": "Solar",
+                "correct": false
+            },
+            {
+                "answer": "Wind",
+                "correct": false
+            },
+            {
+                "answer": "Hydro",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Solar, wind, and hydro are all types of renewable energy."
+        
+    },
+    {
+        "question": "Fossil fuels are always cheaper than renewable energy.",
+        "answers": [
+            {
+                "answer": "False",
+                "correct": true
+            },
+            {
+                "answer": "True",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Some renewable energies have become so efficient that they are cheaper than fossil fuels."
+        
+    },
+    {
+        "question": "Glass is 100% recyclable.",
+        "answers": [
+            {
+                "answer": "True",
+                "correct": true
+            },
+            {
+                "answer": "False",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Glass is 100% recyclable."
+        
+    },
+    {
+        "question": "Which of the following materials is the easiest to recycle?",
+        "answers": [
+            {
+                "answer": "Metal",
+                "correct": true
+            },
+            {
+                "answer": "Glass",
+                "correct": false
+            },
+            {
+                "answer": "Newspaper",
+                "correct": false
+            },
+            {
+                "answer": "Plastics",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Metals are the most easily recyclable materials."
+        
+    },
+    {
+        "question": "What is not an example of a fossil fuel?",
+        "answers": [
+            {
+                "answer": "Ethanol",
+                "correct": true
+            },
+            {
+                "answer": "Coal",
+                "correct": false
+            },
+            {
+                "answer": "Oil",
+                "correct": false
+            },
+            {
+                "answer": "Natural gas",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Ethanol is a renewable fuel, not a fossil fuel."
+        
+    },
+    {
+        "question": "We are currently in a mass extinction.",
+        "answers": [
+            {
+                "answer": "True",
+                "correct": true
+            },
+            {
+                "answer": "False",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "The world's sixth mass extinction is occurring in the present, and it has largely been instigated by humans."
+        
+    },
+    {
+        "question": "Why are the glaciers and ice caps melting?",
+        "answers": [
+            {
+                "answer": "Global warming",
+                "correct": true
+            },
+            {
+                "answer": "Rising sea levels",
+                "correct": false
+            },
+            {
+                "answer": "Increased storms",
+                "correct": false
+            },
+            {
+                "answer": "Air pollution",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "The melting of ice caps is caused by global warming and contributes to rising sea levels which can cause more storms."
+        
+    },
+    {
+        "question": "Which type of region is becoming more common due to climate change?",
+        "answers": [
+            {
+                "answer": "Deserts",
+                "correct": true
+            },
+            {
+                "answer": "Glaciers",
+                "correct": false
+            },
+            {
+                "answer": "Forests",
+                "correct": false
+            },
+            {
+                "answer": "Mountains",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "As the earth becomes warmer and more damaged, desert regions are becoming more common."
+        
+    },
+    {
+        "question": "What is the term for the widespread elimination of the population of a species?",
+        "answers": [
+            {
+                "answer": "Extinction",
+                "correct": true
+            },
+            {
+                "answer": "Endangerment",
+                "correct": false
+            },
+            {
+                "answer": "Extermination",
+                "correct": false
+            },
+            {
+                "answer": "Expulsion",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Extinction is when entire species die off."
+        
+    },
+    {
+        "question": "The average speed of biking is how many times faster than that of walking?",
+        "answers": [
+            {
+                "answer": "4",
+                "correct": true
+            },
+            {
+                "answer": "2",
+                "correct": false
+            },
+            {
+                "answer": "6",
+                "correct": false
+            },
+            {
+                "answer": "1",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Biking is four times faster than walking."
+        
+    },
+    {
+        "question": "Reducing the usage of pesticides in agriculture can help sustainability.",
+        "answers": [
+            {
+                "answer": "True",
+                "correct": true
+            },
+            {
+                "answer": "False",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Reduced pesticide use is more sustainable."
+        
+    },
+    {
+        "question": "What term refers to changing our systems so they don't contribute to warming the planet?",
+        "answers": [
+            {
+                "answer": "Climate action",
+                "correct": true
+            },
+            {
+                "answer": "Climate change",
+                "correct": false
+            },
+            {
+                "answer": "Ecological agenda",
+                "correct": false
+            },
+            {
+                "answer": "Carbon legislation",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Climate action refers to the efforts to reduce emissions that lead to global warming."
+        
+    },
+    {
+        "question": "What term refers to low and zero-emission, energy efficient, efficient modes of transport such as electric and alternate fuel vehicles?",
+        "answers": [
+            {
+                "answer": "Sustainable transportation",
+                "correct": true
+            },
+            {
+                "answer": "Hybrid car ",
+                "correct": false
+            },
+            {
+                "answer": "Carpooling",
+                "correct": false
+            },
+            {
+                "answer": "Public transport",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Sustainable transportation is low and zero-emission, energy efficient, efficient modes of transport such as electric and alternate fuel vehicles"
+        
+    },
+    {
+        "question": "What is the name of the scale that measures wind speed?",
+        "answers": [
+            {
+                "answer": "Beaufort scale",
+                "correct": true
+            },
+            {
+                "answer": "Kelvin Scale",
+                "correct": false
+            },
+            {
+                "answer": "Celsius scale",
+                "correct": false
+            },
+            {
+                "answer": "Richter scale",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "The Beaufort scale relates wind speed to observed conditions at sea or land. "
+        
+    },
+    {
+        "question": "What is the term for a large body of air with uniform temperature and humidity",
+        "answers": [
+            {
+                "answer": "Air mass",
+                "correct": true
+            },
+            {
+                "answer": "Jet stream",
+                "correct": false
+            },
+            {
+                "answer": "Front",
+                "correct": false
+            },
+            {
+                "answer": "Cumulonimbus",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "An air mass is a body of air with horizontally uniform temperature and humidity. "
+        
+    },
+    {
+        "question": "What is the term for a long-term pattern of weather conditions in a region?",
+        "answers": [
+            {
+                "answer": "Climate",
+                "correct": true
+            },
+            {
+                "answer": "Season",
+                "correct": false
+            },
+            {
+                "answer": "Biome",
+                "correct": false
+            },
+            {
+                "answer": "Weather",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Climate is the average weather in a given area over a range of time."
+        
+    },
+    {
+        "question": "What is the word for the wearing away of the earth?",
+        "answers": [
+            {
+                "answer": "Erosion",
+                "correct": true
+            },
+            {
+                "answer": "Mitigation",
+                "correct": false
+            },
+            {
+                "answer": "Sea levels rise",
+                "correct": false
+            },
+            {
+                "answer": "Sequestration",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Erosion is the wearing away of the earth from wind and water."
+        
+    },
+    {
+        "question": "What is the main accelerator of climate change?",
+        "answers": [
+            {
+                "answer": "Humans",
+                "correct": true
+            },
+            {
+                "answer": "Animals",
+                "correct": false
+            },
+            {
+                "answer": "Plants",
+                "correct": false
+            },
+            {
+                "answer": "Sun",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Humans are the biggest catalyst and accelerator of climate change."
+        
+    },
+    {
+        "question": "What color are recycling bins in San Diego county?",
+        "answers": [
+            {
+                "answer": "Blue",
+                "correct": true
+            },
+            {
+                "answer": "Green",
+                "correct": false
+            },
+            {
+                "answer": "Red",
+                "correct": false
+            },
+            {
+                "answer": "Brown",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Recycling bins are blue and are meant to collect materials that are recyclable. "
+        
+    },
+    {
+        "question": "What is an example of a non-renewable energy resource?",
+        "answers": [
+            {
+                "answer": "Oil",
+                "correct": true
+            },
+            {
+                "answer": "Sun",
+                "correct": false
+            },
+            {
+                "answer": "Rain",
+                "correct": false
+            },
+            {
+                "answer": "Wind",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "An example of a non-renewable energy resource is oil. "
+        
+    },
+    {
+        "question": "Air pollution is responsible for one in fifty deaths worldwide according to WHO.",
+        "answers": [
+            {
+                "answer": "False",
+                "correct": true
+            },
+            {
+                "answer": "True",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Air pollution actually accounts for one in eight deaths."
+        
+    },
+    {
+        "question": "Which of the following causes the most deaths worldwide?",
+        "answers": [
+            {
+                "answer": "Pollution",
+                "correct": true
+            },
+            {
+                "answer": "Cigarettes",
+                "correct": false
+            },
+            {
+                "answer": "Terrorism",
+                "correct": false
+            },
+            {
+                "answer": "Natural Disasters",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Pollution is the world's number one killer, causing more premature deaths than cigarettes, terrorism, and natural disasters"
+        
+    },
+    {
+        "question": "What is the main source of agricultural greenhouse gas emissions?",
+        "answers": [
+            {
+                "answer": "Cattle",
+                "correct": true
+            },
+            {
+                "answer": "Crops",
+                "correct": false
+            },
+            {
+                "answer": "Machinery",
+                "correct": false
+            },
+            {
+                "answer": "Fertilizer",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Cattle emit methane and are the main source of emissions on most farms."
+        
+    },
+    {
+        "question": "The concentration of CO2 in the atmosphere is the highest it has ever been.",
+        "answers": [
+            {
+                "answer": "True",
+                "correct": true
+            },
+            {
+                "answer": "False",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Atmospheric CO2 is at an all-time high and is only increasing."
+        
+    },
+    {
+        "question": "About how many trees are cut down every year?",
+        "answers": [
+            {
+                "answer": "15 billion",
+                "correct": true
+            },
+            {
+                "answer": "10 million",
+                "correct": false
+            },
+            {
+                "answer": "3 million",
+                "correct": false
+            },
+            {
+                "answer": "1 billion",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "More than 15 billion trees are cut down each year"
+        
+    },
+    {
+        "question": "What is the process of incorporating food scraps and organic matter into a planter to promote soil regeneration?",
+        "answers": [
+            {
+                "answer": "Composting",
+                "correct": true
+            },
+            {
+                "answer": "Recycling",
+                "correct": false
+            },
+            {
+                "answer": "Disposing",
+                "correct": false
+            },
+            {
+                "answer": "Dumping",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Composting is the process of allowing food scraps to decompose and regenerate the soil."
+        
+    },
+    {
+        "question": "Which of the following is not considered a greenhouse gas?",
+        "answers": [
+            {
+                "answer": "Oxygen",
+                "correct": true
+            },
+            {
+                "answer": "Carbon dioxide",
+                "correct": false
+            },
+            {
+                "answer": "Nitrous oxide",
+                "correct": false
+            },
+            {
+                "answer": "Methane",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Carbon dioxide, methane, and nitrous oxide are the most infamous greenhouse gases."
+        
+    },
+    {
+        "question": "Fresh, clean water is becoming scarcer. This is because water sources are at risk of pollution from:",
+        "answers": [
+            {
+                "answer": "All choices are correct",
+                "correct": true
+            },
+            {
+                "answer": "Industrial waste",
+                "correct": false
+            },
+            {
+                "answer": "Marine dumping",
+                "correct": false
+            },
+            {
+                "answer": "Wastewater and sewage",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Water can become polluted from all types of waste dumping, including industrial and domestic waste."
+        
+    },
+    {
+        "question": "How many people in the world do not have access to clean water?",
+        "answers": [
+            {
+                "answer": "2 billion",
+                "correct": true
+            },
+            {
+                "answer": "5 billion",
+                "correct": false
+            },
+            {
+                "answer": "100 million",
+                "correct": false
+            },
+            {
+                "answer": "40 million",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Two billion people in the world do not have regular access to fresh, clean water"
+        
+    },
+    {
+        "question": "What type of plastic is the most detrimental to the environment?",
+        "answers": [
+            {
+                "answer": "Single-use plastic",
+                "correct": true
+            },
+            {
+                "answer": "Green plastic",
+                "correct": false
+            },
+            {
+                "answer": "Clear plastic",
+                "correct": false
+            },
+            {
+                "answer": "Reusable plastic",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Single-use plastic is used briefly and often ends up in landfills."
+        
+    },
+    {
+        "question": "About what percentage of water bottles are recycled annually in America?",
+        "answers": [
+            {
+                "answer": "29%",
+                "correct": true
+            },
+            {
+                "answer": "50%",
+                "correct": false
+            },
+            {
+                "answer": "70%",
+                "correct": false
+            },
+            {
+                "answer": "90%",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Americans buy around 50 billion water bottles each year. Of these, only 29.1 percent are recycled"
+        
+    },
+    {
+        "question": "How many times can paper be recycled?",
+        "answers": [
+            {
+                "answer": "6 times",
+                "correct": true
+            },
+            {
+                "answer": "2 times",
+                "correct": false
+            },
+            {
+                "answer": "10 times",
+                "correct": false
+            },
+            {
+                "answer": "No limit",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Paper can be recycled six times before the fibers become too weak."
+        
+    },
+    {
+        "question": "What is the term for planting trees to combat their removal?",
+        "answers": [
+            {
+                "answer": "Reforestation",
+                "correct": true
+            },
+            {
+                "answer": "Carbon sequestration",
+                "correct": false
+            },
+            {
+                "answer": "Deforestation",
+                "correct": false
+            },
+            {
+                "answer": "Irrigation",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Reforestation is the processing of replanting trees; about 1.5 billion trees are planted annually."
+        
+    },
+    {
+        "question": "Which of the following is not a reason that coral reefs are destroyed?",
+        "answers": [
+            {
+                "answer": "Rising sea levels",
+                "correct": true
+            },
+            {
+                "answer": "Overfishing",
+                "correct": false
+            },
+            {
+                "answer": "Water pollution",
+                "correct": false
+            },
+            {
+                "answer": "Coral mining",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "The coral reefs have been destroyed as the ocean habitat has been damaged due to pollution and other human practices."
+        
+    },
+    {
+        "question": "What does anthropogenic mean?",
+        "answers": [
+            {
+                "answer": "Human caused",
+                "correct": true
+            },
+            {
+                "answer": "Animal anatomy",
+                "correct": false
+            },
+            {
+                "answer": "Sustainability",
+                "correct": false
+            },
+            {
+                "answer": "Greenhouse gas",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Anthropogenic means caused by humans."
+        
+    },
+    {
+        "question": "What gas is released by deforestation?",
+        "answers": [
+            {
+                "answer": "Carbon dioxide",
+                "correct": true
+            },
+            {
+                "answer": "Oxygen",
+                "correct": false
+            },
+            {
+                "answer": "Methane",
+                "correct": false
+            },
+            {
+                "answer": "Nitrous oxide",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Deforestation releases carbon dioxide into the atmosphere."
+        
+    },
+    {
+        "question": "What type of radiation is released by the sun?",
+        "answers": [
+            {
+                "answer": "Ultra-violet",
+                "correct": true
+            },
+            {
+                "answer": "Alpha",
+                "correct": false
+            },
+            {
+                "answer": "Gamma",
+                "correct": false
+            },
+            {
+                "answer": "Ionizing",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "The sun gives off UV radiation."
+        
+    },
+    {
+        "question": "Photosynthesis converts ___ to ___ energy.",
+        "answers": [
+            {
+                "answer": "solar, chemical",
+                "correct": true
+            },
+            {
+                "answer": "chemical, solar",
+                "correct": false
+            },
+            {
+                "answer": "solar, mechanical",
+                "correct": false
+            },
+            {
+                "answer": "potential, chemical ",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Photosynthesis is the conversion of solar energy into chemical energy."
+        
+    },
+    {
+        "question": "To prevent roads from reaching high temperatures, cities are painting their roads what color?",
+        "answers": [
+            {
+                "answer": "White",
+                "correct": true
+            },
+            {
+                "answer": "Black",
+                "correct": false
+            },
+            {
+                "answer": "Yellow",
+                "correct": false
+            },
+            {
+                "answer": "Green",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Cities are starting to paint their roads white to reflect the rays of the sun."
+        
+    },
+    {
+        "question": "Eggshells are compostable.",
+        "answers": [
+            {
+                "answer": "True",
+                "correct": true
+            },
+            {
+                "answer": "False",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Eggshells are a great source of calcium to add to compost."
+        
+    },
+    {
+        "question": "How many tons of waste does the US produce annually?",
+        "answers": [
+            {
+                "answer": "268 million",
+                "correct": true
+            },
+            {
+                "answer": "32 billion",
+                "correct": false
+            },
+            {
+                "answer": "398 million",
+                "correct": false
+            },
+            {
+                "answer": "41 million",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "The US produces 268 million tons of waste each year."
+        
+    },
+    {
+        "question": "What percent of the 33.6k million tons of global carbon dioxide emissions does the US contribute?",
+        "answers": [
+            {
+                "answer": "15%",
+                "correct": true
+            },
+            {
+                "answer": "34%",
+                "correct": false
+            },
+            {
+                "answer": "7%",
+                "correct": false
+            },
+            {
+                "answer": "55%",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "The US produces on average 5000 million tons of carbon dioxide emissions which is ~15% of the global total."
+        
+    },
+    {
+        "question": "What is the name of the certification that provides a framework for highly efficient and cost-saving green buildings?",
+        "answers": [
+            {
+                "answer": "LEED",
+                "correct": true
+            },
+            {
+                "answer": "CDP",
+                "correct": false
+            },
+            {
+                "answer": "SASB",
+                "correct": false
+            },
+            {
+                "answer": "DJSI",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "LEED is a set of rating systems for the design, construction, and operation of green buildings."
+        
+    },
+    {
+        "question": "Which of the following is not a synthetic fertilizer?",
+        "answers": [
+            {
+                "answer": "Compost",
+                "correct": true
+            },
+            {
+                "answer": "Ammonium nitrate",
+                "correct": false
+            },
+            {
+                "answer": "Potassium sulfate",
+                "correct": false
+            },
+            {
+                "answer": "Ammonium phosphate",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Compost is a natural fertilizer."
+        
+    },
+    {
+        "question": "What is the average range of healthy soil pH?",
+        "answers": [
+            {
+                "answer": "5.5 to 7.5",
+                "correct": true
+            },
+            {
+                "answer": "7.0 to 9.0",
+                "correct": false
+            },
+            {
+                "answer": "3.5 to 5.5",
+                "correct": false
+            },
+            {
+                "answer": "1.0 to 3.0",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Healthy soil is around a neutral pH of 7."
+        
+    },
+    {
+        "question": "Which of the following is a good practice of sustainability?",
+        "answers": [
+            {
+                "answer": "All the choices are correct",
+                "correct": true
+            },
+            {
+                "answer": "Walking to school",
+                "correct": false
+            },
+            {
+                "answer": "Turning off the lights when not in use",
+                "correct": false
+            },
+            {
+                "answer": "Use reusable shopping bags",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "These are all good everyday practices of sustainability."
+        
+    },
+    {
+        "question": "What is the name of a resource that can be replenished in the future?",
+        "answers": [
+            {
+                "answer": "Renewable",
+                "correct": true
+            },
+            {
+                "answer": "Sustainable",
+                "correct": false
+            },
+            {
+                "answer": "Green",
+                "correct": false
+            },
+            {
+                "answer": "Timeless",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Renewable resources are ones that can be replenished."
+        
+    },
+    {
+        "question": "Pollution is the presence of a substance in the environment that is harmful.",
+        "answers": [
+            {
+                "answer": "True",
+                "correct": true
+            },
+            {
+                "answer": "False",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "Pollution is the presence of something harmful in the environment."
+        
+    },
+    {
+        "question": "What are evidences of climate change?",
+        "answers": [
+            {
+                "answer": "All the choices are correct",
+                "correct": true
+            },
+            {
+                "answer": "Melting glaciers",
+                "correct": false
+            },
+            {
+                "answer": "Temperature increases",
+                "correct": false
+            },
+            {
+                "answer": "More endangered species",
+                "correct": false
+            }
+        ],
+        "category": "general",
+        "explanation": "These are all current symptoms of climate change."
+        
+    }
+]
