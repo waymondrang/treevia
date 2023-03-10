@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { CookiesProvider } from "react-cookie";
 import "./index.css";
 import {
   createBrowserRouter,
@@ -14,6 +15,7 @@ import Host from "./routes/Host";
 import Local from "./routes/MainPage";
 import Demo from "./routes/Demo";
 import Play from "./routes/Play";
+import End from "./routes/EndPage";
 import Trivia from "./routes/TriviaTestPage";
 import io from "socket.io-client";
 
@@ -25,6 +27,7 @@ _io.disconnect();
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <CookiesProvider>
     <RouterProvider
       router={createBrowserRouter([
         {
@@ -53,11 +56,18 @@ root.render(
               path: "/trivia",
               element: <Trivia/>,
             },
+            {
+              path: "/end",
+              element: <End />,
+            },
           ],
         },
       ])}
     />
+    <App />
+  </CookiesProvider>
   </React.StrictMode>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

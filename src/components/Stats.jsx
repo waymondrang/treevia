@@ -1,5 +1,4 @@
-import "../Stats.css";
-import "../Farm.css";
+import "./Stats.css";
 import { Cookies } from 'react-cookie';
 import React, { Component } from 'react';
 
@@ -40,10 +39,10 @@ class Stats extends Component{
       
         return (
             <div className="Stats">
-              <header>
+              <div className="header">
                 <h1>Stats</h1>
-              </header>
-              <body>
+              </div>
+              <div className="body">
               <div className="Stat-vals">
                   <p className="Sustainability">{cookies.get('sustainability')}</p>
                   <p className="Productivity">{cookies.get('productivity')}</p>
@@ -60,7 +59,7 @@ class Stats extends Component{
                   <p>Natural Distasters:</p>
                   <p>Water:</p>
                 </div>
-              </body>
+              </div>
             </div> 
         );
     }
