@@ -16,8 +16,13 @@ function shuffle(array) {
 function Trivia({ questionData, nextQuestion }) {
   const navigate = useNavigate();
   const [cookies, setCookie, removeCookie] = useCookies(["sustainability","productivity","soil","carbon","disaster","water"]);
+  const [cookies2, setCookie2, removeCookie2] = useCookies(['Button1','Button2','Button3','Button4','Button5','Button6']);
   if(questionData == undefined){
-    navigate("/local");
+    if(cookies2.Button1 && cookies2.Button2 && cookies2.Button3 && cookies2.Button4 && cookies2.Button5 && cookies2.Button6){
+      navigate("/end");
+    }else{
+      navigate("/local");
+    }
   }
 
   const [showResults, setShowResults] = useState(false);

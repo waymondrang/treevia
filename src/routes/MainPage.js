@@ -6,50 +6,61 @@ import { useCookies } from 'react-cookie';
 import Stats from '../components/Stats.jsx';
 import Farm from '../components/Farm.jsx';
 import questions from "../Resources/questions.json"
-import logo from "../img/LogoIter1-2.png"
 import { useNavigate } from "react-router-dom";
 
 function MainPage() {
   const location = useLocation();
   const navigate = useNavigate();
+  
   const stats = location.state;
   console.log("Main page ran");
   const [cookies, setCookie, removeCookie] = useCookies(['Button1','Button2','Button3','Button4','Button5','Button6']);
-  const [cookies2, setCookie2, removeCookie2] = useCookies(["sustainability","productivity","soil","carbon","disaster","water", "allSet"]);
+  const [cookies2, setCookie2, removeCookie2] = useCookies(["sustainability","productivity","soil","carbon","disaster","water", "allSet", "total"]);
   if(!cookies2.allSet){
-    console.log("allSet "+ cookies2.allSet);
-    setCookie2('sustainability', 0, { path: "/" });
-    setCookie2('productivity', 0, { path: "/" });
-    setCookie2('soil', 0, { path: "/" });
-    setCookie2('carbon', 0, { path: "/" });
-    setCookie2('disaster', 0, { path: "/" });
-    setCookie2('water', 0, { path: "/" });
-    setCookie2('allSet', true, { path: "/" });
-  }
-  const onClick1 = () => {
-    setCookie('Button1', true, { path: '/' });
-  };
-  const onClick2 = () => {
-    setCookie('Button2', true, { path: '/' });
-  };
-  const onClick3 = () => {
-    setCookie('Button3', true, { path: '/' });
-  };
-  const onClick4 = () => {
-    setCookie('Button4', true, { path: '/' });
-  };
-  const onClick5 = () => {
-    setCookie('Button5', true, { path: '/' });
-  };
-  const onClick6 = () => {
-    setCookie('Button6', true, { path: '/' });
-  };
+    removeCookie('Button1');
+    removeCookie('Button2');
+    removeCookie('Button3');
+    removeCookie('Button4');
+    removeCookie('Button5');
+    removeCookie('Button6');
+    setCookie2("sustainability", 0, { path: "/", sameSite: 'None' });
+    setCookie2("productivity", 0, { path: "/" , sameSite: 'None' });
+    setCookie2("soil", 0, { path: "/" , sameSite: 'None' });
+    setCookie2("carbon", 0, { path: "/", sameSite: 'None'  }); 
+    setCookie2("disaster", 0, { path: "/", sameSite: 'None'  });
+    setCookie2("water", 0, { path: "/", sameSite: 'None'  });
+    setCookie2("total", 0, { path: "/", sameSite: 'None'  });
+    setCookie2("allSet", true, { path: "/", sameSite: 'None'  });
 
-  if(cookies.Button1 && cookies.Button2 && cookies.Button3 && cookies.Button4 && cookies.Button5 && cookies.Button6){
-    navigate("/End");
   }
   
+  if(cookies.Button1 && cookies.Button2 && cookies.Button3 && cookies.Button4 && cookies.Button5 && cookies.Button6){
+    navigate("/end");
+  }
+
+  const onClick1 = () => {
+    setCookie('Button1', true, { path: '/', sameSite: 'None'  });
+  };
+  const onClick2 = () => {
+    setCookie('Button2', true, { path: '/', sameSite: 'None'  });
+  };
+  const onClick3 = () => {
+    setCookie('Button3', true, { path: '/', sameSite: 'None'  });
+  };
+  const onClick4 = () => {
+    setCookie('Button4', true, { path: '/', sameSite: 'None'  });
+  };
+  const onClick5 = () => {
+    setCookie('Button5', true, { path: '/', sameSite: 'None'  });
+  };
+  const onClick6 = () => {
+    setCookie('Button6', true, { path: '/', sameSite: 'None'  });
+  };
+
+  
+  
   const clear = () => {
+    /*
     removeCookie('Button1');
     removeCookie('Button2');
     removeCookie('Button3');
@@ -64,6 +75,14 @@ function MainPage() {
     removeCookie2("water");
     removeCookie2("allSet");
     window.location.reload();
+   */
+    setCookie('Button1',true,  { path: '/'});
+    setCookie('Button2',true,  { path: '/'});
+    setCookie('Button3',true,  { path: '/'});
+    setCookie('Button4',true,  { path: '/'});
+    setCookie('Button5',true,  { path: '/'});
+    setCookie('Button6',true,  { path: '/'});
+    navigate("/end"); 
   };
   
   return (
@@ -75,7 +94,7 @@ function MainPage() {
         </header>
 
       <Stats className="Stats" data = {stats} />
-      <body>
+      <div className="body">
       
       <Farm/>
 
@@ -105,9 +124,9 @@ function MainPage() {
             <button className="button" disabled={cookies.Button6} onClick={onClick6}>Water</button>
           </Link>
             <br/>
-            <button className="button"  onClick={clear}>Remove Cookies</button>
+            <button className="button"  onClick={clear}>Get To End</button>
         </div>
-      </body>
+      </div>
     </div>
   );
 }

@@ -5,7 +5,6 @@ import "./index.css";
 import {
   createBrowserRouter,
   RouterProvider,
-  useRouteError,
 } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -16,7 +15,6 @@ import Local from "./routes/MainPage";
 import Demo from "./routes/Demo";
 import Play from "./routes/Play";
 import End from "./routes/EndPage";
-import Trivia from "./routes/TriviaTestPage";
 import io from "socket.io-client";
 
 const _io = io(
@@ -51,10 +49,6 @@ root.render(
             {
               path: "/demo",
               element: <Demo />,
-            },
-            {
-              path: "/trivia",
-              element: <Trivia/>,
             },
             {
               path: "/end",

@@ -21,7 +21,6 @@ class Farm extends Component{
     var sum = parseInt(cookies.get('sustainability')) + parseInt(cookies.get('productivity')) + parseInt(cookies.get('soil'))
               + parseInt(cookies.get('carbon')) + parseInt(cookies.get('disaster')) + parseInt(cookies.get('water'));
     cookies.set("total", sum);
-    console.log("Sum: " + sum);
     if(sum >= 3){
         this.setState({field: field2});
         console.log("Switch to field2");
@@ -45,7 +44,7 @@ class Farm extends Component{
     render(){           
         return (
             <div className="farm">
-                <img class="field" src= {this.state.field}  alt="field" ></img>
+                <img className="field" src= {this.state.field}  alt="field" ></img>
             </div>
         );
     }
