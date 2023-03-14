@@ -3,6 +3,7 @@ import express from "express";
 import http from "http";
 import ClientStates from "./src/util/ClientStates";
 import HostStates from "./src/util/HostStates";
+import path from "path";
 
 const adjectives = require("./adjectives.json") as string[];
 const nouns = require("./nouns.json") as string[];
@@ -464,6 +465,10 @@ io.on("connection", function (socket) {
       }
     }
   });
+});
+
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "build/index.html"));
 });
 
 server.listen(PORT, function () {

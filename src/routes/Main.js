@@ -15,13 +15,11 @@ export default function Main() {
             <span>Host</span>
           </button>
         </Link>
-        <a onClick={() => {window.location.href="/local"}}>
         <Link to={`/local`} className="button-link">
           <button>
             <span>Story</span>
           </button>
         </Link>
-        </a>
       </div>
     </div>
   );
