@@ -14,14 +14,14 @@ export default function EndPage() {
     removeCookie('Button4');
     removeCookie('Button5');
     removeCookie('Button6');
-    setCookie2("sustainability", 0, { path: "/", sameSite: 'None' });
-    setCookie2("productivity", 0, { path: "/" , sameSite: 'None' });
-    setCookie2("soil", 0, { path: "/" , sameSite: 'None' });
-    setCookie2("carbon", 0, { path: "/", sameSite: 'None'  }); 
-    setCookie2("disaster", 0, { path: "/", sameSite: 'None'  });
-    setCookie2("water", 0, { path: "/", sameSite: 'None'  });
-    setCookie2("total", 0, { path: "/", sameSite: 'None'  });
-    setCookie2("allSet", false,{ path: "/", sameSite: 'None' });
+    setCookie2("sustainability", 0, { path: "/", sameSite: 'Strict' });
+    setCookie2("productivity", 0, { path: "/" , sameSite: 'Strict'});
+    setCookie2("soil", 0, { path: "/" , sameSite: 'Strict'});
+    setCookie2("carbon", 0, { path: "/", sameSite: 'Strict'}); 
+    setCookie2("disaster", 0, { path: "/", sameSite: 'Strict'});
+    setCookie2("water", 0, { path: "/", sameSite: 'Strict'});
+    setCookie2("total", 0, { path: "/", sameSite: 'Strict'});
+    setCookie2("allSet", false,{ path: "/", sameSite: 'Strict'});
 
     return(
         <div className="EndPage">
@@ -29,7 +29,6 @@ export default function EndPage() {
                 <h1>Your Results!</h1>
             </header>
             <div className="body">
-                <Stats className = 'Stats'/>
                 <p>Total: {cookies2.total}</p>
                 <a onClick={() => {window.location.href="/local"}}>
                 <Link to='/local'>

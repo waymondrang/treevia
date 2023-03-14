@@ -23,14 +23,14 @@ function MainPage() {
     removeCookie('Button4');
     removeCookie('Button5');
     removeCookie('Button6');
-    setCookie2("sustainability", 0, { path: "/", sameSite: 'None' });
-    setCookie2("productivity", 0, { path: "/" , sameSite: 'None' });
-    setCookie2("soil", 0, { path: "/" , sameSite: 'None' });
-    setCookie2("carbon", 0, { path: "/", sameSite: 'None'  }); 
-    setCookie2("disaster", 0, { path: "/", sameSite: 'None'  });
-    setCookie2("water", 0, { path: "/", sameSite: 'None'  });
-    setCookie2("total", 0, { path: "/", sameSite: 'None'  });
-    setCookie2("allSet", true, { path: "/", sameSite: 'None'  });
+    setCookie2("sustainability", 0, { path: "/", sameSite: 'Strict' });
+    setCookie2("productivity", 0, { path: "/" , sameSite: 'Strict'});
+    setCookie2("soil", 0, { path: "/" , sameSite: 'Strict'});
+    setCookie2("carbon", 0, { path: "/", sameSite: 'Strict'}); 
+    setCookie2("disaster", 0, { path: "/", sameSite: 'Strict'});
+    setCookie2("water", 0, { path: "/", sameSite: 'Strict'});
+    setCookie2("total", 0, { path: "/", sameSite: 'Strict'});
+    setCookie2("allSet", true,{ path: "/", sameSite: 'Strict'});
 
   }
   
@@ -39,22 +39,22 @@ function MainPage() {
   }
 
   const onClick1 = () => {
-    setCookie('Button1', true, { path: '/', sameSite: 'None'  });
+    setCookie('Button1', true, { path: '/',  sameSite: 'Strict'});
   };
   const onClick2 = () => {
-    setCookie('Button2', true, { path: '/', sameSite: 'None'  });
+    setCookie('Button2', true, { path: '/',  sameSite: 'Strict'});
   };
   const onClick3 = () => {
-    setCookie('Button3', true, { path: '/', sameSite: 'None'  });
+    setCookie('Button3', true, { path: '/',  sameSite: 'Strict'});
   };
   const onClick4 = () => {
-    setCookie('Button4', true, { path: '/', sameSite: 'None'  });
+    setCookie('Button4', true, { path: '/',  sameSite: 'Strict'});
   };
   const onClick5 = () => {
-    setCookie('Button5', true, { path: '/', sameSite: 'None'  });
+    setCookie('Button5', true, { path: '/',  sameSite: 'Strict'});
   };
   const onClick6 = () => {
-    setCookie('Button6', true, { path: '/', sameSite: 'None'  });
+    setCookie('Button6', true, { path: '/',  sameSite: 'Strict'});
   };
 
   
@@ -124,7 +124,6 @@ function MainPage() {
             <button className="button" disabled={cookies.Button6} onClick={onClick6}>Water</button>
           </Link>
             <br/>
-            <button className="button"  onClick={clear}>Get To End</button>
         </div>
       </div>
     </div>

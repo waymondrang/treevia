@@ -40,11 +40,11 @@ function Trivia({ questionData, nextQuestion }) {
     if(correct){
       switch(questionData.category) {
         case 'sustainability':
-          setCookie("sustainability", parseInt(cookies.sustainability) + 1, { path: "/" });
+          setCookie("sustainability", parseInt(cookies.sustainability) + 1, { path: "/"});
           console.log("Switch sustainability now " + cookies.sustainability);
           break;
         case 'productivity':
-          setCookie("productivity",  parseInt(cookies.productivity) + 1, { path: "/" });
+          setCookie("productivity",  parseInt(cookies.productivity) + 1, { path: "/"});
           console.log("Switch productivity now " + cookies.productivity);
           break;
         case 'soil':
@@ -54,10 +54,10 @@ function Trivia({ questionData, nextQuestion }) {
           setCookie("carbon",  parseInt(cookies.carbon) + 1, { path: "/" });
           break;
         case 'disaster':
-          setCookie("disaster",  parseInt(cookies.disaster) + 1, { path: "/" });
+          setCookie("disaster",  parseInt(cookies.disaster) + 1, { path: "/"});
           break;
         case 'water':
-          setCookie("water",  parseInt(cookies.water) + 1, { path: "/" });
+          setCookie("water",  parseInt(cookies.water) + 1, { path: "/"});
           break;  
         default:
           break;
