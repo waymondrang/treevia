@@ -1,8 +1,8 @@
 import "./Host.css";
 import { useEffect, useRef, useState } from "react";
-import nobody from "../img/nobody.png";
 import questionsRaw from "../util/general_questions.json";
 import HostStates from "../util/HostStates";
+import ProgressBar from "../components/ProgressBar.component";
 
 const maxQuestions = 10;
 
@@ -15,6 +15,7 @@ export default function Host({ _io }) {
   const [hostState, setHostState] = useState(HostStates.createGameHostState);
   const [questionCount, setQuestionCount] = useState(0);
   const [questionSet, setQuestionSet] = useState(questionsRaw);
+  const [questionWaitTime, setQuestionWaitTime] = useState(-1);
 
   useEffect(() => {
     _io.connect();
@@ -60,6 +61,9 @@ export default function Host({ _io }) {
       // remove event listeners
       _io.off("connect");
       _io.off("hostState");
+      _io.off("completeGameState");
+      _io.off("gameError");
+      _io.off("disconnect");
     };
   }, []);
 
@@ -153,7 +157,9 @@ export default function Host({ _io }) {
     setHostState(HostStates.questionHostState);
 
     // display question for random seconds from 3 to 5
-    await waitForTimeout(Math.floor(Math.random() * 3) + 3);
+    let timeoutTime = Math.floor(Math.random() * 3) + 3;
+    setQuestionWaitTime(timeoutTime);
+    await waitForTimeout(timeoutTime);
 
     // show answers
     setHostState(HostStates.answerHostState);
@@ -267,6 +273,7 @@ export default function Host({ _io }) {
       {hostState === HostStates.questionHostState && (
         <div id="host-question">
           <span className="question-text">{currentQuestion.question}</span>
+          <ProgressBar questionWaitTime={questionWaitTime} />
         </div>
       )}
 

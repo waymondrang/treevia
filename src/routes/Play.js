@@ -45,7 +45,7 @@ export default function Play({ _io }) {
 
     _io.on("broadcastAnswers", (answers) => {
       console.log("Answers", answers);
-      setQuestionAnswers(answers);
+      setQuestionAnswers(scrambleAnswers(answers));
       setClientState(clientStates.answerGameState);
     });
 
@@ -106,6 +106,19 @@ export default function Play({ _io }) {
 
     console.log("Checking Room Before Joining...");
     _io.emit("checkRoom", roomCode);
+  }
+
+  function scrambleAnswers(answers) {
+    let a = [...answers]; // create copy
+    let scrambledAnswers = [];
+
+    while (a.length > 0) {
+      let index = Math.floor(Math.random() * a.length);
+      scrambledAnswers.push(a[index]);
+      a.splice(index, 1);
+    }
+
+    return scrambledAnswers;
   }
 
   return (
