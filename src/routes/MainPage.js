@@ -60,7 +60,6 @@ function MainPage() {
   
   
   const clear = () => {
-    /*
     removeCookie('Button1');
     removeCookie('Button2');
     removeCookie('Button3');
@@ -75,14 +74,6 @@ function MainPage() {
     removeCookie2("water");
     removeCookie2("allSet");
     window.location.reload();
-   */
-    setCookie('Button1',true,  { path: '/'});
-    setCookie('Button2',true,  { path: '/'});
-    setCookie('Button3',true,  { path: '/'});
-    setCookie('Button4',true,  { path: '/'});
-    setCookie('Button5',true,  { path: '/'});
-    setCookie('Button6',true,  { path: '/'});
-    navigate("/end"); 
   };
   
   return (
@@ -90,6 +81,7 @@ function MainPage() {
       <header>
         <Link to='/'>
             <button>Return to Main</button>
+            <button className="reset" onClick={clear}> ⟳ Reset</button>
         </Link>
         </header>
 
@@ -123,6 +115,8 @@ function MainPage() {
           <Link to='/demo' state= {{jason: JSON.stringify(makeList("water"))}}>
             <button className="button" disabled={cookies.Button6} onClick={onClick6}>Water</button>
           </Link>
+            <br/>
+           
             <br/>
         </div>
       </div>

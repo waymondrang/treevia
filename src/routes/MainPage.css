@@ -23,7 +23,7 @@
     border-radius: 5px;
     font-family: Object Sans;
     margin-top: 0%;
-    width:100%;
+    width:99.6%;
   }
 
   .Stats{
@@ -32,7 +32,10 @@
     margin-left: 80%;
     margin-top: 10%;
   }
-
+.reset{
+  position: absolute;
+  left: 87.2% ;
+}
   .MainPage-link {
     color: #61dafb;
   }
