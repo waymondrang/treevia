@@ -2,10 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { CookiesProvider } from "react-cookie";
 import "./index.css";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./routes/ErrorPage";
@@ -26,42 +23,40 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <CookiesProvider>
-    <RouterProvider
-      router={createBrowserRouter([
-        {
-          path: "/",
-          element: <App />,
-          errorElement: <ErrorPage />,
-          children: [
-            { path: "/", element: <Main /> },
-            {
-              path: "/play",
-              element: <Play _io={_io} />,
-            },
-            {
-              path: "/host",
-              element: <Host _io={_io} />,
-            },
-            {
-              path: "/local",
-              element: <Local />,
-            },
-            {
-              path: "/demo",
-              element: <Demo />,
-            },
-            {
-              path: "/end",
-              element: <End />,
-            },
-          ],
-        },
-      ])}
-    />
-    <App />
-  </CookiesProvider>
+      <RouterProvider
+        router={createBrowserRouter([
+          {
+            path: "/",
+            element: <App />,
+            errorElement: <ErrorPage />,
+            children: [
+              { path: "/", element: <Main /> },
+              {
+                path: "/play",
+                element: <Play _io={_io} />,
+              },
+              {
+                path: "/host",
+                element: <Host _io={_io} />,
+              },
+              {
+                path: "/local",
+                element: <Local />,
+              },
+              {
+                path: "/demo",
+                element: <Demo />,
+              },
+              {
+                path: "/end",
+                element: <End />,
+              },
+            ],
+          },
+        ])}
+      />
+    </CookiesProvider>
   </React.StrictMode>
-
 );
 
 // If you want to start measuring performance in your app, pass a function
