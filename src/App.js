@@ -1,10 +1,6 @@
-import { Link } from "react-router-dom";
 import "./App.css";
-import React from 'react';
+import React from "react";
 import { Outlet } from "react-router-dom";
-import MainPage from './routes/MainPage.js';
-import * as ReactDOM from "react-dom";
-import { BrowserRouter, Switch, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -23,10 +19,23 @@ function App() {
         <div id="about-section-contents">
           <h2>About</h2>
           <p>
-            Treevia is a trivia question-answer style game created by Shilpa Chowbey, Sophia Conti, Annabella Macaluso, Jessica Wang, and Raymond Wang. The questions in this game target various climate issues that relate to agriculture and the effect of climate change on farming. We hope this game will provide fun and positive experiences around learning about farming, sustainability in agriculture, and climate change.
+            Treevia is a trivia question-answer style game created by Shilpa
+            Chowbey, Sophia Conti, Annabella Macaluso, Jessica Wang, and Raymond
+            Wang. The questions in this game target various climate issues that
+            relate to agriculture and the effect of climate change on farming.
+            We hope this game will provide fun and positive experiences around
+            learning about farming, sustainability in agriculture, and climate
+            change.
             <br />
             <br />
-            Our questions have been sourced and created from academic journals and papers that cover topics such as carbon emissions, natural disasters, soil health, runoff, and more. We've also included questions about atypical agricultural methods from indigenous practices or local methods that aren't traditionally used in commercial farming. We hope to promote new voices within this game and create awareness about different cultures and communities and how they view agriculture and growing/raising food.
+            Our questions have been sourced and created from academic journals
+            and papers that cover topics such as carbon emissions, natural
+            disasters, soil health, runoff, and more. We've also included
+            questions about atypical agricultural methods from indigenous
+            practices or local methods that aren't traditionally used in
+            commercial farming. We hope to promote new voices within this game
+            and create awareness about different cultures and communities and
+            how they view agriculture and growing/raising food.
           </p>
 
           <h2>Works Cited</h2>
@@ -67,7 +76,10 @@ function App() {
 
           <h3>Story Mode</h3>
           <p>
-            Select the 'Local' button to start a new story mode game. In story mode, you're provided a plot of land to build your farm! Select from the six different categories of questions and answer correctly to help your farm grow and thrive.
+            Select the 'Local' button to start a new story mode game. In story
+            mode, you're provided a plot of land to build your farm! Select from
+            the six different categories of questions and answer correctly to
+            help your farm grow and thrive.
           </p>
         </div>
       </div>
@@ -76,4 +88,3 @@ function App() {
 }
 
 export default App;
-
