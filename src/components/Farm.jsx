@@ -20,7 +20,7 @@ class Farm extends Component{
   componentDidMount(){
     var sum = parseInt(cookies.get('sustainability')) + parseInt(cookies.get('productivity')) + parseInt(cookies.get('soil'))
               + parseInt(cookies.get('carbon')) + parseInt(cookies.get('disaster')) + parseInt(cookies.get('water'));
-    cookies.set("total", sum);
+    cookies.set("total", sum, {sameSite:'Strict'});
 
     if(sum >= 3){
         this.setState({field: field2});
