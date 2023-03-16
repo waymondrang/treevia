@@ -8,7 +8,6 @@ import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./routes/ErrorPage";
 import Main from "./routes/Main";
 import Host from "./routes/Host";
-import Demo from "./routes/Demo";
 import Play from "./routes/Play";
 import End from "./routes/EndPage";
 import io from "socket.io-client";

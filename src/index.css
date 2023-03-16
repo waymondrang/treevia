@@ -12,27 +12,6 @@
     url(../public/assets/fonts/PPObjectSans-Heavy.woff2) format("woff2");
 }
 
-@font-face {
-  font-family: "Mondwest";
-  font-weight: normal;
-  src: url(../public/assets/fonts/PPMondwest-Regular.woff) format("woff"),
-    url(../public/assets/fonts/PPMondwest-Regular.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Neue Bit";
-  font-weight: normal;
-  src: url(../public/assets/fonts/PPNeueBit-Regular.woff) format("woff"),
-    url(../public/assets/fonts/PPNeueBit-Regular.woff2) format("woff2");
-}
-
-@font-face {
-  font-family: "Neue Bit";
-  font-weight: bold;
-  src: url(../public/assets/fonts/PPNeueBit-Bold.woff) format("woff"),
-    url(../public/assets/fonts/PPNeueBit-Bold.woff2) format("woff2");
-}
-
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
