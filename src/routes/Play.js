@@ -130,7 +130,7 @@ export default function Play({ _io }) {
           <input
             onChange={(e) => setRoomCode(e.target.value)}
             value={roomCode}
-            type="number"
+            type="text"
             placeholder="Room Code"
           />
           <button onClick={joinRoom} type="submit">
@@ -187,7 +187,7 @@ export default function Play({ _io }) {
 
       {clientState === clientStates.readyGameState && (
         <div id="game">
-          <h1>Get Ready!</h1>
+          <h1 id="get-ready">Get Ready!</h1>
         </div>
       )}
 

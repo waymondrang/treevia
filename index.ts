@@ -4,6 +4,7 @@ import http from "http";
 import ClientStates from "./src/util/ClientStates";
 import HostStates from "./src/util/HostStates";
 import path from "path";
+import cookie from "cookie";
 
 const adjectives = require("./adjectives.json") as string[];
 const nouns = require("./nouns.json") as string[];
@@ -133,6 +134,10 @@ io.on("connection", function (socket) {
   var teamName: string;
   var player: Player;
 
+  var cookies = cookie.parse(socket.handshake.headers.cookie || "");
+  roomCode = cookies["superSecretRoomCode"];
+  console.log(roomCode);
+
   socket.on("joinRoom", function (payload: JoinGamePayload) {
     let { roomCode: rc, username: u, teamName: tn } = payload;
 
@@ -227,10 +232,11 @@ io.on("connection", function (socket) {
 
   socket.on("createRoom", function () {
     // 6 digit random room code
-    let rc = createNDigitRoomCode(6);
+    let rc = roomCode || createNDigitRoomCode(6);
     while (games[rc] !== undefined) {
       rc = createNDigitRoomCode(6);
     }
+
     console.log("[" + socket.id + "] Creating Room: " + rc);
 
     socket.join(rc);
