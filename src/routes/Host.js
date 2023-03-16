@@ -1,5 +1,5 @@
 import "./Host.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import questionsRaw from "../util/general_questions.json";
 import HostStates from "../util/HostStates";
 import ProgressBar from "../components/ProgressBar.component";

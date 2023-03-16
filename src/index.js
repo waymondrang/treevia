@@ -8,8 +8,6 @@ import reportWebVitals from "./reportWebVitals";
 import ErrorPage from "./routes/ErrorPage";
 import Main from "./routes/Main";
 import Host from "./routes/Host";
-import Local from "./routes/MainPage";
-import Demo from "./routes/Demo";
 import Play from "./routes/Play";
 import End from "./routes/EndPage";
 import io from "socket.io-client";
@@ -38,14 +36,6 @@ root.render(
               {
                 path: "/host",
                 element: <Host _io={_io} />,
-              },
-              {
-                path: "/local",
-                element: <Local />,
-              },
-              {
-                path: "/demo",
-                element: <Demo />,
               },
               {
                 path: "/end",
