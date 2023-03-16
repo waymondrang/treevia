@@ -21,7 +21,7 @@ function Trivia({ questionData, nextQuestion }) {
     if(cookies2.Button1 && cookies2.Button2 && cookies2.Button3 && cookies2.Button4 && cookies2.Button5 && cookies2.Button6){
       navigate("/end");
     }else{
-      navigate("/local");
+      navigate("/story");
     }
   }
 

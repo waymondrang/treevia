@@ -1,14 +1,4 @@
 steps:
-  # enable failover server
-  - name: "gcr.io/cloud-builders/gcloud"
-    args:
-      [
-        "compute",
-        "firewall-rules",
-        "update",
-        "fw-failover-enable",
-        "--disabled",
-      ]
   # perform update
   - name: "gcr.io/cloud-builders/gcloud"
     args:
@@ -20,16 +10,6 @@ steps:
         "ray@instance",
         "--command",
         "screen -X -S treevia quit; cd ~/treevia; git pull; npm ci; npm run build; screen -d -m -S treevia sudo ts-node index.ts",
-      ]
-  # disable failover server
-  - name: "gcr.io/cloud-builders/gcloud"
-    args:
-      [
-        "compute",
-        "firewall-rules",
-        "update",
-        "fw-failover-enable",
-        "--no-disabled",
       ]
 options:
   logging: CLOUD_LOGGING_ONLY
