@@ -50,6 +50,16 @@ function App() {
               Work's Cited Document
             </a>
             .
+
+            We graciously were able to use this UI Pack for our farm visuals! Please show the original 
+            creators Cup Nooble support. 
+            <a 
+              target="_blank" 
+              rel="noopener noreferrer"
+              href="https://cupnooble.itch.io/sprout-lands-ui-pack"
+            >
+              Link to UI Pack.
+            </a>
           </p>
 
           <h2>How to Play</h2>
