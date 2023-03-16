@@ -9,7 +9,7 @@ steps:
         "us-west1-a",
         "ray@instance",
         "--command",
-        "screen -X -S treevia quit; mkdir ~/testfolder",
+        "screen -X -S treevia quit",
       ]
 options:
   logging: CLOUD_LOGGING_ONLY
