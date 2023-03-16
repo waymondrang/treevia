@@ -8,4 +8,5 @@
     height: 100%;
     background-color: #4caf50;
     transition: width 0.1s linear;
+    border-radius: 999rem;
 }
