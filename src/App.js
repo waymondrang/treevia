@@ -50,15 +50,16 @@ function App() {
               Work's Cited Document
             </a>
             .
-            <br></br>
-            We graciously were able to use this UI Pack for our farm visuals! Please show the original 
-            creators Cup Nooble support. 
-            <a 
-              target="_blank" 
+            <br />
+            <br />
+            We graciously were able to use this UI Pack for our farm visuals!
+            Please show the original creators Cup Nooble support.{" "}
+            <a
+              target="_blank"
               rel="noopener noreferrer"
               href="https://cupnooble.itch.io/sprout-lands-ui-pack"
             >
-              Link to UI Pack.
+              Link to UI Pack
             </a>
           </p>
 
@@ -90,6 +91,11 @@ function App() {
             mode, you're provided a plot of land to build your farm! Select from
             the six different categories of questions and answer correctly to
             help your farm grow and thrive.
+          </p>
+          <h2>Development</h2>
+          <p>
+            The source code for this website and server are publicly available
+            on <a href="https://github.com/waymondrang/treevia">GitHub</a>.
           </p>
         </div>
       </div>
