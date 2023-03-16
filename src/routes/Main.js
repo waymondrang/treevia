@@ -15,7 +15,7 @@ export default function Main() {
             <span>Host</span>
           </button>
         </Link>
-        <Link to={`/local`} className="button-link">
+        <Link to={`/story`} className="button-link">
           <button>
             <span>Story</span>
           </button>
