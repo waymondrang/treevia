@@ -50,7 +50,7 @@ function App() {
               Work's Cited Document
             </a>
             .
-
+            <br></br>
             We graciously were able to use this UI Pack for our farm visuals! Please show the original 
             creators Cup Nooble support. 
             <a 
