@@ -99,96 +99,51 @@ function Story() {
   return (
     <div className="MainPage">
       <header>
-        <Link to="/">
-          <button>Return to Main</button>
-          <button className="reset" onClick={clear}>
-            {" "}
-            ⟳ Reset
-          </button>
+        <Link to='/'>
+            <button id="return">Return to Main</button>
+            <button className="reset" onClick={clear}> ⟳ Reset</button>
         </Link>
-      </header>
+        </header>
 
-      <Stats className="Stats" data={stats} />
       <div className="body">
-        <Farm />
+      
+      <Farm/>
 
+        <div id="container">
         <div className="buttons-list">
-          <h2>Select Question Type</h2>
-          <Link
-            to="/demo"
-            state={{ jason: JSON.stringify(makeList("sustainability")) }}
-          >
-            <button
-              className="button"
-              disabled={cookies.Button1}
-              onClick={onClick1}
-            >
-              Sustainability
-            </button>
+          <h2 id="select_title">Select Question Type</h2>
+          <Link to='/demo' state= {{jason: JSON.stringify(makeList("sustainability"))}}>
+            <button className="button" disabled={cookies.Button1} onClick={onClick1}>Sustainability</button>
           </Link>
-          <br />
-          <Link
-            to="/demo"
-            state={{ jason: JSON.stringify(makeList("productivity")) }}
-          >
-            <button
-              className="button"
-              disabled={cookies.Button2}
-              onClick={onClick2}
-            >
-              Productivity
-            </button>
+            <br/>
+            <Link to='/demo' state= {{jason: JSON.stringify(makeList("productivity"))}}>
+            <button className="button" disabled={cookies.Button2} onClick={onClick2}>Productivity</button>
           </Link>
-          <br />
-          <Link to="/demo" state={{ jason: JSON.stringify(makeList("soil")) }}>
-            <button
-              className="button"
-              disabled={cookies.Button3}
-              onClick={onClick3}
-            >
-              Soil
-            </button>
+            <br/>
+          <Link to='/demo' state= {{jason: JSON.stringify(makeList("soil"))}}>
+            <button className="button" disabled={cookies.Button3} onClick={onClick3}>Soil</button>
           </Link>
-          <br />
-          <Link
-            to="/demo"
-            state={{ jason: JSON.stringify(makeList("carbon")) }}
-          >
-            <button
-              className="button"
-              disabled={cookies.Button4}
-              onClick={onClick4}
-            >
-              Carbon Emissions
-            </button>
+            <br/>
+          <Link to='/demo' state= {{jason: JSON.stringify(makeList("carbon"))}}>
+            <button className="button" disabled={cookies.Button4} onClick={onClick4}>Carbon Emissions</button>
           </Link>
-          <br />
-          <Link
-            to="/demo"
-            state={{ jason: JSON.stringify(makeList("disaster")) }}
-          >
-            <button
-              className="button"
-              disabled={cookies.Button5}
-              onClick={onClick5}
-            >
-              Natural Distasters
-            </button>
+            <br/>
+          <Link to='/demo' state= {{jason: JSON.stringify(makeList("disaster"))}}>
+            <button className="button" disabled={cookies.Button5} onClick={onClick5}>Natural Distasters</button>
           </Link>
-          <br />
-          <Link to="/demo" state={{ jason: JSON.stringify(makeList("water")) }}>
-            <button
-              className="button"
-              disabled={cookies.Button6}
-              onClick={onClick6}
-            >
-              Water
-            </button>
+            <br/>
+          <Link to='/demo' state= {{jason: JSON.stringify(makeList("water"))}}>
+            <button className="button" disabled={cookies.Button6} onClick={onClick6}>Water</button>
           </Link>
-          <br />
-
-          <br />
+            <br/>
+           
+            <br/>
         </div>
+
+        
+        <Stats className="Stats" data = {stats} />
+        </div>
+        
       </div>
     </div>
   );
