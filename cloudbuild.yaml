@@ -1,0 +1,13 @@
+steps:
+  # testing if the build is working
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      [
+        "compute",
+        "ssh",
+        "--zone",
+        "us-west1-a",
+        "ray@instance",
+        "--command",
+        "screen -X -S treevia quit",
+      ]
