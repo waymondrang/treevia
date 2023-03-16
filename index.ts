@@ -332,11 +332,11 @@ io.on("connection", function (socket) {
         );
         if (correctAnswer) {
           // calculate score, minimum of 500, with buffer of .1 seconds
-          console.log(
-            (teamAnswer.timeAnswered.getTime() -
-              games[roomCode].currentQuestion!.timeBroadcasted.getTime()) /
-              20
-          );
+          // console.log(
+          //   (teamAnswer.timeAnswered.getTime() -
+          //     games[roomCode].currentQuestion!.timeBroadcasted.getTime()) /
+          //     20
+          // );
           let score = Math.min(
             1000,
             Math.max(
