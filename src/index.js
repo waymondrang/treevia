@@ -12,6 +12,7 @@ import Play from "./routes/Play";
 import End from "./routes/EndPage";
 import io from "socket.io-client";
 import Story from "./routes/Story";
+import Demo from "./routes/Demo";
 
 const _io = io(
   process.env.NODE_ENV === "development" ? "http://localhost:3001" : ""
@@ -41,6 +42,10 @@ root.render(
               {
                 path: "/story",
                 element: <Story />,
+              },
+              {
+                path: "/demo",
+                element: <Demo />,
               },
               {
                 path: "/end",
