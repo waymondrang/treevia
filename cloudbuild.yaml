@@ -9,7 +9,7 @@ steps:
         "us-west1-a",
         "ray@instance",
         "--command",
-        "screen -X -S treevia quit; cd ~/treevia; npm ci; npm run build; screen -d -m -S treevia sudo ts-node index.ts",
+        "screen -X -S treevia quit; cd ~/treevia; git pull; npm ci; npm run build; screen -d -m -S treevia sudo ts-node index.ts",
       ]
 options:
   logging: CLOUD_LOGGING_ONLY
