@@ -52,15 +52,16 @@ function App() {
             .
             <br />
             <br />
-            We graciously were able to use this UI Pack for our farm visuals!
-            Please show the original creators Cup Nooble support.{" "}
+            We graciously were able to use{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://cupnooble.itch.io/sprout-lands-ui-pack"
             >
-              Link to UI Pack
-            </a>
+              this UI Pack
+            </a>{" "}
+            for our farm visuals! Please show the original creators Cup Nooble
+            support.
           </p>
 
           <h2>How to Play</h2>
